@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.SphwphMapper">
+  <resultMap id="BaseResultMap" type="com.kuka.domain.Sphwph">
+    <!--@mbg.generated-->
+    <!--@Table sphwph-->
+    <id column="spid" jdbcType="CHAR" property="spid" />
+    <id column="hw" jdbcType="CHAR" property="hw" />
+    <id column="pihao" jdbcType="VARCHAR" property="pihao" />
+    <result column="baozhiqi" jdbcType="CHAR" property="baozhiqi" />
+    <result column="dangqzht" jdbcType="CHAR" property="dangqzht" />
+    <result column="shl" jdbcType="DECIMAL" property="shl" />
+    <result column="gebjj" jdbcType="DECIMAL" property="gebjj" />
+    <result column="miejph" jdbcType="CHAR" property="miejph" />
+    <result column="sxrq" jdbcType="CHAR" property="sxrq" />
+    <result column="yanghriqi" jdbcType="CHAR" property="yanghriqi" />
+    <result column="xsshl" jdbcType="DECIMAL" property="xsshl" />
+    <result column="Bkxshl" jdbcType="DECIMAL" property="bkxshl" />
+    <result column="ykpshl" jdbcType="DECIMAL" property="ykpshl" />
+    <result column="bukxshl" jdbcType="DECIMAL" property="bukxshl" />
+    <result column="pizhwh" jdbcType="CHAR" property="pizhwh" />
+    <result column="zhuczhh" jdbcType="CHAR" property="zhuczhh" />
+    <result column="jwh" jdbcType="CHAR" property="jwh" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    spid, hw, pihao, baozhiqi, dangqzht, shl, gebjj, miejph, sxrq, yanghriqi, xsshl, 
+    Bkxshl, ykpshl, bukxshl, pizhwh, zhuczhh, jwh
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from sphwph
+    where spid = #{spid,jdbcType=CHAR}
+      and hw = #{hw,jdbcType=CHAR}
+      and pihao = #{pihao,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    <!--@mbg.generated-->
+    delete from sphwph
+    where spid = #{spid,jdbcType=CHAR}
+      and hw = #{hw,jdbcType=CHAR}
+      and pihao = #{pihao,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.kuka.domain.Sphwph">
+    <!--@mbg.generated-->
+    insert into sphwph (spid, hw, pihao, baozhiqi, 
+      dangqzht, shl, gebjj, 
+      miejph, sxrq, yanghriqi, xsshl, 
+      Bkxshl, ykpshl, bukxshl, 
+      pizhwh, zhuczhh, jwh)
+    values (#{spid,jdbcType=CHAR}, #{hw,jdbcType=CHAR}, #{pihao,jdbcType=VARCHAR}, #{baozhiqi,jdbcType=CHAR}, 
+      #{dangqzht,jdbcType=CHAR}, #{shl,jdbcType=DECIMAL}, #{gebjj,jdbcType=DECIMAL}, 
+      #{miejph,jdbcType=CHAR}, #{sxrq,jdbcType=CHAR}, #{yanghriqi,jdbcType=CHAR}, #{xsshl,jdbcType=DECIMAL}, 
+      #{bkxshl,jdbcType=DECIMAL}, #{ykpshl,jdbcType=DECIMAL}, #{bukxshl,jdbcType=DECIMAL}, 
+      #{pizhwh,jdbcType=CHAR}, #{zhuczhh,jdbcType=CHAR}, #{jwh,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kuka.domain.Sphwph">
+    <!--@mbg.generated-->
+    insert into sphwph
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        spid,
+      </if>
+      <if test="hw != null">
+        hw,
+      </if>
+      <if test="pihao != null">
+        pihao,
+      </if>
+      <if test="baozhiqi != null">
+        baozhiqi,
+      </if>
+      <if test="dangqzht != null">
+        dangqzht,
+      </if>
+      <if test="shl != null">
+        shl,
+      </if>
+      <if test="gebjj != null">
+        gebjj,
+      </if>
+      <if test="miejph != null">
+        miejph,
+      </if>
+      <if test="sxrq != null">
+        sxrq,
+      </if>
+      <if test="yanghriqi != null">
+        yanghriqi,
+      </if>
+      <if test="xsshl != null">
+        xsshl,
+      </if>
+      <if test="bkxshl != null">
+        Bkxshl,
+      </if>
+      <if test="ykpshl != null">
+        ykpshl,
+      </if>
+      <if test="bukxshl != null">
+        bukxshl,
+      </if>
+      <if test="pizhwh != null">
+        pizhwh,
+      </if>
+      <if test="zhuczhh != null">
+        zhuczhh,
+      </if>
+      <if test="jwh != null">
+        jwh,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        #{spid,jdbcType=CHAR},
+      </if>
+      <if test="hw != null">
+        #{hw,jdbcType=CHAR},
+      </if>
+      <if test="pihao != null">
+        #{pihao,jdbcType=VARCHAR},
+      </if>
+      <if test="baozhiqi != null">
+        #{baozhiqi,jdbcType=CHAR},
+      </if>
+      <if test="dangqzht != null">
+        #{dangqzht,jdbcType=CHAR},
+      </if>
+      <if test="shl != null">
+        #{shl,jdbcType=DECIMAL},
+      </if>
+      <if test="gebjj != null">
+        #{gebjj,jdbcType=DECIMAL},
+      </if>
+      <if test="miejph != null">
+        #{miejph,jdbcType=CHAR},
+      </if>
+      <if test="sxrq != null">
+        #{sxrq,jdbcType=CHAR},
+      </if>
+      <if test="yanghriqi != null">
+        #{yanghriqi,jdbcType=CHAR},
+      </if>
+      <if test="xsshl != null">
+        #{xsshl,jdbcType=DECIMAL},
+      </if>
+      <if test="bkxshl != null">
+        #{bkxshl,jdbcType=DECIMAL},
+      </if>
+      <if test="ykpshl != null">
+        #{ykpshl,jdbcType=DECIMAL},
+      </if>
+      <if test="bukxshl != null">
+        #{bukxshl,jdbcType=DECIMAL},
+      </if>
+      <if test="pizhwh != null">
+        #{pizhwh,jdbcType=CHAR},
+      </if>
+      <if test="zhuczhh != null">
+        #{zhuczhh,jdbcType=CHAR},
+      </if>
+      <if test="jwh != null">
+        #{jwh,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kuka.domain.Sphwph">
+    <!--@mbg.generated-->
+    update sphwph
+    <set>
+      <if test="baozhiqi != null">
+        baozhiqi = #{baozhiqi,jdbcType=CHAR},
+      </if>
+      <if test="dangqzht != null">
+        dangqzht = #{dangqzht,jdbcType=CHAR},
+      </if>
+      <if test="shl != null">
+        shl = #{shl,jdbcType=DECIMAL},
+      </if>
+      <if test="gebjj != null">
+        gebjj = #{gebjj,jdbcType=DECIMAL},
+      </if>
+      <if test="miejph != null">
+        miejph = #{miejph,jdbcType=CHAR},
+      </if>
+      <if test="sxrq != null">
+        sxrq = #{sxrq,jdbcType=CHAR},
+      </if>
+      <if test="yanghriqi != null">
+        yanghriqi = #{yanghriqi,jdbcType=CHAR},
+      </if>
+      <if test="xsshl != null">
+        xsshl = #{xsshl,jdbcType=DECIMAL},
+      </if>
+      <if test="bkxshl != null">
+        Bkxshl = #{bkxshl,jdbcType=DECIMAL},
+      </if>
+      <if test="ykpshl != null">
+        ykpshl = #{ykpshl,jdbcType=DECIMAL},
+      </if>
+      <if test="bukxshl != null">
+        bukxshl = #{bukxshl,jdbcType=DECIMAL},
+      </if>
+      <if test="pizhwh != null">
+        pizhwh = #{pizhwh,jdbcType=CHAR},
+      </if>
+      <if test="zhuczhh != null">
+        zhuczhh = #{zhuczhh,jdbcType=CHAR},
+      </if>
+      <if test="jwh != null">
+        jwh = #{jwh,jdbcType=CHAR},
+      </if>
+    </set>
+    where spid = #{spid,jdbcType=CHAR}
+      and hw = #{hw,jdbcType=CHAR}
+      and pihao = #{pihao,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kuka.domain.Sphwph">
+    <!--@mbg.generated-->
+    update sphwph
+    set baozhiqi = #{baozhiqi,jdbcType=CHAR},
+      dangqzht = #{dangqzht,jdbcType=CHAR},
+      shl = #{shl,jdbcType=DECIMAL},
+      gebjj = #{gebjj,jdbcType=DECIMAL},
+      miejph = #{miejph,jdbcType=CHAR},
+      sxrq = #{sxrq,jdbcType=CHAR},
+      yanghriqi = #{yanghriqi,jdbcType=CHAR},
+      xsshl = #{xsshl,jdbcType=DECIMAL},
+      Bkxshl = #{bkxshl,jdbcType=DECIMAL},
+      ykpshl = #{ykpshl,jdbcType=DECIMAL},
+      bukxshl = #{bukxshl,jdbcType=DECIMAL},
+      pizhwh = #{pizhwh,jdbcType=CHAR},
+      zhuczhh = #{zhuczhh,jdbcType=CHAR},
+      jwh = #{jwh,jdbcType=CHAR}
+    where spid = #{spid,jdbcType=CHAR}
+      and hw = #{hw,jdbcType=CHAR}
+      and pihao = #{pihao,jdbcType=VARCHAR}
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into sphwph
+    (spid, hw, pihao, baozhiqi, dangqzht, shl, gebjj, miejph, sxrq, yanghriqi, xsshl, 
+      Bkxshl, ykpshl, bukxshl, pizhwh, zhuczhh, jwh)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.spid,jdbcType=CHAR}, #{item.hw,jdbcType=CHAR}, #{item.pihao,jdbcType=VARCHAR}, 
+        #{item.baozhiqi,jdbcType=CHAR}, #{item.dangqzht,jdbcType=CHAR}, #{item.shl,jdbcType=DECIMAL}, 
+        #{item.gebjj,jdbcType=DECIMAL}, #{item.miejph,jdbcType=CHAR}, #{item.sxrq,jdbcType=CHAR}, 
+        #{item.yanghriqi,jdbcType=CHAR}, #{item.xsshl,jdbcType=DECIMAL}, #{item.bkxshl,jdbcType=DECIMAL}, 
+        #{item.ykpshl,jdbcType=DECIMAL}, #{item.bukxshl,jdbcType=DECIMAL}, #{item.pizhwh,jdbcType=CHAR}, 
+        #{item.zhuczhh,jdbcType=CHAR}, #{item.jwh,jdbcType=CHAR})
+    </foreach>
+  </insert>
+</mapper>

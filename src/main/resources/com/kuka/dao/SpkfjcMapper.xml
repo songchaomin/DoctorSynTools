@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.SpkfjcMapper">
+  <resultMap id="BaseResultMap" type="com.kuka.domain.Spkfjc">
+    <!--@mbg.generated-->
+    <!--@Table spkfjc-->
+    <id column="spid" jdbcType="CHAR" property="spid" />
+    <result column="kcshl" jdbcType="DECIMAL" property="kcshl" />
+    <result column="kcje" jdbcType="DECIMAL" property="kcje" />
+    <result column="chbdj" jdbcType="DECIMAL" property="chbdj" />
+    <result column="zgjj" jdbcType="DECIMAL" property="zgjj" />
+    <result column="zdjj" jdbcType="DECIMAL" property="zdjj" />
+    <result column="zhjj" jdbcType="DECIMAL" property="zhjj" />
+    <result column="hescbj" jdbcType="DECIMAL" property="hescbj" />
+    <result column="gudchb" jdbcType="DECIMAL" property="gudchb" />
+    <result column="maolv" jdbcType="DECIMAL" property="maolv" />
+    <result column="shqjzhdj" jdbcType="DECIMAL" property="shqjzhdj" />
+    <result column="shqjzhshl" jdbcType="DECIMAL" property="shqjzhshl" />
+    <result column="shqjzhje" jdbcType="DECIMAL" property="shqjzhje" />
+    <result column="lingsjzje" jdbcType="DECIMAL" property="lingsjzje" />
+    <result column="zancsl" jdbcType="DECIMAL" property="zancsl" />
+    <result column="oldshl" jdbcType="DECIMAL" property="oldshl" />
+    <result column="oldje" jdbcType="DECIMAL" property="oldje" />
+    <result column="lastmodifytime" jdbcType="VARCHAR" property="lastmodifytime" />
+    <result column="cwsqjzsl" jdbcType="DECIMAL" property="cwsqjzsl" />
+    <result column="cwsqjzje" jdbcType="DECIMAL" property="cwsqjzje" />
+    <result column="chbjsid" jdbcType="CHAR" property="chbjsid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    spid, kcshl, kcje, chbdj, zgjj, zdjj, zhjj, hescbj, gudchb, maolv, shqjzhdj, shqjzhshl, 
+    shqjzhje, lingsjzje, zancsl, oldshl, oldje, lastmodifytime, cwsqjzsl, cwsqjzje, chbjsid
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from spkfjc
+    where spid = #{spid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from spkfjc
+    where spid = #{spid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.kuka.domain.Spkfjc">
+    <!--@mbg.generated-->
+    insert into spkfjc (spid, kcshl, kcje, 
+      chbdj, zgjj, zdjj, 
+      zhjj, hescbj, gudchb, 
+      maolv, shqjzhdj, shqjzhshl, 
+      shqjzhje, lingsjzje, zancsl, 
+      oldshl, oldje, lastmodifytime, 
+      cwsqjzsl, cwsqjzje, chbjsid
+      )
+    values (#{spid,jdbcType=CHAR}, #{kcshl,jdbcType=DECIMAL}, #{kcje,jdbcType=DECIMAL}, 
+      #{chbdj,jdbcType=DECIMAL}, #{zgjj,jdbcType=DECIMAL}, #{zdjj,jdbcType=DECIMAL}, 
+      #{zhjj,jdbcType=DECIMAL}, #{hescbj,jdbcType=DECIMAL}, #{gudchb,jdbcType=DECIMAL}, 
+      #{maolv,jdbcType=DECIMAL}, #{shqjzhdj,jdbcType=DECIMAL}, #{shqjzhshl,jdbcType=DECIMAL}, 
+      #{shqjzhje,jdbcType=DECIMAL}, #{lingsjzje,jdbcType=DECIMAL}, #{zancsl,jdbcType=DECIMAL}, 
+      #{oldshl,jdbcType=DECIMAL}, #{oldje,jdbcType=DECIMAL}, #{lastmodifytime,jdbcType=VARCHAR}, 
+      #{cwsqjzsl,jdbcType=DECIMAL}, #{cwsqjzje,jdbcType=DECIMAL}, #{chbjsid,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.kuka.domain.Spkfjc">
+    <!--@mbg.generated-->
+    insert into spkfjc
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        spid,
+      </if>
+      <if test="kcshl != null">
+        kcshl,
+      </if>
+      <if test="kcje != null">
+        kcje,
+      </if>
+      <if test="chbdj != null">
+        chbdj,
+      </if>
+      <if test="zgjj != null">
+        zgjj,
+      </if>
+      <if test="zdjj != null">
+        zdjj,
+      </if>
+      <if test="zhjj != null">
+        zhjj,
+      </if>
+      <if test="hescbj != null">
+        hescbj,
+      </if>
+      <if test="gudchb != null">
+        gudchb,
+      </if>
+      <if test="maolv != null">
+        maolv,
+      </if>
+      <if test="shqjzhdj != null">
+        shqjzhdj,
+      </if>
+      <if test="shqjzhshl != null">
+        shqjzhshl,
+      </if>
+      <if test="shqjzhje != null">
+        shqjzhje,
+      </if>
+      <if test="lingsjzje != null">
+        lingsjzje,
+      </if>
+      <if test="zancsl != null">
+        zancsl,
+      </if>
+      <if test="oldshl != null">
+        oldshl,
+      </if>
+      <if test="oldje != null">
+        oldje,
+      </if>
+      <if test="lastmodifytime != null">
+        lastmodifytime,
+      </if>
+      <if test="cwsqjzsl != null">
+        cwsqjzsl,
+      </if>
+      <if test="cwsqjzje != null">
+        cwsqjzje,
+      </if>
+      <if test="chbjsid != null">
+        chbjsid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        #{spid,jdbcType=CHAR},
+      </if>
+      <if test="kcshl != null">
+        #{kcshl,jdbcType=DECIMAL},
+      </if>
+      <if test="kcje != null">
+        #{kcje,jdbcType=DECIMAL},
+      </if>
+      <if test="chbdj != null">
+        #{chbdj,jdbcType=DECIMAL},
+      </if>
+      <if test="zgjj != null">
+        #{zgjj,jdbcType=DECIMAL},
+      </if>
+      <if test="zdjj != null">
+        #{zdjj,jdbcType=DECIMAL},
+      </if>
+      <if test="zhjj != null">
+        #{zhjj,jdbcType=DECIMAL},
+      </if>
+      <if test="hescbj != null">
+        #{hescbj,jdbcType=DECIMAL},
+      </if>
+      <if test="gudchb != null">
+        #{gudchb,jdbcType=DECIMAL},
+      </if>
+      <if test="maolv != null">
+        #{maolv,jdbcType=DECIMAL},
+      </if>
+      <if test="shqjzhdj != null">
+        #{shqjzhdj,jdbcType=DECIMAL},
+      </if>
+      <if test="shqjzhshl != null">
+        #{shqjzhshl,jdbcType=DECIMAL},
+      </if>
+      <if test="shqjzhje != null">
+        #{shqjzhje,jdbcType=DECIMAL},
+      </if>
+      <if test="lingsjzje != null">
+        #{lingsjzje,jdbcType=DECIMAL},
+      </if>
+      <if test="zancsl != null">
+        #{zancsl,jdbcType=DECIMAL},
+      </if>
+      <if test="oldshl != null">
+        #{oldshl,jdbcType=DECIMAL},
+      </if>
+      <if test="oldje != null">
+        #{oldje,jdbcType=DECIMAL},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=VARCHAR},
+      </if>
+      <if test="cwsqjzsl != null">
+        #{cwsqjzsl,jdbcType=DECIMAL},
+      </if>
+      <if test="cwsqjzje != null">
+        #{cwsqjzje,jdbcType=DECIMAL},
+      </if>
+      <if test="chbjsid != null">
+        #{chbjsid,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kuka.domain.Spkfjc">
+    <!--@mbg.generated-->
+    update spkfjc
+    <set>
+      <if test="kcshl != null">
+        kcshl = #{kcshl,jdbcType=DECIMAL},
+      </if>
+      <if test="kcje != null">
+        kcje = #{kcje,jdbcType=DECIMAL},
+      </if>
+      <if test="chbdj != null">
+        chbdj = #{chbdj,jdbcType=DECIMAL},
+      </if>
+      <if test="zgjj != null">
+        zgjj = #{zgjj,jdbcType=DECIMAL},
+      </if>
+      <if test="zdjj != null">
+        zdjj = #{zdjj,jdbcType=DECIMAL},
+      </if>
+      <if test="zhjj != null">
+        zhjj = #{zhjj,jdbcType=DECIMAL},
+      </if>
+      <if test="hescbj != null">
+        hescbj = #{hescbj,jdbcType=DECIMAL},
+      </if>
+      <if test="gudchb != null">
+        gudchb = #{gudchb,jdbcType=DECIMAL},
+      </if>
+      <if test="maolv != null">
+        maolv = #{maolv,jdbcType=DECIMAL},
+      </if>
+      <if test="shqjzhdj != null">
+        shqjzhdj = #{shqjzhdj,jdbcType=DECIMAL},
+      </if>
+      <if test="shqjzhshl != null">
+        shqjzhshl = #{shqjzhshl,jdbcType=DECIMAL},
+      </if>
+      <if test="shqjzhje != null">
+        shqjzhje = #{shqjzhje,jdbcType=DECIMAL},
+      </if>
+      <if test="lingsjzje != null">
+        lingsjzje = #{lingsjzje,jdbcType=DECIMAL},
+      </if>
+      <if test="zancsl != null">
+        zancsl = #{zancsl,jdbcType=DECIMAL},
+      </if>
+      <if test="oldshl != null">
+        oldshl = #{oldshl,jdbcType=DECIMAL},
+      </if>
+      <if test="oldje != null">
+        oldje = #{oldje,jdbcType=DECIMAL},
+      </if>
+      <if test="lastmodifytime != null">
+        lastmodifytime = #{lastmodifytime,jdbcType=VARCHAR},
+      </if>
+      <if test="cwsqjzsl != null">
+        cwsqjzsl = #{cwsqjzsl,jdbcType=DECIMAL},
+      </if>
+      <if test="cwsqjzje != null">
+        cwsqjzje = #{cwsqjzje,jdbcType=DECIMAL},
+      </if>
+      <if test="chbjsid != null">
+        chbjsid = #{chbjsid,jdbcType=CHAR},
+      </if>
+    </set>
+    where spid = #{spid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kuka.domain.Spkfjc">
+    <!--@mbg.generated-->
+    update spkfjc
+    set kcshl = #{kcshl,jdbcType=DECIMAL},
+      kcje = #{kcje,jdbcType=DECIMAL},
+      chbdj = #{chbdj,jdbcType=DECIMAL},
+      zgjj = #{zgjj,jdbcType=DECIMAL},
+      zdjj = #{zdjj,jdbcType=DECIMAL},
+      zhjj = #{zhjj,jdbcType=DECIMAL},
+      hescbj = #{hescbj,jdbcType=DECIMAL},
+      gudchb = #{gudchb,jdbcType=DECIMAL},
+      maolv = #{maolv,jdbcType=DECIMAL},
+      shqjzhdj = #{shqjzhdj,jdbcType=DECIMAL},
+      shqjzhshl = #{shqjzhshl,jdbcType=DECIMAL},
+      shqjzhje = #{shqjzhje,jdbcType=DECIMAL},
+      lingsjzje = #{lingsjzje,jdbcType=DECIMAL},
+      zancsl = #{zancsl,jdbcType=DECIMAL},
+      oldshl = #{oldshl,jdbcType=DECIMAL},
+      oldje = #{oldje,jdbcType=DECIMAL},
+      lastmodifytime = #{lastmodifytime,jdbcType=VARCHAR},
+      cwsqjzsl = #{cwsqjzsl,jdbcType=DECIMAL},
+      cwsqjzje = #{cwsqjzje,jdbcType=DECIMAL},
+      chbjsid = #{chbjsid,jdbcType=CHAR}
+    where spid = #{spid,jdbcType=CHAR}
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into spkfjc
+    (spid, kcshl, kcje, chbdj, zgjj, zdjj, zhjj, hescbj, gudchb, maolv, shqjzhdj, shqjzhshl, 
+      shqjzhje, lingsjzje, zancsl, oldshl, oldje, lastmodifytime, cwsqjzsl, cwsqjzje, 
+      chbjsid)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.spid,jdbcType=CHAR}, #{item.kcshl,jdbcType=DECIMAL}, #{item.kcje,jdbcType=DECIMAL}, 
+        #{item.chbdj,jdbcType=DECIMAL}, #{item.zgjj,jdbcType=DECIMAL}, #{item.zdjj,jdbcType=DECIMAL}, 
+        #{item.zhjj,jdbcType=DECIMAL}, #{item.hescbj,jdbcType=DECIMAL}, #{item.gudchb,jdbcType=DECIMAL}, 
+        #{item.maolv,jdbcType=DECIMAL}, #{item.shqjzhdj,jdbcType=DECIMAL}, #{item.shqjzhshl,jdbcType=DECIMAL}, 
+        #{item.shqjzhje,jdbcType=DECIMAL}, #{item.lingsjzje,jdbcType=DECIMAL}, #{item.zancsl,jdbcType=DECIMAL}, 
+        #{item.oldshl,jdbcType=DECIMAL}, #{item.oldje,jdbcType=DECIMAL}, #{item.lastmodifytime,jdbcType=VARCHAR}, 
+        #{item.cwsqjzsl,jdbcType=DECIMAL}, #{item.cwsqjzje,jdbcType=DECIMAL}, #{item.chbjsid,jdbcType=CHAR}
+        )
+    </foreach>
+  </insert>
+</mapper>

@@ -1,0 +1,9 @@
+#测试数据库配置信息
+jdbc:
+  driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  url: jdbc:sqlserver://192.168.251.90:1433;DatabaseName=KuKaSaleTar
+  username: bh
+  password: aaaaaa
+
+tmallOrder:
+  count:100

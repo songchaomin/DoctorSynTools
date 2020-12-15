@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.SupplierStockExtMapper">
+  <resultMap id="BaseResultExtMap" type="com.kuka.domain.SupplierStock">
+    <!--@mbg.generated-->
+    <!--@Table supplier_stock-->
+    <id column="store_id" jdbcType="VARCHAR" property="storeId" />
+    <result column="is_retail" jdbcType="INTEGER" property="isRetail" />
+    <result column="drug_num" jdbcType="VARCHAR" property="drugNum" />
+    <result column="clerk_num" jdbcType="VARCHAR" property="clerkNum" />
+    <result column="drug_name" jdbcType="VARCHAR" property="drugName" />
+    <result column="product_factory" jdbcType="VARCHAR" property="productFactory" />
+    <result column="drug_owner" jdbcType="VARCHAR" property="drugOwner" />
+    <result column="spec" jdbcType="VARCHAR" property="spec" />
+    <result column="pack" jdbcType="VARCHAR" property="pack" />
+    <result column="middle_package" jdbcType="VARCHAR" property="middlePackage" />
+    <result column="batch_num" jdbcType="VARCHAR" property="batchNum" />
+    <result column="batch_group" jdbcType="VARCHAR" property="batchGroup" />
+    <result column="due_date" jdbcType="VARCHAR" property="dueDate" />
+    <result column="due_date2" jdbcType="VARCHAR" property="dueDate2" />
+    <result column="store_num" jdbcType="DECIMAL" property="storeNum" />
+    <result column="hightest_price" jdbcType="DECIMAL" property="hightestPrice" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="drug_type" jdbcType="VARCHAR" property="drugType" />
+    <result column="tax_rate" jdbcType="INTEGER" property="taxRate" />
+    <result column="approve_no" jdbcType="VARCHAR" property="approveNo" />
+    <result column="store_no" jdbcType="VARCHAR" property="storeNo" />
+    <result column="special_drug" jdbcType="INTEGER" property="specialDrug" />
+    <result column="supplier_category" jdbcType="VARCHAR" property="supplierCategory" />
+    <result column="main_url" jdbcType="VARCHAR" property="mainUrl" />
+    <result column="update_date" jdbcType="VARCHAR" property="updateDate" />
+    <result column="drug_bar_code" jdbcType="VARCHAR" property="drugBarCode" />
+    <result column="drug_code" jdbcType="VARCHAR" property="drugCode" />
+    <result column="factory_code" jdbcType="VARCHAR" property="factoryCode" />
+    <result column="drug_owner_code" jdbcType="VARCHAR" property="drugOwnerCode" />
+    <result column="prod_date" jdbcType="VARCHAR" property="prodDate" />
+    <result column="prod_date2" jdbcType="VARCHAR" property="prodDate2" />
+  </resultMap>
+  <sql id="Base_Column_Ext_List">
+    <!--@mbg.generated-->
+    store_id, is_retail, drug_num, clerk_num, drug_name, product_factory, drug_owner, 
+    spec, pack, middle_package, batch_num, batch_group, due_date, due_date2, store_num, 
+    hightest_price, price, unit, drug_type, tax_rate, approve_no, store_no, special_drug, 
+    supplier_category, main_url, update_date, drug_bar_code, drug_code, factory_code, 
+    drug_owner_code, prod_date, prod_date2
+  </sql>
+
+    <select id="querySupplierStockItem" resultType="com.kuka.domain.SupplierStock">
+      SELECT * FROM
+(
+    SELECT ROW_NUMBER() OVER (ORDER BY drug_num) AS RowNum, *
+	 FROM (
+	 select drug_num,drug_name,product_factory,spec,pack,unit,drug_type,approve_no,supplier_category,drug_code,factory_code
+	from supplier_stock group by drug_num,drug_name,product_factory,spec,pack,unit,drug_type,approve_no,supplier_category,drug_code,factory_code
+	) a
+)b
+
+WHERE RowNum BETWEEN (#{page}-1)*#{pageSize}+1 AND #{page}*#{pageSize}
+
+
+    </select>
+
+    <select id="querySupplierStockItemCount" resultType="int">
+        select count(1) from
+       ( select drug_num
+        from supplier_stock
+        group by drug_num) a
+    </select>
+
+    <update id="truncateSupplierStock">
+        truncate table supplier_stock
+    </update>
+
+    <select id="queryMergeSupplierStockItemCount" resultType="int">
+        select count(1) from
+            (
+            select spid store_id,drug_num,sum(store_num) store_num ,min(price) price ,sum(store_num)*min(price) totalprice from supplier_stock a inner join supplier_stock_item b on a.drug_num=b.spbh where a.store_num>=100  group by spid,drug_num
+            )a
+    </select>
+
+    <select id="queryMergeSupplierStockItem" resultType="com.kuka.domain.SupplierStock">
+        SELECT * FROM
+(
+    SELECT ROW_NUMBER() OVER (ORDER BY drug_num) AS RowNum, *
+	 FROM (
+	 select spid store_id,drug_num,sum(store_num) store_num ,min(price) price ,sum(store_num)*min(price) totalprice from supplier_stock a inner join supplier_stock_item b on a.drug_num=b.spbh where a.store_num>=100  group by spid,drug_num
+	) a
+)b
+        WHERE RowNum BETWEEN (#{page}-1)*#{pageSize}+1 AND #{page}*#{pageSize}
+    </select>
+
+<select id="queryBatchSupplierStockItemCount" resultType="java.lang.Integer">
+select count(1) from
+(
+select b.spid store_id,drug_num,sum(a.store_num) store_num,min(a.price)price ,a.batch_num,max(convert(date,substring(a.due_date2,1,10)))  due_date2
+from supplier_stock a inner join supplier_stock_item b on a.drug_num=b.spbh
+where a.store_num>=100
+group by b.spid,drug_num,a.batch_num
+)a
+</select>
+
+    <select id="queryBathSupplierStockItemByPage" resultType="com.kuka.domain.SupplierStock">
+        SELECT * FROM
+        (
+        SELECT ROW_NUMBER() OVER (ORDER BY drug_num) AS RowNum, *
+        FROM (
+            select b.spid store_id,drug_num,sum(a.store_num) store_num,min(a.price)price ,a.batch_num,max(convert(date,substring(a.due_date2,1,10))) due_date2
+            from supplier_stock a inner join supplier_stock_item b on a.drug_num=b.spbh
+            where a.store_num>=100
+            group by b.spid,drug_num,a.batch_num
+        ) a
+        )b
+        WHERE RowNum BETWEEN (#{page}-1)*#{pageSize}+1 AND #{page}*#{pageSize}
+    </select>
+</mapper>

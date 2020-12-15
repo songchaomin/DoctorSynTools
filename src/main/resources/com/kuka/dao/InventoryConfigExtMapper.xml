@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.InventoryConfigExtMapper">
+  <resultMap id="BaseExtResultMap" type="com.kuka.domain.InventoryConfig">
+    <!--@mbg.generated-->
+    <!--@Table inventory_config-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="notes" jdbcType="VARCHAR" property="notes" />
+  </resultMap>
+  <sql id="Base_Column_ext_List">
+    <!--@mbg.generated-->
+    id, [type], content, notes
+  </sql>
+
+    <select id="queryInventoryConfig" resultType="com.kuka.domain.InventoryConfig">
+        select type,content from inventory_config
+    </select>
+    <update id="updateInventoryConfigByType">
+        update inventory_config set content=#{cotent} where type=#{type}
+    </update>
+</mapper>

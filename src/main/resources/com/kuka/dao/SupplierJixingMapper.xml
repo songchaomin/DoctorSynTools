@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.SupplierJixingMapper">
+  <resultMap id="BaseResultMap" type="com.kuka.domain.SupplierJixing">
+    <!--@mbg.generated-->
+    <!--@Table supplier_jixing-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="yyjx" jdbcType="VARCHAR" property="yyjx" />
+    <result column="ahhyjx" jdbcType="VARCHAR" property="ahhyjx" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, yyjx, ahhyjx
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from supplier_jixing
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from supplier_jixing
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.kuka.domain.SupplierJixing" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into supplier_jixing (yyjx, ahhyjx)
+    values (#{yyjx,jdbcType=VARCHAR}, #{ahhyjx,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.kuka.domain.SupplierJixing" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into supplier_jixing
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="yyjx != null">
+        yyjx,
+      </if>
+      <if test="ahhyjx != null">
+        ahhyjx,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="yyjx != null">
+        #{yyjx,jdbcType=VARCHAR},
+      </if>
+      <if test="ahhyjx != null">
+        #{ahhyjx,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kuka.domain.SupplierJixing">
+    <!--@mbg.generated-->
+    update supplier_jixing
+    <set>
+      <if test="yyjx != null">
+        yyjx = #{yyjx,jdbcType=VARCHAR},
+      </if>
+      <if test="ahhyjx != null">
+        ahhyjx = #{ahhyjx,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kuka.domain.SupplierJixing">
+    <!--@mbg.generated-->
+    update supplier_jixing
+    set yyjx = #{yyjx,jdbcType=VARCHAR},
+      ahhyjx = #{ahhyjx,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <insert id="batchInsert" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into supplier_jixing
+    (yyjx, ahhyjx)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.yyjx,jdbcType=VARCHAR}, #{item.ahhyjx,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+    <select id="queryAll" resultType="com.kuka.domain.SupplierJixing">
+        select <include refid="Base_Column_List"></include> from supplier_jixing
+    </select>
+
+</mapper>

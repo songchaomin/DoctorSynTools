@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.SupplierStockItemExtMapper">
+  <resultMap id="BaseResultExtMap" type="com.kuka.domain.SupplierStockItem">
+    <!--@mbg.generated-->
+    <!--@Table supplier_stock_item-->
+    <id column="spid" jdbcType="VARCHAR" property="spid" />
+    <result column="spbh" jdbcType="VARCHAR" property="spbh" />
+  </resultMap>
+  <sql id="Base_Column_Ext_List">
+    <!--@mbg.generated-->
+    spid, spbh
+  </sql>
+    <select id="queryItemByDrugNum" resultType="com.kuka.domain.SupplierStockItem">
+        select <include refid="Base_Column_Ext_List"></include> from
+        supplier_stock_item
+        where 1=1 and
+        spbh in
+        <foreach collection="list" index="item" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
+</mapper>

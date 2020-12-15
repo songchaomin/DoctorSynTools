@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: OaSysTools
+  http:
+    encoding:
+      charset: utf-16
+      force: true
+#设置服务端口
+server:
+  port: 8787
+
+logging:
+  config: classpath:logback-spring.xml
+  path: d:/logs

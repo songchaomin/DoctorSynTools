@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!-- 打印查询语句 如果将它注释，你的sql就可以打印进日志 -->
+       <!-- <setting name="logImpl" value="STDOUT_LOGGING" />-->
+        <setting name="logPrefix" value="dao."/>
+        <!--自动驼峰命名映射字段名-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+</configuration>

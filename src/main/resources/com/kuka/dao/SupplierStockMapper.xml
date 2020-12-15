@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.SupplierStockMapper">
+  <resultMap id="BaseResultMap" type="com.kuka.domain.SupplierStock">
+    <!--@mbg.generated-->
+    <!--@Table supplier_stock-->
+    <id column="store_id" jdbcType="VARCHAR" property="storeId" />
+    <result column="is_retail" jdbcType="INTEGER" property="isRetail" />
+    <result column="drug_num" jdbcType="VARCHAR" property="drugNum" />
+    <result column="clerk_num" jdbcType="VARCHAR" property="clerkNum" />
+    <result column="drug_name" jdbcType="VARCHAR" property="drugName" />
+    <result column="product_factory" jdbcType="VARCHAR" property="productFactory" />
+    <result column="drug_owner" jdbcType="VARCHAR" property="drugOwner" />
+    <result column="spec" jdbcType="VARCHAR" property="spec" />
+    <result column="pack" jdbcType="VARCHAR" property="pack" />
+    <result column="middle_package" jdbcType="VARCHAR" property="middlePackage" />
+    <result column="batch_num" jdbcType="VARCHAR" property="batchNum" />
+    <result column="batch_group" jdbcType="VARCHAR" property="batchGroup" />
+    <result column="due_date" jdbcType="VARCHAR" property="dueDate" />
+    <result column="due_date2" jdbcType="VARCHAR" property="dueDate2" />
+    <result column="store_num" jdbcType="DECIMAL" property="storeNum" />
+    <result column="hightest_price" jdbcType="DECIMAL" property="hightestPrice" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="drug_type" jdbcType="VARCHAR" property="drugType" />
+    <result column="tax_rate" jdbcType="INTEGER" property="taxRate" />
+    <result column="approve_no" jdbcType="VARCHAR" property="approveNo" />
+    <result column="store_no" jdbcType="VARCHAR" property="storeNo" />
+    <result column="special_drug" jdbcType="INTEGER" property="specialDrug" />
+    <result column="supplier_category" jdbcType="VARCHAR" property="supplierCategory" />
+    <result column="main_url" jdbcType="VARCHAR" property="mainUrl" />
+    <result column="update_date" jdbcType="VARCHAR" property="updateDate" />
+    <result column="drug_bar_code" jdbcType="VARCHAR" property="drugBarCode" />
+    <result column="drug_code" jdbcType="VARCHAR" property="drugCode" />
+    <result column="factory_code" jdbcType="VARCHAR" property="factoryCode" />
+    <result column="drug_owner_code" jdbcType="VARCHAR" property="drugOwnerCode" />
+    <result column="prod_date" jdbcType="VARCHAR" property="prodDate" />
+    <result column="prod_date2" jdbcType="VARCHAR" property="prodDate2" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    store_id, is_retail, drug_num, clerk_num, drug_name, product_factory, drug_owner, 
+    spec, pack, middle_package, batch_num, batch_group, due_date, due_date2, store_num, 
+    hightest_price, price, unit, drug_type, tax_rate, approve_no, store_no, special_drug, 
+    supplier_category, main_url, update_date, drug_bar_code, drug_code, factory_code, 
+    drug_owner_code, prod_date, prod_date2
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from supplier_stock
+    where store_id = #{storeId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from supplier_stock
+    where store_id = #{storeId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.kuka.domain.SupplierStock">
+    <!--@mbg.generated-->
+    insert into supplier_stock (store_id, is_retail, drug_num, 
+      clerk_num, drug_name, product_factory, 
+      drug_owner, spec, pack, 
+      middle_package, batch_num, batch_group, 
+      due_date, due_date2, store_num, 
+      hightest_price, price, unit, 
+      drug_type, tax_rate, approve_no, 
+      store_no, special_drug, supplier_category, 
+      main_url, update_date, drug_bar_code, 
+      drug_code, factory_code, drug_owner_code, 
+      prod_date, prod_date2)
+    values (#{storeId,jdbcType=VARCHAR}, #{isRetail,jdbcType=INTEGER}, #{drugNum,jdbcType=VARCHAR}, 
+      #{clerkNum,jdbcType=VARCHAR}, #{drugName,jdbcType=VARCHAR}, #{productFactory,jdbcType=VARCHAR}, 
+      #{drugOwner,jdbcType=VARCHAR}, #{spec,jdbcType=VARCHAR}, #{pack,jdbcType=VARCHAR}, 
+      #{middlePackage,jdbcType=VARCHAR}, #{batchNum,jdbcType=VARCHAR}, #{batchGroup,jdbcType=VARCHAR}, 
+      #{dueDate,jdbcType=VARCHAR}, #{dueDate2,jdbcType=VARCHAR}, #{storeNum,jdbcType=DECIMAL}, 
+      #{hightestPrice,jdbcType=DECIMAL}, #{price,jdbcType=DECIMAL}, #{unit,jdbcType=VARCHAR}, 
+      #{drugType,jdbcType=VARCHAR}, #{taxRate,jdbcType=INTEGER}, #{approveNo,jdbcType=VARCHAR}, 
+      #{storeNo,jdbcType=VARCHAR}, #{specialDrug,jdbcType=INTEGER}, #{supplierCategory,jdbcType=VARCHAR}, 
+      #{mainUrl,jdbcType=VARCHAR}, #{updateDate,jdbcType=VARCHAR}, #{drugBarCode,jdbcType=VARCHAR}, 
+      #{drugCode,jdbcType=VARCHAR}, #{factoryCode,jdbcType=VARCHAR}, #{drugOwnerCode,jdbcType=VARCHAR}, 
+      #{prodDate,jdbcType=VARCHAR}, #{prodDate2,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kuka.domain.SupplierStock">
+    <!--@mbg.generated-->
+    insert into supplier_stock
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="storeId != null">
+        store_id,
+      </if>
+      <if test="isRetail != null">
+        is_retail,
+      </if>
+      <if test="drugNum != null">
+        drug_num,
+      </if>
+      <if test="clerkNum != null">
+        clerk_num,
+      </if>
+      <if test="drugName != null">
+        drug_name,
+      </if>
+      <if test="productFactory != null">
+        product_factory,
+      </if>
+      <if test="drugOwner != null">
+        drug_owner,
+      </if>
+      <if test="spec != null">
+        spec,
+      </if>
+      <if test="pack != null">
+        pack,
+      </if>
+      <if test="middlePackage != null">
+        middle_package,
+      </if>
+      <if test="batchNum != null">
+        batch_num,
+      </if>
+      <if test="batchGroup != null">
+        batch_group,
+      </if>
+      <if test="dueDate != null">
+        due_date,
+      </if>
+      <if test="dueDate2 != null">
+        due_date2,
+      </if>
+      <if test="storeNum != null">
+        store_num,
+      </if>
+      <if test="hightestPrice != null">
+        hightest_price,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="unit != null">
+        unit,
+      </if>
+      <if test="drugType != null">
+        drug_type,
+      </if>
+      <if test="taxRate != null">
+        tax_rate,
+      </if>
+      <if test="approveNo != null">
+        approve_no,
+      </if>
+      <if test="storeNo != null">
+        store_no,
+      </if>
+      <if test="specialDrug != null">
+        special_drug,
+      </if>
+      <if test="supplierCategory != null">
+        supplier_category,
+      </if>
+      <if test="mainUrl != null">
+        main_url,
+      </if>
+      <if test="updateDate != null">
+        update_date,
+      </if>
+      <if test="drugBarCode != null">
+        drug_bar_code,
+      </if>
+      <if test="drugCode != null">
+        drug_code,
+      </if>
+      <if test="factoryCode != null">
+        factory_code,
+      </if>
+      <if test="drugOwnerCode != null">
+        drug_owner_code,
+      </if>
+      <if test="prodDate != null">
+        prod_date,
+      </if>
+      <if test="prodDate2 != null">
+        prod_date2,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="storeId != null">
+        #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="isRetail != null">
+        #{isRetail,jdbcType=INTEGER},
+      </if>
+      <if test="drugNum != null">
+        #{drugNum,jdbcType=VARCHAR},
+      </if>
+      <if test="clerkNum != null">
+        #{clerkNum,jdbcType=VARCHAR},
+      </if>
+      <if test="drugName != null">
+        #{drugName,jdbcType=VARCHAR},
+      </if>
+      <if test="productFactory != null">
+        #{productFactory,jdbcType=VARCHAR},
+      </if>
+      <if test="drugOwner != null">
+        #{drugOwner,jdbcType=VARCHAR},
+      </if>
+      <if test="spec != null">
+        #{spec,jdbcType=VARCHAR},
+      </if>
+      <if test="pack != null">
+        #{pack,jdbcType=VARCHAR},
+      </if>
+      <if test="middlePackage != null">
+        #{middlePackage,jdbcType=VARCHAR},
+      </if>
+      <if test="batchNum != null">
+        #{batchNum,jdbcType=VARCHAR},
+      </if>
+      <if test="batchGroup != null">
+        #{batchGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="dueDate != null">
+        #{dueDate,jdbcType=VARCHAR},
+      </if>
+      <if test="dueDate2 != null">
+        #{dueDate2,jdbcType=VARCHAR},
+      </if>
+      <if test="storeNum != null">
+        #{storeNum,jdbcType=DECIMAL},
+      </if>
+      <if test="hightestPrice != null">
+        #{hightestPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="unit != null">
+        #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="drugType != null">
+        #{drugType,jdbcType=VARCHAR},
+      </if>
+      <if test="taxRate != null">
+        #{taxRate,jdbcType=INTEGER},
+      </if>
+      <if test="approveNo != null">
+        #{approveNo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeNo != null">
+        #{storeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="specialDrug != null">
+        #{specialDrug,jdbcType=INTEGER},
+      </if>
+      <if test="supplierCategory != null">
+        #{supplierCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="mainUrl != null">
+        #{mainUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null">
+        #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="drugBarCode != null">
+        #{drugBarCode,jdbcType=VARCHAR},
+      </if>
+      <if test="drugCode != null">
+        #{drugCode,jdbcType=VARCHAR},
+      </if>
+      <if test="factoryCode != null">
+        #{factoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="drugOwnerCode != null">
+        #{drugOwnerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="prodDate != null">
+        #{prodDate,jdbcType=VARCHAR},
+      </if>
+      <if test="prodDate2 != null">
+        #{prodDate2,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kuka.domain.SupplierStock">
+    <!--@mbg.generated-->
+    update supplier_stock
+    <set>
+      <if test="isRetail != null">
+        is_retail = #{isRetail,jdbcType=INTEGER},
+      </if>
+      <if test="drugNum != null">
+        drug_num = #{drugNum,jdbcType=VARCHAR},
+      </if>
+      <if test="clerkNum != null">
+        clerk_num = #{clerkNum,jdbcType=VARCHAR},
+      </if>
+      <if test="drugName != null">
+        drug_name = #{drugName,jdbcType=VARCHAR},
+      </if>
+      <if test="productFactory != null">
+        product_factory = #{productFactory,jdbcType=VARCHAR},
+      </if>
+      <if test="drugOwner != null">
+        drug_owner = #{drugOwner,jdbcType=VARCHAR},
+      </if>
+      <if test="spec != null">
+        spec = #{spec,jdbcType=VARCHAR},
+      </if>
+      <if test="pack != null">
+        pack = #{pack,jdbcType=VARCHAR},
+      </if>
+      <if test="middlePackage != null">
+        middle_package = #{middlePackage,jdbcType=VARCHAR},
+      </if>
+      <if test="batchNum != null">
+        batch_num = #{batchNum,jdbcType=VARCHAR},
+      </if>
+      <if test="batchGroup != null">
+        batch_group = #{batchGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="dueDate != null">
+        due_date = #{dueDate,jdbcType=VARCHAR},
+      </if>
+      <if test="dueDate2 != null">
+        due_date2 = #{dueDate2,jdbcType=VARCHAR},
+      </if>
+      <if test="storeNum != null">
+        store_num = #{storeNum,jdbcType=DECIMAL},
+      </if>
+      <if test="hightestPrice != null">
+        hightest_price = #{hightestPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="unit != null">
+        unit = #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="drugType != null">
+        drug_type = #{drugType,jdbcType=VARCHAR},
+      </if>
+      <if test="taxRate != null">
+        tax_rate = #{taxRate,jdbcType=INTEGER},
+      </if>
+      <if test="approveNo != null">
+        approve_no = #{approveNo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeNo != null">
+        store_no = #{storeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="specialDrug != null">
+        special_drug = #{specialDrug,jdbcType=INTEGER},
+      </if>
+      <if test="supplierCategory != null">
+        supplier_category = #{supplierCategory,jdbcType=VARCHAR},
+      </if>
+      <if test="mainUrl != null">
+        main_url = #{mainUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null">
+        update_date = #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="drugBarCode != null">
+        drug_bar_code = #{drugBarCode,jdbcType=VARCHAR},
+      </if>
+      <if test="drugCode != null">
+        drug_code = #{drugCode,jdbcType=VARCHAR},
+      </if>
+      <if test="factoryCode != null">
+        factory_code = #{factoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="drugOwnerCode != null">
+        drug_owner_code = #{drugOwnerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="prodDate != null">
+        prod_date = #{prodDate,jdbcType=VARCHAR},
+      </if>
+      <if test="prodDate2 != null">
+        prod_date2 = #{prodDate2,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where store_id = #{storeId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kuka.domain.SupplierStock">
+    <!--@mbg.generated-->
+    update supplier_stock
+    set is_retail = #{isRetail,jdbcType=INTEGER},
+      drug_num = #{drugNum,jdbcType=VARCHAR},
+      clerk_num = #{clerkNum,jdbcType=VARCHAR},
+      drug_name = #{drugName,jdbcType=VARCHAR},
+      product_factory = #{productFactory,jdbcType=VARCHAR},
+      drug_owner = #{drugOwner,jdbcType=VARCHAR},
+      spec = #{spec,jdbcType=VARCHAR},
+      pack = #{pack,jdbcType=VARCHAR},
+      middle_package = #{middlePackage,jdbcType=VARCHAR},
+      batch_num = #{batchNum,jdbcType=VARCHAR},
+      batch_group = #{batchGroup,jdbcType=VARCHAR},
+      due_date = #{dueDate,jdbcType=VARCHAR},
+      due_date2 = #{dueDate2,jdbcType=VARCHAR},
+      store_num = #{storeNum,jdbcType=DECIMAL},
+      hightest_price = #{hightestPrice,jdbcType=DECIMAL},
+      price = #{price,jdbcType=DECIMAL},
+      unit = #{unit,jdbcType=VARCHAR},
+      drug_type = #{drugType,jdbcType=VARCHAR},
+      tax_rate = #{taxRate,jdbcType=INTEGER},
+      approve_no = #{approveNo,jdbcType=VARCHAR},
+      store_no = #{storeNo,jdbcType=VARCHAR},
+      special_drug = #{specialDrug,jdbcType=INTEGER},
+      supplier_category = #{supplierCategory,jdbcType=VARCHAR},
+      main_url = #{mainUrl,jdbcType=VARCHAR},
+      update_date = #{updateDate,jdbcType=VARCHAR},
+      drug_bar_code = #{drugBarCode,jdbcType=VARCHAR},
+      drug_code = #{drugCode,jdbcType=VARCHAR},
+      factory_code = #{factoryCode,jdbcType=VARCHAR},
+      drug_owner_code = #{drugOwnerCode,jdbcType=VARCHAR},
+      prod_date = #{prodDate,jdbcType=VARCHAR},
+      prod_date2 = #{prodDate2,jdbcType=VARCHAR}
+    where store_id = #{storeId,jdbcType=VARCHAR}
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into supplier_stock
+    (store_id, is_retail, drug_num, clerk_num, drug_name, product_factory, drug_owner, 
+      spec, pack, middle_package, batch_num, batch_group, due_date, due_date2, store_num, 
+      hightest_price, price, unit, drug_type, tax_rate, approve_no, store_no, special_drug, 
+      supplier_category, main_url, update_date, drug_bar_code, drug_code, factory_code, 
+      drug_owner_code, prod_date, prod_date2)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.storeId,jdbcType=VARCHAR}, #{item.isRetail,jdbcType=INTEGER}, #{item.drugNum,jdbcType=VARCHAR}, 
+        #{item.clerkNum,jdbcType=VARCHAR}, #{item.drugName,jdbcType=VARCHAR}, #{item.productFactory,jdbcType=VARCHAR}, 
+        #{item.drugOwner,jdbcType=VARCHAR}, #{item.spec,jdbcType=VARCHAR}, #{item.pack,jdbcType=VARCHAR}, 
+        #{item.middlePackage,jdbcType=VARCHAR}, #{item.batchNum,jdbcType=VARCHAR}, #{item.batchGroup,jdbcType=VARCHAR}, 
+        #{item.dueDate,jdbcType=VARCHAR}, #{item.dueDate2,jdbcType=VARCHAR}, #{item.storeNum,jdbcType=DECIMAL}, 
+        #{item.hightestPrice,jdbcType=DECIMAL}, #{item.price,jdbcType=DECIMAL}, #{item.unit,jdbcType=VARCHAR}, 
+        #{item.drugType,jdbcType=VARCHAR}, #{item.taxRate,jdbcType=INTEGER}, #{item.approveNo,jdbcType=VARCHAR}, 
+        #{item.storeNo,jdbcType=VARCHAR}, #{item.specialDrug,jdbcType=INTEGER}, #{item.supplierCategory,jdbcType=VARCHAR}, 
+        #{item.mainUrl,jdbcType=VARCHAR}, #{item.updateDate,jdbcType=VARCHAR}, #{item.drugBarCode,jdbcType=VARCHAR}, 
+        #{item.drugCode,jdbcType=VARCHAR}, #{item.factoryCode,jdbcType=VARCHAR}, #{item.drugOwnerCode,jdbcType=VARCHAR}, 
+        #{item.prodDate,jdbcType=VARCHAR}, #{item.prodDate2,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+</mapper>

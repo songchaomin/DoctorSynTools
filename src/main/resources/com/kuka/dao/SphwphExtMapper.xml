@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.SphwphExtMapper">
+  <resultMap id="BaseResultExtMap" type="com.kuka.domain.Sphwph">
+    <!--@mbg.generated-->
+    <!--@Table sphwph-->
+    <id column="spid" jdbcType="CHAR" property="spid" />
+    <id column="hw" jdbcType="CHAR" property="hw" />
+    <id column="pihao" jdbcType="VARCHAR" property="pihao" />
+    <result column="baozhiqi" jdbcType="CHAR" property="baozhiqi" />
+    <result column="dangqzht" jdbcType="CHAR" property="dangqzht" />
+    <result column="shl" jdbcType="DECIMAL" property="shl" />
+    <result column="gebjj" jdbcType="DECIMAL" property="gebjj" />
+    <result column="miejph" jdbcType="CHAR" property="miejph" />
+    <result column="sxrq" jdbcType="CHAR" property="sxrq" />
+    <result column="yanghriqi" jdbcType="CHAR" property="yanghriqi" />
+    <result column="xsshl" jdbcType="DECIMAL" property="xsshl" />
+    <result column="Bkxshl" jdbcType="DECIMAL" property="bkxshl" />
+    <result column="ykpshl" jdbcType="DECIMAL" property="ykpshl" />
+    <result column="bukxshl" jdbcType="DECIMAL" property="bukxshl" />
+    <result column="pizhwh" jdbcType="CHAR" property="pizhwh" />
+    <result column="zhuczhh" jdbcType="CHAR" property="zhuczhh" />
+    <result column="jwh" jdbcType="CHAR" property="jwh" />
+  </resultMap>
+  <sql id="Base_Column_Ext_List">
+    <!--@mbg.generated-->
+    spid, hw, pihao, baozhiqi, dangqzht, shl, gebjj, miejph, sxrq, yanghriqi, xsshl, 
+    Bkxshl, ykpshl, bukxshl, pizhwh, zhuczhh, jwh
+  </sql>
+<update id="truncateSphwph">
+    truncate table sphwph
+</update>
+</mapper>

@@ -1,0 +1,2794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.SpkfkMapper">
+  <resultMap id="BaseResultMap" type="com.kuka.domain.Spkfk">
+    <!--@mbg.generated-->
+    <!--@Table spkfk-->
+    <id column="spid" jdbcType="CHAR" property="spid" />
+    <result column="spbh" jdbcType="CHAR" property="spbh" />
+    <result column="sptm" jdbcType="VARCHAR" property="sptm" />
+    <result column="spmch" jdbcType="CHAR" property="spmch" />
+    <result column="zjm" jdbcType="CHAR" property="zjm" />
+    <result column="beactive" jdbcType="CHAR" property="beactive" />
+    <result column="yishj" jdbcType="CHAR" property="yishj" />
+    <result column="is_gdsj" jdbcType="CHAR" property="isGdsj" />
+    <result column="is_gdzk" jdbcType="CHAR" property="isGdzk" />
+    <result column="is_tjsp" jdbcType="CHAR" property="isTjsp" />
+    <result column="is_hysp" jdbcType="CHAR" property="isHysp" />
+    <result column="is_gmp" jdbcType="CHAR" property="isGmp" />
+    <result column="is_gsp" jdbcType="CHAR" property="isGsp" />
+    <result column="is_sy" jdbcType="CHAR" property="isSy" />
+    <result column="is_yp" jdbcType="CHAR" property="isYp" />
+    <result column="jingd" jdbcType="CHAR" property="jingd" />
+    <result column="denglrq" jdbcType="VARCHAR" property="denglrq" />
+    <result column="gengxshj" jdbcType="VARCHAR" property="gengxshj" />
+    <result column="delrq" jdbcType="VARCHAR" property="delrq" />
+    <result column="dw" jdbcType="VARCHAR" property="dw" />
+    <result column="shpchd" jdbcType="CHAR" property="shpchd" />
+    <result column="shpgg" jdbcType="CHAR" property="shpgg" />
+    <result column="kemuhao" jdbcType="VARCHAR" property="kemuhao" />
+    <result column="oldcode" jdbcType="VARCHAR" property="oldcode" />
+    <result column="rkhw" jdbcType="VARCHAR" property="rkhw" />
+    <result column="ckhw" jdbcType="VARCHAR" property="ckhw" />
+    <result column="bzqfs" jdbcType="VARCHAR" property="bzqfs" />
+    <result column="fenlbh" jdbcType="VARCHAR" property="fenlbh" />
+    <result column="guojbh" jdbcType="VARCHAR" property="guojbh" />
+    <result column="changjbh" jdbcType="VARCHAR" property="changjbh" />
+    <result column="huaxm" jdbcType="VARCHAR" property="huaxm" />
+    <result column="changym" jdbcType="VARCHAR" property="changym" />
+    <result column="suming" jdbcType="VARCHAR" property="suming" />
+    <result column="xiwname" jdbcType="VARCHAR" property="xiwname" />
+    <result column="tongym" jdbcType="CHAR" property="tongym" />
+    <result column="shengccj" jdbcType="CHAR" property="shengccj" />
+    <result column="pizhwh" jdbcType="CHAR" property="pizhwh" />
+    <result column="zhucsb" jdbcType="VARCHAR" property="zhucsb" />
+    <result column="jixing" jdbcType="CHAR" property="jixing" />
+    <result column="shiyzh" jdbcType="VARCHAR" property="shiyzh" />
+    <result column="bulfy" jdbcType="VARCHAR" property="bulfy" />
+    <result column="chuczysx" jdbcType="VARCHAR" property="chuczysx" />
+    <result column="chuffl" jdbcType="VARCHAR" property="chuffl" />
+    <result column="yaofpd" jdbcType="VARCHAR" property="yaofpd" />
+    <result column="yongfyyl" jdbcType="VARCHAR" property="yongfyyl" />
+    <result column="jinjzh" jdbcType="VARCHAR" property="jinjzh" />
+    <result column="zhuysx" jdbcType="VARCHAR" property="zhuysx" />
+    <result column="yaowchf" jdbcType="VARCHAR" property="yaowchf" />
+    <result column="youxq" jdbcType="CHAR" property="youxq" />
+    <result column="shangplx" jdbcType="VARCHAR" property="shangplx" />
+    <result column="guizbz" jdbcType="VARCHAR" property="guizbz" />
+    <result column="yongyfl" jdbcType="VARCHAR" property="yongyfl" />
+    <result column="leibie" jdbcType="CHAR" property="leibie" />
+    <result column="jlgg" jdbcType="INTEGER" property="jlgg" />
+    <result column="otd" jdbcType="INTEGER" property="otd" />
+    <result column="ordercycle" jdbcType="INTEGER" property="ordercycle" />
+    <result column="stkquot" jdbcType="DECIMAL" property="stkquot" />
+    <result column="shlv" jdbcType="DECIMAL" property="shlv" />
+    <result column="hshjj" jdbcType="DECIMAL" property="hshjj" />
+    <result column="jj" jdbcType="DECIMAL" property="jj" />
+    <result column="shj" jdbcType="DECIMAL" property="shj" />
+    <result column="hshsj" jdbcType="DECIMAL" property="hshsj" />
+    <result column="lshj" jdbcType="DECIMAL" property="lshj" />
+    <result column="koul" jdbcType="DECIMAL" property="koul" />
+    <result column="kcsx" jdbcType="DECIMAL" property="kcsx" />
+    <result column="kcxx" jdbcType="DECIMAL" property="kcxx" />
+    <result column="helkc" jdbcType="DECIMAL" property="helkc" />
+    <result column="bzqts" jdbcType="INTEGER" property="bzqts" />
+    <result column="yujts" jdbcType="INTEGER" property="yujts" />
+    <result column="zgshl" jdbcType="DECIMAL" property="zgshl" />
+    <result column="zhdcbj" jdbcType="DECIMAL" property="zhdcbj" />
+    <result column="zdshj" jdbcType="DECIMAL" property="zdshj" />
+    <result column="zgshj" jdbcType="DECIMAL" property="zgshj" />
+    <result column="zgjjxz" jdbcType="DECIMAL" property="zgjjxz" />
+    <result column="maolv" jdbcType="DECIMAL" property="maolv" />
+    <result column="huiytj" jdbcType="DECIMAL" property="huiytj" />
+    <result column="itemlength" jdbcType="DECIMAL" property="itemlength" />
+    <result column="itemheight" jdbcType="DECIMAL" property="itemheight" />
+    <result column="itemwidth" jdbcType="DECIMAL" property="itemwidth" />
+    <result column="weight" jdbcType="DECIMAL" property="weight" />
+    <result column="casevolume" jdbcType="DECIMAL" property="casevolume" />
+    <result column="caseweight" jdbcType="DECIMAL" property="caseweight" />
+    <result column="zuixdwtj" jdbcType="DECIMAL" property="zuixdwtj" />
+    <result column="zuixdwzl" jdbcType="DECIMAL" property="zuixdwzl" />
+    <result column="pfpj" jdbcType="DECIMAL" property="pfpj" />
+    <result column="dispcolor" jdbcType="CHAR" property="dispcolor" />
+    <result column="jx" jdbcType="VARCHAR" property="jx" />
+    <result column="bzgg" jdbcType="INTEGER" property="bzgg" />
+    <result column="lastmodifytime" jdbcType="VARCHAR" property="lastmodifytime" />
+    <result column="is_cmd" jdbcType="CHAR" property="isCmd" />
+    <result column="lsgg" jdbcType="VARCHAR" property="lsgg" />
+    <result column="is_zdyh" jdbcType="CHAR" property="isZdyh" />
+    <result column="is_jkyp" jdbcType="CHAR" property="isJkyp" />
+    <result column="minshl" jdbcType="INTEGER" property="minshl" />
+    <result column="cx_dj_kl" jdbcType="DECIMAL" property="cxDjKl" />
+    <result column="is_cx_dj" jdbcType="CHAR" property="isCxDj" />
+    <result column="zdyh" jdbcType="VARCHAR" property="zdyh" />
+    <result column="zdhyzklshj" jdbcType="DECIMAL" property="zdhyzklshj" />
+    <result column="is_cyhydz" jdbcType="CHAR" property="isCyhydz" />
+    <result column="huiyshl" jdbcType="DECIMAL" property="huiyshl" />
+    <result column="nocalcopys" jdbcType="CHAR" property="nocalcopys" />
+    <result column="fuzr" jdbcType="VARCHAR" property="fuzr" />
+    <result column="is_jsh" jdbcType="CHAR" property="isJsh" />
+    <result column="is_lc" jdbcType="CHAR" property="isLc" />
+    <result column="is_zhongyao" jdbcType="CHAR" property="isZhongyao" />
+    <result column="type_bh" jdbcType="VARCHAR" property="typeBh" />
+    <result column="zdlshj" jdbcType="DECIMAL" property="zdlshj" />
+    <result column="guanjzjh" jdbcType="VARCHAR" property="guanjzjh" />
+    <result column="shiyq" jdbcType="VARCHAR" property="shiyq" />
+    <result column="abbrImageURL" jdbcType="VARCHAR" property="abbrimageurl" />
+    <result column="cbflbh" jdbcType="VARCHAR" property="cbflbh" />
+    <result column="imageUrl" jdbcType="VARCHAR" property="imageurl" />
+    <result column="is_ybsp" jdbcType="CHAR" property="isYbsp" />
+    <result column="yb_zfbl" jdbcType="DECIMAL" property="ybZfbl" />
+    <result column="yb_spbh" jdbcType="VARCHAR" property="ybSpbh" />
+    <result column="username" jdbcType="CHAR" property="username" />
+    <result column="chuchj" jdbcType="DECIMAL" property="chuchj" />
+    <result column="pifj" jdbcType="DECIMAL" property="pifj" />
+    <result column="zhilbz" jdbcType="CHAR" property="zhilbz" />
+    <result column="chargelb" jdbcType="CHAR" property="chargelb" />
+    <result column="is_sendybzx" jdbcType="CHAR" property="isSendybzx" />
+    <result column="tj_ylshj" jdbcType="DECIMAL" property="tjYlshj" />
+    <result column="is_hj" jdbcType="CHAR" property="isHj" />
+    <result column="is_yxbz" jdbcType="CHAR" property="isYxbz" />
+    <result column="wdid" jdbcType="VARCHAR" property="wdid" />
+    <result column="chbjs" jdbcType="CHAR" property="chbjs" />
+    <result column="dwbh" jdbcType="VARCHAR" property="dwbh" />
+    <result column="zengp" jdbcType="CHAR" property="zengp" />
+    <result column="beizhu" jdbcType="CHAR" property="beizhu" />
+    <result column="cunchtj" jdbcType="CHAR" property="cunchtj" />
+    <result column="is_jy" jdbcType="CHAR" property="isJy" />
+    <result column="shlvz" jdbcType="DECIMAL" property="shlvz" />
+    <result column="xscbdj" jdbcType="DECIMAL" property="xscbdj" />
+    <result column="shcqyzz" jdbcType="CHAR" property="shcqyzz" />
+    <result column="yppzhwh" jdbcType="CHAR" property="yppzhwh" />
+    <result column="chpzlbzh" jdbcType="CHAR" property="chpzlbzh" />
+    <result column="cpzljybgs" jdbcType="CHAR" property="cpzljybgs" />
+    <result column="cpwjpw" jdbcType="CHAR" property="cpwjpw" />
+    <result column="jkypxkz" jdbcType="CHAR" property="jkypxkz" />
+    <result column="jkypzcz" jdbcType="CHAR" property="jkypzcz" />
+    <result column="ypscbzzm" jdbcType="CHAR" property="ypscbzzm" />
+    <result column="cpsmspzwh" jdbcType="CHAR" property="cpsmspzwh" />
+    <result column="qxcpsczcz" jdbcType="CHAR" property="qxcpsczcz" />
+    <result column="swzppqfz" jdbcType="CHAR" property="swzppqfz" />
+    <result column="jkycpj" jdbcType="CHAR" property="jkycpj" />
+    <result column="zhk" jdbcType="DECIMAL" property="zhk" />
+    <result column="zhkj" jdbcType="DECIMAL" property="zhkj" />
+    <result column="is_fp" jdbcType="CHAR" property="isFp" />
+    <result column="zhbj" jdbcType="DECIMAL" property="zhbj" />
+    <result column="danganh" jdbcType="CHAR" property="danganh" />
+    <result column="spfl" jdbcType="CHAR" property="spfl" />
+    <result column="iszhj" jdbcType="CHAR" property="iszhj" />
+    <result column="shenhe" jdbcType="CHAR" property="shenhe" />
+    <result column="is_shenhe" jdbcType="CHAR" property="isShenhe" />
+    <result column="leibie1" jdbcType="CHAR" property="leibie1" />
+    <result column="zhuzlx" jdbcType="VARCHAR" property="zhuzlx" />
+    <result column="waig" jdbcType="CHAR" property="waig" />
+    <result column="baozh" jdbcType="CHAR" property="baozh" />
+    <result column="lclxfy" jdbcType="CHAR" property="lclxfy" />
+    <result column="zlcxqk" jdbcType="CHAR" property="zlcxqk" />
+    <result column="yhfwqk" jdbcType="CHAR" property="yhfwqk" />
+    <result column="zlbzbgqk" jdbcType="CHAR" property="zlbzbgqk" />
+    <result column="kczlkcqk" jdbcType="CHAR" property="kczlkcqk" />
+    <result column="gspzsyxq" jdbcType="CHAR" property="gspzsyxq" />
+    <result column="gmpzsyxq" jdbcType="CHAR" property="gmpzsyxq" />
+    <result column="gmpzsh" jdbcType="CHAR" property="gmpzsh" />
+    <result column="maxkxsl" jdbcType="INTEGER" property="maxkxsl" />
+    <result column="jinkzczh" jdbcType="CHAR" property="jinkzczh" />
+    <result column="jwh" jdbcType="CHAR" property="jwh" />
+    <result column="is_desc" jdbcType="CHAR" property="isDesc" />
+    <result column="ckshlv" jdbcType="DECIMAL" property="ckshlv" />
+    <result column="gsp_pzwhyxq" jdbcType="CHAR" property="gspPzwhyxq" />
+    <result column="gsp_cgzy" jdbcType="CHAR" property="gspCgzy" />
+    <result column="xyzs" jdbcType="CHAR" property="xyzs" />
+    <result column="wjpw" jdbcType="CHAR" property="wjpw" />
+    <result column="zhucpj" jdbcType="CHAR" property="zhucpj" />
+    <result column="zzhcpj" jdbcType="CHAR" property="zzhcpj" />
+    <result column="bchpj" jdbcType="CHAR" property="bchpj" />
+    <result column="bzhpj" jdbcType="CHAR" property="bzhpj" />
+    <result column="bzhyp" jdbcType="CHAR" property="bzhyp" />
+    <result column="chjwts" jdbcType="CHAR" property="chjwts" />
+    <result column="zlbz" jdbcType="CHAR" property="zlbz" />
+    <result column="xy_sms" jdbcType="CHAR" property="xySms" />
+    <result column="xy_ypbz" jdbcType="CHAR" property="xyYpbz" />
+    <result column="yspbh" jdbcType="CHAR" property="yspbh" />
+    <result column="huozu" jdbcType="CHAR" property="huozu" />
+    <result column="cjgjz" jdbcType="CHAR" property="cjgjz" />
+    <result column="zhengzzt" jdbcType="INTEGER" property="zhengzzt" />
+    <result column="gsp_swpqf" jdbcType="CHAR" property="gspSwpqf" />
+    <result column="gsp_jkycpj" jdbcType="CHAR" property="gspJkycpj" />
+    <result column="gsp_jkzxz" jdbcType="CHAR" property="gspJkzxz" />
+    <result column="gsp_jkswzpbgs" jdbcType="CHAR" property="gspJkswzpbgs" />
+    <result column="gsp_jkypbgs" jdbcType="CHAR" property="gspJkypbgs" />
+    <result column="kesi" jdbcType="CHAR" property="kesi" />
+    <result column="shuilv" jdbcType="DECIMAL" property="shuilv" />
+    <result column="swfldm" jdbcType="CHAR" property="swfldm" />
+    <result column="ds_jg" jdbcType="DECIMAL" property="dsJg" />
+    <result column="bm" jdbcType="CHAR" property="bm" />
+    <result column="zbz" jdbcType="DECIMAL" property="zbz" />
+    <result column="isunbundled" jdbcType="CHAR" property="isunbundled" />
+    <result column="ProductType" jdbcType="VARCHAR" property="producttype" />
+    <result column="BarCode" jdbcType="VARCHAR" property="barcode" />
+    <result column="MBarCode" jdbcType="VARCHAR" property="mbarcode" />
+    <result column="SbarCode" jdbcType="VARCHAR" property="sbarcode" />
+    <result column="IsGoods" jdbcType="CHAR" property="isgoods" />
+    <result column="IsPrecious" jdbcType="CHAR" property="isprecious" />
+    <result column="IsImport" jdbcType="CHAR" property="isimport" />
+    <result column="CountryCode" jdbcType="VARCHAR" property="countrycode" />
+    <result column="IsEmonitor" jdbcType="CHAR" property="isemonitor" />
+    <result column="IsAnti" jdbcType="CHAR" property="isanti" />
+    <result column="Uefforts" jdbcType="CHAR" property="uefforts" />
+    <result column="GCategory" jdbcType="CHAR" property="gcategory" />
+    <result column="Squantity" jdbcType="INTEGER" property="squantity" />
+    <result column="LocatLimitedType" jdbcType="CHAR" property="locatlimitedtype" />
+    <result column="BatchValidType" jdbcType="CHAR" property="batchvalidtype" />
+    <result column="PackageSpec" jdbcType="VARCHAR" property="packagespec" />
+    <result column="IsEmphasis" jdbcType="CHAR" property="isemphasis" />
+    <result column="zt" jdbcType="CHAR" property="zt" />
+    <result column="dsjg" jdbcType="DECIMAL" property="dsjg" />
+    <result column="fenzu2" jdbcType="CHAR" property="fenzu2" />
+    <result column="fenzu" jdbcType="CHAR" property="fenzu" />
+    <result column="is_mhj" jdbcType="CHAR" property="isMhj" />
+    <result column="ypssxkcyr" jdbcType="CHAR" property="ypssxkcyr" />
+    <result column="gsp_qxzczh" jdbcType="CHAR" property="gspQxzczh" />
+    <result column="ssxkcyr" jdbcType="CHAR" property="ssxkcyr" />
+    <result column="qx_scxkzh" jdbcType="CHAR" property="qxScxkzh" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    spid, spbh, sptm, spmch, zjm, beactive, yishj, is_gdsj, is_gdzk, is_tjsp, is_hysp, 
+    is_gmp, is_gsp, is_sy, is_yp, jingd, denglrq, gengxshj, delrq, dw, shpchd, shpgg, 
+    kemuhao, oldcode, rkhw, ckhw, bzqfs, fenlbh, guojbh, changjbh, huaxm, changym, suming, 
+    xiwname, tongym, shengccj, pizhwh, zhucsb, jixing, shiyzh, bulfy, chuczysx, chuffl, 
+    yaofpd, yongfyyl, jinjzh, zhuysx, yaowchf, youxq, shangplx, guizbz, yongyfl, leibie, 
+    jlgg, otd, ordercycle, stkquot, shlv, hshjj, jj, shj, hshsj, lshj, koul, kcsx, kcxx, 
+    helkc, bzqts, yujts, zgshl, zhdcbj, zdshj, zgshj, zgjjxz, maolv, huiytj, itemlength, 
+    itemheight, itemwidth, weight, casevolume, caseweight, zuixdwtj, zuixdwzl, pfpj, 
+    dispcolor, jx, bzgg, lastmodifytime, is_cmd, lsgg, is_zdyh, is_jkyp, minshl, cx_dj_kl, 
+    is_cx_dj, zdyh, zdhyzklshj, is_cyhydz, huiyshl, nocalcopys, fuzr, is_jsh, is_lc, 
+    is_zhongyao, type_bh, zdlshj, guanjzjh, shiyq, abbrImageURL, cbflbh, imageUrl, is_ybsp, 
+    yb_zfbl, yb_spbh, username, chuchj, pifj, zhilbz, chargelb, is_sendybzx, tj_ylshj, 
+    is_hj, is_yxbz, wdid, chbjs, dwbh, zengp, beizhu, cunchtj, is_jy, shlvz, xscbdj, 
+    shcqyzz, yppzhwh, chpzlbzh, cpzljybgs, cpwjpw, jkypxkz, jkypzcz, ypscbzzm, cpsmspzwh, 
+    qxcpsczcz, swzppqfz, jkycpj, zhk, zhkj, is_fp, zhbj, danganh, spfl, iszhj, shenhe, 
+    is_shenhe, leibie1, zhuzlx, waig, baozh, lclxfy, zlcxqk, yhfwqk, zlbzbgqk, kczlkcqk, 
+    gspzsyxq, gmpzsyxq, gmpzsh, maxkxsl, jinkzczh, jwh, is_desc, ckshlv, gsp_pzwhyxq, 
+    gsp_cgzy, xyzs, wjpw, zhucpj, zzhcpj, bchpj, bzhpj, bzhyp, chjwts, zlbz, xy_sms, 
+    xy_ypbz, yspbh, huozu, cjgjz, zhengzzt, gsp_swpqf, gsp_jkycpj, gsp_jkzxz, gsp_jkswzpbgs, 
+    gsp_jkypbgs, kesi, shuilv, swfldm, ds_jg, bm, zbz, isunbundled, ProductType, BarCode, 
+    MBarCode, SbarCode, IsGoods, IsPrecious, IsImport, CountryCode, IsEmonitor, IsAnti, 
+    Uefforts, GCategory, Squantity, LocatLimitedType, BatchValidType, PackageSpec, IsEmphasis, 
+    zt, dsjg, fenzu2, fenzu, is_mhj, ypssxkcyr, gsp_qxzczh, ssxkcyr, qx_scxkzh
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from spkfk
+    where spid = #{spid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from spkfk
+    where spid = #{spid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.kuka.domain.Spkfk">
+    <!--@mbg.generated-->
+    insert into spkfk (spid, spbh, sptm, spmch, 
+      zjm, beactive, yishj, is_gdsj, 
+      is_gdzk, is_tjsp, is_hysp, is_gmp, 
+      is_gsp, is_sy, is_yp, jingd, 
+      denglrq, gengxshj, delrq, 
+      dw, shpchd, shpgg, kemuhao, 
+      oldcode, rkhw, ckhw, 
+      bzqfs, fenlbh, guojbh, 
+      changjbh, huaxm, changym, 
+      suming, xiwname, tongym, 
+      shengccj, pizhwh, zhucsb, 
+      jixing, shiyzh, bulfy, 
+      chuczysx, chuffl, yaofpd, 
+      yongfyyl, jinjzh, zhuysx, 
+      yaowchf, youxq, shangplx, 
+      guizbz, yongyfl, leibie, 
+      jlgg, otd, ordercycle, 
+      stkquot, shlv, hshjj, 
+      jj, shj, hshsj, lshj, 
+      koul, kcsx, kcxx, helkc, 
+      bzqts, yujts, zgshl, 
+      zhdcbj, zdshj, zgshj, 
+      zgjjxz, maolv, huiytj, 
+      itemlength, itemheight, itemwidth, 
+      weight, casevolume, caseweight, 
+      zuixdwtj, zuixdwzl, pfpj, 
+      dispcolor, jx, bzgg, lastmodifytime, 
+      is_cmd, lsgg, is_zdyh, is_jkyp, 
+      minshl, cx_dj_kl, is_cx_dj, 
+      zdyh, zdhyzklshj, is_cyhydz, 
+      huiyshl, nocalcopys, fuzr, 
+      is_jsh, is_lc, is_zhongyao, type_bh, 
+      zdlshj, guanjzjh, shiyq, 
+      abbrImageURL, cbflbh, imageUrl, 
+      is_ybsp, yb_zfbl, yb_spbh, 
+      username, chuchj, pifj, 
+      zhilbz, chargelb, is_sendybzx, 
+      tj_ylshj, is_hj, is_yxbz, wdid, 
+      chbjs, dwbh, zengp, beizhu, 
+      cunchtj, is_jy, shlvz, xscbdj, 
+      shcqyzz, yppzhwh, chpzlbzh, 
+      cpzljybgs, cpwjpw, jkypxkz, 
+      jkypzcz, ypscbzzm, cpsmspzwh, 
+      qxcpsczcz, swzppqfz, jkycpj, 
+      zhk, zhkj, is_fp, zhbj, 
+      danganh, spfl, iszhj, shenhe, 
+      is_shenhe, leibie1, zhuzlx, 
+      waig, baozh, lclxfy, zlcxqk, 
+      yhfwqk, zlbzbgqk, kczlkcqk, 
+      gspzsyxq, gmpzsyxq, gmpzsh, 
+      maxkxsl, jinkzczh, jwh, is_desc, 
+      ckshlv, gsp_pzwhyxq, gsp_cgzy, 
+      xyzs, wjpw, zhucpj, zzhcpj, 
+      bchpj, bzhpj, bzhyp, chjwts, 
+      zlbz, xy_sms, xy_ypbz, yspbh, 
+      huozu, cjgjz, zhengzzt, gsp_swpqf, 
+      gsp_jkycpj, gsp_jkzxz, gsp_jkswzpbgs, 
+      gsp_jkypbgs, kesi, shuilv, 
+      swfldm, ds_jg, bm, zbz, 
+      isunbundled, ProductType, BarCode, 
+      MBarCode, SbarCode, IsGoods, 
+      IsPrecious, IsImport, CountryCode, 
+      IsEmonitor, IsAnti, Uefforts, 
+      GCategory, Squantity, LocatLimitedType, 
+      BatchValidType, PackageSpec, IsEmphasis, 
+      zt, dsjg, fenzu2, fenzu, 
+      is_mhj, ypssxkcyr, gsp_qxzczh, 
+      ssxkcyr, qx_scxkzh)
+    values (#{spid,jdbcType=CHAR}, #{spbh,jdbcType=CHAR}, #{sptm,jdbcType=VARCHAR}, #{spmch,jdbcType=CHAR}, 
+      #{zjm,jdbcType=CHAR}, #{beactive,jdbcType=CHAR}, #{yishj,jdbcType=CHAR}, #{isGdsj,jdbcType=CHAR}, 
+      #{isGdzk,jdbcType=CHAR}, #{isTjsp,jdbcType=CHAR}, #{isHysp,jdbcType=CHAR}, #{isGmp,jdbcType=CHAR}, 
+      #{isGsp,jdbcType=CHAR}, #{isSy,jdbcType=CHAR}, #{isYp,jdbcType=CHAR}, #{jingd,jdbcType=CHAR}, 
+      #{denglrq,jdbcType=VARCHAR}, #{gengxshj,jdbcType=VARCHAR}, #{delrq,jdbcType=VARCHAR}, 
+      #{dw,jdbcType=VARCHAR}, #{shpchd,jdbcType=CHAR}, #{shpgg,jdbcType=CHAR}, #{kemuhao,jdbcType=VARCHAR}, 
+      #{oldcode,jdbcType=VARCHAR}, #{rkhw,jdbcType=VARCHAR}, #{ckhw,jdbcType=VARCHAR}, 
+      #{bzqfs,jdbcType=VARCHAR}, #{fenlbh,jdbcType=VARCHAR}, #{guojbh,jdbcType=VARCHAR}, 
+      #{changjbh,jdbcType=VARCHAR}, #{huaxm,jdbcType=VARCHAR}, #{changym,jdbcType=VARCHAR}, 
+      #{suming,jdbcType=VARCHAR}, #{xiwname,jdbcType=VARCHAR}, #{tongym,jdbcType=CHAR}, 
+      #{shengccj,jdbcType=CHAR}, #{pizhwh,jdbcType=CHAR}, #{zhucsb,jdbcType=VARCHAR}, 
+      #{jixing,jdbcType=CHAR}, #{shiyzh,jdbcType=VARCHAR}, #{bulfy,jdbcType=VARCHAR}, 
+      #{chuczysx,jdbcType=VARCHAR}, #{chuffl,jdbcType=VARCHAR}, #{yaofpd,jdbcType=VARCHAR}, 
+      #{yongfyyl,jdbcType=VARCHAR}, #{jinjzh,jdbcType=VARCHAR}, #{zhuysx,jdbcType=VARCHAR}, 
+      #{yaowchf,jdbcType=VARCHAR}, #{youxq,jdbcType=CHAR}, #{shangplx,jdbcType=VARCHAR}, 
+      #{guizbz,jdbcType=VARCHAR}, #{yongyfl,jdbcType=VARCHAR}, #{leibie,jdbcType=CHAR}, 
+      #{jlgg,jdbcType=INTEGER}, #{otd,jdbcType=INTEGER}, #{ordercycle,jdbcType=INTEGER}, 
+      #{stkquot,jdbcType=DECIMAL}, #{shlv,jdbcType=DECIMAL}, #{hshjj,jdbcType=DECIMAL}, 
+      #{jj,jdbcType=DECIMAL}, #{shj,jdbcType=DECIMAL}, #{hshsj,jdbcType=DECIMAL}, #{lshj,jdbcType=DECIMAL}, 
+      #{koul,jdbcType=DECIMAL}, #{kcsx,jdbcType=DECIMAL}, #{kcxx,jdbcType=DECIMAL}, #{helkc,jdbcType=DECIMAL}, 
+      #{bzqts,jdbcType=INTEGER}, #{yujts,jdbcType=INTEGER}, #{zgshl,jdbcType=DECIMAL}, 
+      #{zhdcbj,jdbcType=DECIMAL}, #{zdshj,jdbcType=DECIMAL}, #{zgshj,jdbcType=DECIMAL}, 
+      #{zgjjxz,jdbcType=DECIMAL}, #{maolv,jdbcType=DECIMAL}, #{huiytj,jdbcType=DECIMAL}, 
+      #{itemlength,jdbcType=DECIMAL}, #{itemheight,jdbcType=DECIMAL}, #{itemwidth,jdbcType=DECIMAL}, 
+      #{weight,jdbcType=DECIMAL}, #{casevolume,jdbcType=DECIMAL}, #{caseweight,jdbcType=DECIMAL}, 
+      #{zuixdwtj,jdbcType=DECIMAL}, #{zuixdwzl,jdbcType=DECIMAL}, #{pfpj,jdbcType=DECIMAL}, 
+      #{dispcolor,jdbcType=CHAR}, #{jx,jdbcType=VARCHAR}, #{bzgg,jdbcType=INTEGER}, #{lastmodifytime,jdbcType=VARCHAR}, 
+      #{isCmd,jdbcType=CHAR}, #{lsgg,jdbcType=VARCHAR}, #{isZdyh,jdbcType=CHAR}, #{isJkyp,jdbcType=CHAR}, 
+      #{minshl,jdbcType=INTEGER}, #{cxDjKl,jdbcType=DECIMAL}, #{isCxDj,jdbcType=CHAR}, 
+      #{zdyh,jdbcType=VARCHAR}, #{zdhyzklshj,jdbcType=DECIMAL}, #{isCyhydz,jdbcType=CHAR}, 
+      #{huiyshl,jdbcType=DECIMAL}, #{nocalcopys,jdbcType=CHAR}, #{fuzr,jdbcType=VARCHAR}, 
+      #{isJsh,jdbcType=CHAR}, #{isLc,jdbcType=CHAR}, #{isZhongyao,jdbcType=CHAR}, #{typeBh,jdbcType=VARCHAR}, 
+      #{zdlshj,jdbcType=DECIMAL}, #{guanjzjh,jdbcType=VARCHAR}, #{shiyq,jdbcType=VARCHAR}, 
+      #{abbrimageurl,jdbcType=VARCHAR}, #{cbflbh,jdbcType=VARCHAR}, #{imageurl,jdbcType=VARCHAR}, 
+      #{isYbsp,jdbcType=CHAR}, #{ybZfbl,jdbcType=DECIMAL}, #{ybSpbh,jdbcType=VARCHAR}, 
+      #{username,jdbcType=CHAR}, #{chuchj,jdbcType=DECIMAL}, #{pifj,jdbcType=DECIMAL}, 
+      #{zhilbz,jdbcType=CHAR}, #{chargelb,jdbcType=CHAR}, #{isSendybzx,jdbcType=CHAR}, 
+      #{tjYlshj,jdbcType=DECIMAL}, #{isHj,jdbcType=CHAR}, #{isYxbz,jdbcType=CHAR}, #{wdid,jdbcType=VARCHAR}, 
+      #{chbjs,jdbcType=CHAR}, #{dwbh,jdbcType=VARCHAR}, #{zengp,jdbcType=CHAR}, #{beizhu,jdbcType=CHAR}, 
+      #{cunchtj,jdbcType=CHAR}, #{isJy,jdbcType=CHAR}, #{shlvz,jdbcType=DECIMAL}, #{xscbdj,jdbcType=DECIMAL}, 
+      #{shcqyzz,jdbcType=CHAR}, #{yppzhwh,jdbcType=CHAR}, #{chpzlbzh,jdbcType=CHAR}, 
+      #{cpzljybgs,jdbcType=CHAR}, #{cpwjpw,jdbcType=CHAR}, #{jkypxkz,jdbcType=CHAR}, 
+      #{jkypzcz,jdbcType=CHAR}, #{ypscbzzm,jdbcType=CHAR}, #{cpsmspzwh,jdbcType=CHAR}, 
+      #{qxcpsczcz,jdbcType=CHAR}, #{swzppqfz,jdbcType=CHAR}, #{jkycpj,jdbcType=CHAR}, 
+      #{zhk,jdbcType=DECIMAL}, #{zhkj,jdbcType=DECIMAL}, #{isFp,jdbcType=CHAR}, #{zhbj,jdbcType=DECIMAL}, 
+      #{danganh,jdbcType=CHAR}, #{spfl,jdbcType=CHAR}, #{iszhj,jdbcType=CHAR}, #{shenhe,jdbcType=CHAR}, 
+      #{isShenhe,jdbcType=CHAR}, #{leibie1,jdbcType=CHAR}, #{zhuzlx,jdbcType=VARCHAR}, 
+      #{waig,jdbcType=CHAR}, #{baozh,jdbcType=CHAR}, #{lclxfy,jdbcType=CHAR}, #{zlcxqk,jdbcType=CHAR}, 
+      #{yhfwqk,jdbcType=CHAR}, #{zlbzbgqk,jdbcType=CHAR}, #{kczlkcqk,jdbcType=CHAR}, 
+      #{gspzsyxq,jdbcType=CHAR}, #{gmpzsyxq,jdbcType=CHAR}, #{gmpzsh,jdbcType=CHAR}, 
+      #{maxkxsl,jdbcType=INTEGER}, #{jinkzczh,jdbcType=CHAR}, #{jwh,jdbcType=CHAR}, #{isDesc,jdbcType=CHAR}, 
+      #{ckshlv,jdbcType=DECIMAL}, #{gspPzwhyxq,jdbcType=CHAR}, #{gspCgzy,jdbcType=CHAR}, 
+      #{xyzs,jdbcType=CHAR}, #{wjpw,jdbcType=CHAR}, #{zhucpj,jdbcType=CHAR}, #{zzhcpj,jdbcType=CHAR}, 
+      #{bchpj,jdbcType=CHAR}, #{bzhpj,jdbcType=CHAR}, #{bzhyp,jdbcType=CHAR}, #{chjwts,jdbcType=CHAR}, 
+      #{zlbz,jdbcType=CHAR}, #{xySms,jdbcType=CHAR}, #{xyYpbz,jdbcType=CHAR}, #{yspbh,jdbcType=CHAR}, 
+      #{huozu,jdbcType=CHAR}, #{cjgjz,jdbcType=CHAR}, #{zhengzzt,jdbcType=INTEGER}, #{gspSwpqf,jdbcType=CHAR}, 
+      #{gspJkycpj,jdbcType=CHAR}, #{gspJkzxz,jdbcType=CHAR}, #{gspJkswzpbgs,jdbcType=CHAR}, 
+      #{gspJkypbgs,jdbcType=CHAR}, #{kesi,jdbcType=CHAR}, #{shuilv,jdbcType=DECIMAL}, 
+      #{swfldm,jdbcType=CHAR}, #{dsJg,jdbcType=DECIMAL}, #{bm,jdbcType=CHAR}, #{zbz,jdbcType=DECIMAL}, 
+      #{isunbundled,jdbcType=CHAR}, #{producttype,jdbcType=VARCHAR}, #{barcode,jdbcType=VARCHAR}, 
+      #{mbarcode,jdbcType=VARCHAR}, #{sbarcode,jdbcType=VARCHAR}, #{isgoods,jdbcType=CHAR}, 
+      #{isprecious,jdbcType=CHAR}, #{isimport,jdbcType=CHAR}, #{countrycode,jdbcType=VARCHAR}, 
+      #{isemonitor,jdbcType=CHAR}, #{isanti,jdbcType=CHAR}, #{uefforts,jdbcType=CHAR}, 
+      #{gcategory,jdbcType=CHAR}, #{squantity,jdbcType=INTEGER}, #{locatlimitedtype,jdbcType=CHAR}, 
+      #{batchvalidtype,jdbcType=CHAR}, #{packagespec,jdbcType=VARCHAR}, #{isemphasis,jdbcType=CHAR}, 
+      #{zt,jdbcType=CHAR}, #{dsjg,jdbcType=DECIMAL}, #{fenzu2,jdbcType=CHAR}, #{fenzu,jdbcType=CHAR}, 
+      #{isMhj,jdbcType=CHAR}, #{ypssxkcyr,jdbcType=CHAR}, #{gspQxzczh,jdbcType=CHAR}, 
+      #{ssxkcyr,jdbcType=CHAR}, #{qxScxkzh,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kuka.domain.Spkfk">
+    <!--@mbg.generated-->
+    insert into spkfk
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        spid,
+      </if>
+      <if test="spbh != null">
+        spbh,
+      </if>
+      <if test="sptm != null">
+        sptm,
+      </if>
+      <if test="spmch != null">
+        spmch,
+      </if>
+      <if test="zjm != null">
+        zjm,
+      </if>
+      <if test="beactive != null">
+        beactive,
+      </if>
+      <if test="yishj != null">
+        yishj,
+      </if>
+      <if test="isGdsj != null">
+        is_gdsj,
+      </if>
+      <if test="isGdzk != null">
+        is_gdzk,
+      </if>
+      <if test="isTjsp != null">
+        is_tjsp,
+      </if>
+      <if test="isHysp != null">
+        is_hysp,
+      </if>
+      <if test="isGmp != null">
+        is_gmp,
+      </if>
+      <if test="isGsp != null">
+        is_gsp,
+      </if>
+      <if test="isSy != null">
+        is_sy,
+      </if>
+      <if test="isYp != null">
+        is_yp,
+      </if>
+      <if test="jingd != null">
+        jingd,
+      </if>
+      <if test="denglrq != null">
+        denglrq,
+      </if>
+      <if test="gengxshj != null">
+        gengxshj,
+      </if>
+      <if test="delrq != null">
+        delrq,
+      </if>
+      <if test="dw != null">
+        dw,
+      </if>
+      <if test="shpchd != null">
+        shpchd,
+      </if>
+      <if test="shpgg != null">
+        shpgg,
+      </if>
+      <if test="kemuhao != null">
+        kemuhao,
+      </if>
+      <if test="oldcode != null">
+        oldcode,
+      </if>
+      <if test="rkhw != null">
+        rkhw,
+      </if>
+      <if test="ckhw != null">
+        ckhw,
+      </if>
+      <if test="bzqfs != null">
+        bzqfs,
+      </if>
+      <if test="fenlbh != null">
+        fenlbh,
+      </if>
+      <if test="guojbh != null">
+        guojbh,
+      </if>
+      <if test="changjbh != null">
+        changjbh,
+      </if>
+      <if test="huaxm != null">
+        huaxm,
+      </if>
+      <if test="changym != null">
+        changym,
+      </if>
+      <if test="suming != null">
+        suming,
+      </if>
+      <if test="xiwname != null">
+        xiwname,
+      </if>
+      <if test="tongym != null">
+        tongym,
+      </if>
+      <if test="shengccj != null">
+        shengccj,
+      </if>
+      <if test="pizhwh != null">
+        pizhwh,
+      </if>
+      <if test="zhucsb != null">
+        zhucsb,
+      </if>
+      <if test="jixing != null">
+        jixing,
+      </if>
+      <if test="shiyzh != null">
+        shiyzh,
+      </if>
+      <if test="bulfy != null">
+        bulfy,
+      </if>
+      <if test="chuczysx != null">
+        chuczysx,
+      </if>
+      <if test="chuffl != null">
+        chuffl,
+      </if>
+      <if test="yaofpd != null">
+        yaofpd,
+      </if>
+      <if test="yongfyyl != null">
+        yongfyyl,
+      </if>
+      <if test="jinjzh != null">
+        jinjzh,
+      </if>
+      <if test="zhuysx != null">
+        zhuysx,
+      </if>
+      <if test="yaowchf != null">
+        yaowchf,
+      </if>
+      <if test="youxq != null">
+        youxq,
+      </if>
+      <if test="shangplx != null">
+        shangplx,
+      </if>
+      <if test="guizbz != null">
+        guizbz,
+      </if>
+      <if test="yongyfl != null">
+        yongyfl,
+      </if>
+      <if test="leibie != null">
+        leibie,
+      </if>
+      <if test="jlgg != null">
+        jlgg,
+      </if>
+      <if test="otd != null">
+        otd,
+      </if>
+      <if test="ordercycle != null">
+        ordercycle,
+      </if>
+      <if test="stkquot != null">
+        stkquot,
+      </if>
+      <if test="shlv != null">
+        shlv,
+      </if>
+      <if test="hshjj != null">
+        hshjj,
+      </if>
+      <if test="jj != null">
+        jj,
+      </if>
+      <if test="shj != null">
+        shj,
+      </if>
+      <if test="hshsj != null">
+        hshsj,
+      </if>
+      <if test="lshj != null">
+        lshj,
+      </if>
+      <if test="koul != null">
+        koul,
+      </if>
+      <if test="kcsx != null">
+        kcsx,
+      </if>
+      <if test="kcxx != null">
+        kcxx,
+      </if>
+      <if test="helkc != null">
+        helkc,
+      </if>
+      <if test="bzqts != null">
+        bzqts,
+      </if>
+      <if test="yujts != null">
+        yujts,
+      </if>
+      <if test="zgshl != null">
+        zgshl,
+      </if>
+      <if test="zhdcbj != null">
+        zhdcbj,
+      </if>
+      <if test="zdshj != null">
+        zdshj,
+      </if>
+      <if test="zgshj != null">
+        zgshj,
+      </if>
+      <if test="zgjjxz != null">
+        zgjjxz,
+      </if>
+      <if test="maolv != null">
+        maolv,
+      </if>
+      <if test="huiytj != null">
+        huiytj,
+      </if>
+      <if test="itemlength != null">
+        itemlength,
+      </if>
+      <if test="itemheight != null">
+        itemheight,
+      </if>
+      <if test="itemwidth != null">
+        itemwidth,
+      </if>
+      <if test="weight != null">
+        weight,
+      </if>
+      <if test="casevolume != null">
+        casevolume,
+      </if>
+      <if test="caseweight != null">
+        caseweight,
+      </if>
+      <if test="zuixdwtj != null">
+        zuixdwtj,
+      </if>
+      <if test="zuixdwzl != null">
+        zuixdwzl,
+      </if>
+      <if test="pfpj != null">
+        pfpj,
+      </if>
+      <if test="dispcolor != null">
+        dispcolor,
+      </if>
+      <if test="jx != null">
+        jx,
+      </if>
+      <if test="bzgg != null">
+        bzgg,
+      </if>
+      <if test="lastmodifytime != null">
+        lastmodifytime,
+      </if>
+      <if test="isCmd != null">
+        is_cmd,
+      </if>
+      <if test="lsgg != null">
+        lsgg,
+      </if>
+      <if test="isZdyh != null">
+        is_zdyh,
+      </if>
+      <if test="isJkyp != null">
+        is_jkyp,
+      </if>
+      <if test="minshl != null">
+        minshl,
+      </if>
+      <if test="cxDjKl != null">
+        cx_dj_kl,
+      </if>
+      <if test="isCxDj != null">
+        is_cx_dj,
+      </if>
+      <if test="zdyh != null">
+        zdyh,
+      </if>
+      <if test="zdhyzklshj != null">
+        zdhyzklshj,
+      </if>
+      <if test="isCyhydz != null">
+        is_cyhydz,
+      </if>
+      <if test="huiyshl != null">
+        huiyshl,
+      </if>
+      <if test="nocalcopys != null">
+        nocalcopys,
+      </if>
+      <if test="fuzr != null">
+        fuzr,
+      </if>
+      <if test="isJsh != null">
+        is_jsh,
+      </if>
+      <if test="isLc != null">
+        is_lc,
+      </if>
+      <if test="isZhongyao != null">
+        is_zhongyao,
+      </if>
+      <if test="typeBh != null">
+        type_bh,
+      </if>
+      <if test="zdlshj != null">
+        zdlshj,
+      </if>
+      <if test="guanjzjh != null">
+        guanjzjh,
+      </if>
+      <if test="shiyq != null">
+        shiyq,
+      </if>
+      <if test="abbrimageurl != null">
+        abbrImageURL,
+      </if>
+      <if test="cbflbh != null">
+        cbflbh,
+      </if>
+      <if test="imageurl != null">
+        imageUrl,
+      </if>
+      <if test="isYbsp != null">
+        is_ybsp,
+      </if>
+      <if test="ybZfbl != null">
+        yb_zfbl,
+      </if>
+      <if test="ybSpbh != null">
+        yb_spbh,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="chuchj != null">
+        chuchj,
+      </if>
+      <if test="pifj != null">
+        pifj,
+      </if>
+      <if test="zhilbz != null">
+        zhilbz,
+      </if>
+      <if test="chargelb != null">
+        chargelb,
+      </if>
+      <if test="isSendybzx != null">
+        is_sendybzx,
+      </if>
+      <if test="tjYlshj != null">
+        tj_ylshj,
+      </if>
+      <if test="isHj != null">
+        is_hj,
+      </if>
+      <if test="isYxbz != null">
+        is_yxbz,
+      </if>
+      <if test="wdid != null">
+        wdid,
+      </if>
+      <if test="chbjs != null">
+        chbjs,
+      </if>
+      <if test="dwbh != null">
+        dwbh,
+      </if>
+      <if test="zengp != null">
+        zengp,
+      </if>
+      <if test="beizhu != null">
+        beizhu,
+      </if>
+      <if test="cunchtj != null">
+        cunchtj,
+      </if>
+      <if test="isJy != null">
+        is_jy,
+      </if>
+      <if test="shlvz != null">
+        shlvz,
+      </if>
+      <if test="xscbdj != null">
+        xscbdj,
+      </if>
+      <if test="shcqyzz != null">
+        shcqyzz,
+      </if>
+      <if test="yppzhwh != null">
+        yppzhwh,
+      </if>
+      <if test="chpzlbzh != null">
+        chpzlbzh,
+      </if>
+      <if test="cpzljybgs != null">
+        cpzljybgs,
+      </if>
+      <if test="cpwjpw != null">
+        cpwjpw,
+      </if>
+      <if test="jkypxkz != null">
+        jkypxkz,
+      </if>
+      <if test="jkypzcz != null">
+        jkypzcz,
+      </if>
+      <if test="ypscbzzm != null">
+        ypscbzzm,
+      </if>
+      <if test="cpsmspzwh != null">
+        cpsmspzwh,
+      </if>
+      <if test="qxcpsczcz != null">
+        qxcpsczcz,
+      </if>
+      <if test="swzppqfz != null">
+        swzppqfz,
+      </if>
+      <if test="jkycpj != null">
+        jkycpj,
+      </if>
+      <if test="zhk != null">
+        zhk,
+      </if>
+      <if test="zhkj != null">
+        zhkj,
+      </if>
+      <if test="isFp != null">
+        is_fp,
+      </if>
+      <if test="zhbj != null">
+        zhbj,
+      </if>
+      <if test="danganh != null">
+        danganh,
+      </if>
+      <if test="spfl != null">
+        spfl,
+      </if>
+      <if test="iszhj != null">
+        iszhj,
+      </if>
+      <if test="shenhe != null">
+        shenhe,
+      </if>
+      <if test="isShenhe != null">
+        is_shenhe,
+      </if>
+      <if test="leibie1 != null">
+        leibie1,
+      </if>
+      <if test="zhuzlx != null">
+        zhuzlx,
+      </if>
+      <if test="waig != null">
+        waig,
+      </if>
+      <if test="baozh != null">
+        baozh,
+      </if>
+      <if test="lclxfy != null">
+        lclxfy,
+      </if>
+      <if test="zlcxqk != null">
+        zlcxqk,
+      </if>
+      <if test="yhfwqk != null">
+        yhfwqk,
+      </if>
+      <if test="zlbzbgqk != null">
+        zlbzbgqk,
+      </if>
+      <if test="kczlkcqk != null">
+        kczlkcqk,
+      </if>
+      <if test="gspzsyxq != null">
+        gspzsyxq,
+      </if>
+      <if test="gmpzsyxq != null">
+        gmpzsyxq,
+      </if>
+      <if test="gmpzsh != null">
+        gmpzsh,
+      </if>
+      <if test="maxkxsl != null">
+        maxkxsl,
+      </if>
+      <if test="jinkzczh != null">
+        jinkzczh,
+      </if>
+      <if test="jwh != null">
+        jwh,
+      </if>
+      <if test="isDesc != null">
+        is_desc,
+      </if>
+      <if test="ckshlv != null">
+        ckshlv,
+      </if>
+      <if test="gspPzwhyxq != null">
+        gsp_pzwhyxq,
+      </if>
+      <if test="gspCgzy != null">
+        gsp_cgzy,
+      </if>
+      <if test="xyzs != null">
+        xyzs,
+      </if>
+      <if test="wjpw != null">
+        wjpw,
+      </if>
+      <if test="zhucpj != null">
+        zhucpj,
+      </if>
+      <if test="zzhcpj != null">
+        zzhcpj,
+      </if>
+      <if test="bchpj != null">
+        bchpj,
+      </if>
+      <if test="bzhpj != null">
+        bzhpj,
+      </if>
+      <if test="bzhyp != null">
+        bzhyp,
+      </if>
+      <if test="chjwts != null">
+        chjwts,
+      </if>
+      <if test="zlbz != null">
+        zlbz,
+      </if>
+      <if test="xySms != null">
+        xy_sms,
+      </if>
+      <if test="xyYpbz != null">
+        xy_ypbz,
+      </if>
+      <if test="yspbh != null">
+        yspbh,
+      </if>
+      <if test="huozu != null">
+        huozu,
+      </if>
+      <if test="cjgjz != null">
+        cjgjz,
+      </if>
+      <if test="zhengzzt != null">
+        zhengzzt,
+      </if>
+      <if test="gspSwpqf != null">
+        gsp_swpqf,
+      </if>
+      <if test="gspJkycpj != null">
+        gsp_jkycpj,
+      </if>
+      <if test="gspJkzxz != null">
+        gsp_jkzxz,
+      </if>
+      <if test="gspJkswzpbgs != null">
+        gsp_jkswzpbgs,
+      </if>
+      <if test="gspJkypbgs != null">
+        gsp_jkypbgs,
+      </if>
+      <if test="kesi != null">
+        kesi,
+      </if>
+      <if test="shuilv != null">
+        shuilv,
+      </if>
+      <if test="swfldm != null">
+        swfldm,
+      </if>
+      <if test="dsJg != null">
+        ds_jg,
+      </if>
+      <if test="bm != null">
+        bm,
+      </if>
+      <if test="zbz != null">
+        zbz,
+      </if>
+      <if test="isunbundled != null">
+        isunbundled,
+      </if>
+      <if test="producttype != null">
+        ProductType,
+      </if>
+      <if test="barcode != null">
+        BarCode,
+      </if>
+      <if test="mbarcode != null">
+        MBarCode,
+      </if>
+      <if test="sbarcode != null">
+        SbarCode,
+      </if>
+      <if test="isgoods != null">
+        IsGoods,
+      </if>
+      <if test="isprecious != null">
+        IsPrecious,
+      </if>
+      <if test="isimport != null">
+        IsImport,
+      </if>
+      <if test="countrycode != null">
+        CountryCode,
+      </if>
+      <if test="isemonitor != null">
+        IsEmonitor,
+      </if>
+      <if test="isanti != null">
+        IsAnti,
+      </if>
+      <if test="uefforts != null">
+        Uefforts,
+      </if>
+      <if test="gcategory != null">
+        GCategory,
+      </if>
+      <if test="squantity != null">
+        Squantity,
+      </if>
+      <if test="locatlimitedtype != null">
+        LocatLimitedType,
+      </if>
+      <if test="batchvalidtype != null">
+        BatchValidType,
+      </if>
+      <if test="packagespec != null">
+        PackageSpec,
+      </if>
+      <if test="isemphasis != null">
+        IsEmphasis,
+      </if>
+      <if test="zt != null">
+        zt,
+      </if>
+      <if test="dsjg != null">
+        dsjg,
+      </if>
+      <if test="fenzu2 != null">
+        fenzu2,
+      </if>
+      <if test="fenzu != null">
+        fenzu,
+      </if>
+      <if test="isMhj != null">
+        is_mhj,
+      </if>
+      <if test="ypssxkcyr != null">
+        ypssxkcyr,
+      </if>
+      <if test="gspQxzczh != null">
+        gsp_qxzczh,
+      </if>
+      <if test="ssxkcyr != null">
+        ssxkcyr,
+      </if>
+      <if test="qxScxkzh != null">
+        qx_scxkzh,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        #{spid,jdbcType=CHAR},
+      </if>
+      <if test="spbh != null">
+        #{spbh,jdbcType=CHAR},
+      </if>
+      <if test="sptm != null">
+        #{sptm,jdbcType=VARCHAR},
+      </if>
+      <if test="spmch != null">
+        #{spmch,jdbcType=CHAR},
+      </if>
+      <if test="zjm != null">
+        #{zjm,jdbcType=CHAR},
+      </if>
+      <if test="beactive != null">
+        #{beactive,jdbcType=CHAR},
+      </if>
+      <if test="yishj != null">
+        #{yishj,jdbcType=CHAR},
+      </if>
+      <if test="isGdsj != null">
+        #{isGdsj,jdbcType=CHAR},
+      </if>
+      <if test="isGdzk != null">
+        #{isGdzk,jdbcType=CHAR},
+      </if>
+      <if test="isTjsp != null">
+        #{isTjsp,jdbcType=CHAR},
+      </if>
+      <if test="isHysp != null">
+        #{isHysp,jdbcType=CHAR},
+      </if>
+      <if test="isGmp != null">
+        #{isGmp,jdbcType=CHAR},
+      </if>
+      <if test="isGsp != null">
+        #{isGsp,jdbcType=CHAR},
+      </if>
+      <if test="isSy != null">
+        #{isSy,jdbcType=CHAR},
+      </if>
+      <if test="isYp != null">
+        #{isYp,jdbcType=CHAR},
+      </if>
+      <if test="jingd != null">
+        #{jingd,jdbcType=CHAR},
+      </if>
+      <if test="denglrq != null">
+        #{denglrq,jdbcType=VARCHAR},
+      </if>
+      <if test="gengxshj != null">
+        #{gengxshj,jdbcType=VARCHAR},
+      </if>
+      <if test="delrq != null">
+        #{delrq,jdbcType=VARCHAR},
+      </if>
+      <if test="dw != null">
+        #{dw,jdbcType=VARCHAR},
+      </if>
+      <if test="shpchd != null">
+        #{shpchd,jdbcType=CHAR},
+      </if>
+      <if test="shpgg != null">
+        #{shpgg,jdbcType=CHAR},
+      </if>
+      <if test="kemuhao != null">
+        #{kemuhao,jdbcType=VARCHAR},
+      </if>
+      <if test="oldcode != null">
+        #{oldcode,jdbcType=VARCHAR},
+      </if>
+      <if test="rkhw != null">
+        #{rkhw,jdbcType=VARCHAR},
+      </if>
+      <if test="ckhw != null">
+        #{ckhw,jdbcType=VARCHAR},
+      </if>
+      <if test="bzqfs != null">
+        #{bzqfs,jdbcType=VARCHAR},
+      </if>
+      <if test="fenlbh != null">
+        #{fenlbh,jdbcType=VARCHAR},
+      </if>
+      <if test="guojbh != null">
+        #{guojbh,jdbcType=VARCHAR},
+      </if>
+      <if test="changjbh != null">
+        #{changjbh,jdbcType=VARCHAR},
+      </if>
+      <if test="huaxm != null">
+        #{huaxm,jdbcType=VARCHAR},
+      </if>
+      <if test="changym != null">
+        #{changym,jdbcType=VARCHAR},
+      </if>
+      <if test="suming != null">
+        #{suming,jdbcType=VARCHAR},
+      </if>
+      <if test="xiwname != null">
+        #{xiwname,jdbcType=VARCHAR},
+      </if>
+      <if test="tongym != null">
+        #{tongym,jdbcType=CHAR},
+      </if>
+      <if test="shengccj != null">
+        #{shengccj,jdbcType=CHAR},
+      </if>
+      <if test="pizhwh != null">
+        #{pizhwh,jdbcType=CHAR},
+      </if>
+      <if test="zhucsb != null">
+        #{zhucsb,jdbcType=VARCHAR},
+      </if>
+      <if test="jixing != null">
+        #{jixing,jdbcType=CHAR},
+      </if>
+      <if test="shiyzh != null">
+        #{shiyzh,jdbcType=VARCHAR},
+      </if>
+      <if test="bulfy != null">
+        #{bulfy,jdbcType=VARCHAR},
+      </if>
+      <if test="chuczysx != null">
+        #{chuczysx,jdbcType=VARCHAR},
+      </if>
+      <if test="chuffl != null">
+        #{chuffl,jdbcType=VARCHAR},
+      </if>
+      <if test="yaofpd != null">
+        #{yaofpd,jdbcType=VARCHAR},
+      </if>
+      <if test="yongfyyl != null">
+        #{yongfyyl,jdbcType=VARCHAR},
+      </if>
+      <if test="jinjzh != null">
+        #{jinjzh,jdbcType=VARCHAR},
+      </if>
+      <if test="zhuysx != null">
+        #{zhuysx,jdbcType=VARCHAR},
+      </if>
+      <if test="yaowchf != null">
+        #{yaowchf,jdbcType=VARCHAR},
+      </if>
+      <if test="youxq != null">
+        #{youxq,jdbcType=CHAR},
+      </if>
+      <if test="shangplx != null">
+        #{shangplx,jdbcType=VARCHAR},
+      </if>
+      <if test="guizbz != null">
+        #{guizbz,jdbcType=VARCHAR},
+      </if>
+      <if test="yongyfl != null">
+        #{yongyfl,jdbcType=VARCHAR},
+      </if>
+      <if test="leibie != null">
+        #{leibie,jdbcType=CHAR},
+      </if>
+      <if test="jlgg != null">
+        #{jlgg,jdbcType=INTEGER},
+      </if>
+      <if test="otd != null">
+        #{otd,jdbcType=INTEGER},
+      </if>
+      <if test="ordercycle != null">
+        #{ordercycle,jdbcType=INTEGER},
+      </if>
+      <if test="stkquot != null">
+        #{stkquot,jdbcType=DECIMAL},
+      </if>
+      <if test="shlv != null">
+        #{shlv,jdbcType=DECIMAL},
+      </if>
+      <if test="hshjj != null">
+        #{hshjj,jdbcType=DECIMAL},
+      </if>
+      <if test="jj != null">
+        #{jj,jdbcType=DECIMAL},
+      </if>
+      <if test="shj != null">
+        #{shj,jdbcType=DECIMAL},
+      </if>
+      <if test="hshsj != null">
+        #{hshsj,jdbcType=DECIMAL},
+      </if>
+      <if test="lshj != null">
+        #{lshj,jdbcType=DECIMAL},
+      </if>
+      <if test="koul != null">
+        #{koul,jdbcType=DECIMAL},
+      </if>
+      <if test="kcsx != null">
+        #{kcsx,jdbcType=DECIMAL},
+      </if>
+      <if test="kcxx != null">
+        #{kcxx,jdbcType=DECIMAL},
+      </if>
+      <if test="helkc != null">
+        #{helkc,jdbcType=DECIMAL},
+      </if>
+      <if test="bzqts != null">
+        #{bzqts,jdbcType=INTEGER},
+      </if>
+      <if test="yujts != null">
+        #{yujts,jdbcType=INTEGER},
+      </if>
+      <if test="zgshl != null">
+        #{zgshl,jdbcType=DECIMAL},
+      </if>
+      <if test="zhdcbj != null">
+        #{zhdcbj,jdbcType=DECIMAL},
+      </if>
+      <if test="zdshj != null">
+        #{zdshj,jdbcType=DECIMAL},
+      </if>
+      <if test="zgshj != null">
+        #{zgshj,jdbcType=DECIMAL},
+      </if>
+      <if test="zgjjxz != null">
+        #{zgjjxz,jdbcType=DECIMAL},
+      </if>
+      <if test="maolv != null">
+        #{maolv,jdbcType=DECIMAL},
+      </if>
+      <if test="huiytj != null">
+        #{huiytj,jdbcType=DECIMAL},
+      </if>
+      <if test="itemlength != null">
+        #{itemlength,jdbcType=DECIMAL},
+      </if>
+      <if test="itemheight != null">
+        #{itemheight,jdbcType=DECIMAL},
+      </if>
+      <if test="itemwidth != null">
+        #{itemwidth,jdbcType=DECIMAL},
+      </if>
+      <if test="weight != null">
+        #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="casevolume != null">
+        #{casevolume,jdbcType=DECIMAL},
+      </if>
+      <if test="caseweight != null">
+        #{caseweight,jdbcType=DECIMAL},
+      </if>
+      <if test="zuixdwtj != null">
+        #{zuixdwtj,jdbcType=DECIMAL},
+      </if>
+      <if test="zuixdwzl != null">
+        #{zuixdwzl,jdbcType=DECIMAL},
+      </if>
+      <if test="pfpj != null">
+        #{pfpj,jdbcType=DECIMAL},
+      </if>
+      <if test="dispcolor != null">
+        #{dispcolor,jdbcType=CHAR},
+      </if>
+      <if test="jx != null">
+        #{jx,jdbcType=VARCHAR},
+      </if>
+      <if test="bzgg != null">
+        #{bzgg,jdbcType=INTEGER},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=VARCHAR},
+      </if>
+      <if test="isCmd != null">
+        #{isCmd,jdbcType=CHAR},
+      </if>
+      <if test="lsgg != null">
+        #{lsgg,jdbcType=VARCHAR},
+      </if>
+      <if test="isZdyh != null">
+        #{isZdyh,jdbcType=CHAR},
+      </if>
+      <if test="isJkyp != null">
+        #{isJkyp,jdbcType=CHAR},
+      </if>
+      <if test="minshl != null">
+        #{minshl,jdbcType=INTEGER},
+      </if>
+      <if test="cxDjKl != null">
+        #{cxDjKl,jdbcType=DECIMAL},
+      </if>
+      <if test="isCxDj != null">
+        #{isCxDj,jdbcType=CHAR},
+      </if>
+      <if test="zdyh != null">
+        #{zdyh,jdbcType=VARCHAR},
+      </if>
+      <if test="zdhyzklshj != null">
+        #{zdhyzklshj,jdbcType=DECIMAL},
+      </if>
+      <if test="isCyhydz != null">
+        #{isCyhydz,jdbcType=CHAR},
+      </if>
+      <if test="huiyshl != null">
+        #{huiyshl,jdbcType=DECIMAL},
+      </if>
+      <if test="nocalcopys != null">
+        #{nocalcopys,jdbcType=CHAR},
+      </if>
+      <if test="fuzr != null">
+        #{fuzr,jdbcType=VARCHAR},
+      </if>
+      <if test="isJsh != null">
+        #{isJsh,jdbcType=CHAR},
+      </if>
+      <if test="isLc != null">
+        #{isLc,jdbcType=CHAR},
+      </if>
+      <if test="isZhongyao != null">
+        #{isZhongyao,jdbcType=CHAR},
+      </if>
+      <if test="typeBh != null">
+        #{typeBh,jdbcType=VARCHAR},
+      </if>
+      <if test="zdlshj != null">
+        #{zdlshj,jdbcType=DECIMAL},
+      </if>
+      <if test="guanjzjh != null">
+        #{guanjzjh,jdbcType=VARCHAR},
+      </if>
+      <if test="shiyq != null">
+        #{shiyq,jdbcType=VARCHAR},
+      </if>
+      <if test="abbrimageurl != null">
+        #{abbrimageurl,jdbcType=VARCHAR},
+      </if>
+      <if test="cbflbh != null">
+        #{cbflbh,jdbcType=VARCHAR},
+      </if>
+      <if test="imageurl != null">
+        #{imageurl,jdbcType=VARCHAR},
+      </if>
+      <if test="isYbsp != null">
+        #{isYbsp,jdbcType=CHAR},
+      </if>
+      <if test="ybZfbl != null">
+        #{ybZfbl,jdbcType=DECIMAL},
+      </if>
+      <if test="ybSpbh != null">
+        #{ybSpbh,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=CHAR},
+      </if>
+      <if test="chuchj != null">
+        #{chuchj,jdbcType=DECIMAL},
+      </if>
+      <if test="pifj != null">
+        #{pifj,jdbcType=DECIMAL},
+      </if>
+      <if test="zhilbz != null">
+        #{zhilbz,jdbcType=CHAR},
+      </if>
+      <if test="chargelb != null">
+        #{chargelb,jdbcType=CHAR},
+      </if>
+      <if test="isSendybzx != null">
+        #{isSendybzx,jdbcType=CHAR},
+      </if>
+      <if test="tjYlshj != null">
+        #{tjYlshj,jdbcType=DECIMAL},
+      </if>
+      <if test="isHj != null">
+        #{isHj,jdbcType=CHAR},
+      </if>
+      <if test="isYxbz != null">
+        #{isYxbz,jdbcType=CHAR},
+      </if>
+      <if test="wdid != null">
+        #{wdid,jdbcType=VARCHAR},
+      </if>
+      <if test="chbjs != null">
+        #{chbjs,jdbcType=CHAR},
+      </if>
+      <if test="dwbh != null">
+        #{dwbh,jdbcType=VARCHAR},
+      </if>
+      <if test="zengp != null">
+        #{zengp,jdbcType=CHAR},
+      </if>
+      <if test="beizhu != null">
+        #{beizhu,jdbcType=CHAR},
+      </if>
+      <if test="cunchtj != null">
+        #{cunchtj,jdbcType=CHAR},
+      </if>
+      <if test="isJy != null">
+        #{isJy,jdbcType=CHAR},
+      </if>
+      <if test="shlvz != null">
+        #{shlvz,jdbcType=DECIMAL},
+      </if>
+      <if test="xscbdj != null">
+        #{xscbdj,jdbcType=DECIMAL},
+      </if>
+      <if test="shcqyzz != null">
+        #{shcqyzz,jdbcType=CHAR},
+      </if>
+      <if test="yppzhwh != null">
+        #{yppzhwh,jdbcType=CHAR},
+      </if>
+      <if test="chpzlbzh != null">
+        #{chpzlbzh,jdbcType=CHAR},
+      </if>
+      <if test="cpzljybgs != null">
+        #{cpzljybgs,jdbcType=CHAR},
+      </if>
+      <if test="cpwjpw != null">
+        #{cpwjpw,jdbcType=CHAR},
+      </if>
+      <if test="jkypxkz != null">
+        #{jkypxkz,jdbcType=CHAR},
+      </if>
+      <if test="jkypzcz != null">
+        #{jkypzcz,jdbcType=CHAR},
+      </if>
+      <if test="ypscbzzm != null">
+        #{ypscbzzm,jdbcType=CHAR},
+      </if>
+      <if test="cpsmspzwh != null">
+        #{cpsmspzwh,jdbcType=CHAR},
+      </if>
+      <if test="qxcpsczcz != null">
+        #{qxcpsczcz,jdbcType=CHAR},
+      </if>
+      <if test="swzppqfz != null">
+        #{swzppqfz,jdbcType=CHAR},
+      </if>
+      <if test="jkycpj != null">
+        #{jkycpj,jdbcType=CHAR},
+      </if>
+      <if test="zhk != null">
+        #{zhk,jdbcType=DECIMAL},
+      </if>
+      <if test="zhkj != null">
+        #{zhkj,jdbcType=DECIMAL},
+      </if>
+      <if test="isFp != null">
+        #{isFp,jdbcType=CHAR},
+      </if>
+      <if test="zhbj != null">
+        #{zhbj,jdbcType=DECIMAL},
+      </if>
+      <if test="danganh != null">
+        #{danganh,jdbcType=CHAR},
+      </if>
+      <if test="spfl != null">
+        #{spfl,jdbcType=CHAR},
+      </if>
+      <if test="iszhj != null">
+        #{iszhj,jdbcType=CHAR},
+      </if>
+      <if test="shenhe != null">
+        #{shenhe,jdbcType=CHAR},
+      </if>
+      <if test="isShenhe != null">
+        #{isShenhe,jdbcType=CHAR},
+      </if>
+      <if test="leibie1 != null">
+        #{leibie1,jdbcType=CHAR},
+      </if>
+      <if test="zhuzlx != null">
+        #{zhuzlx,jdbcType=VARCHAR},
+      </if>
+      <if test="waig != null">
+        #{waig,jdbcType=CHAR},
+      </if>
+      <if test="baozh != null">
+        #{baozh,jdbcType=CHAR},
+      </if>
+      <if test="lclxfy != null">
+        #{lclxfy,jdbcType=CHAR},
+      </if>
+      <if test="zlcxqk != null">
+        #{zlcxqk,jdbcType=CHAR},
+      </if>
+      <if test="yhfwqk != null">
+        #{yhfwqk,jdbcType=CHAR},
+      </if>
+      <if test="zlbzbgqk != null">
+        #{zlbzbgqk,jdbcType=CHAR},
+      </if>
+      <if test="kczlkcqk != null">
+        #{kczlkcqk,jdbcType=CHAR},
+      </if>
+      <if test="gspzsyxq != null">
+        #{gspzsyxq,jdbcType=CHAR},
+      </if>
+      <if test="gmpzsyxq != null">
+        #{gmpzsyxq,jdbcType=CHAR},
+      </if>
+      <if test="gmpzsh != null">
+        #{gmpzsh,jdbcType=CHAR},
+      </if>
+      <if test="maxkxsl != null">
+        #{maxkxsl,jdbcType=INTEGER},
+      </if>
+      <if test="jinkzczh != null">
+        #{jinkzczh,jdbcType=CHAR},
+      </if>
+      <if test="jwh != null">
+        #{jwh,jdbcType=CHAR},
+      </if>
+      <if test="isDesc != null">
+        #{isDesc,jdbcType=CHAR},
+      </if>
+      <if test="ckshlv != null">
+        #{ckshlv,jdbcType=DECIMAL},
+      </if>
+      <if test="gspPzwhyxq != null">
+        #{gspPzwhyxq,jdbcType=CHAR},
+      </if>
+      <if test="gspCgzy != null">
+        #{gspCgzy,jdbcType=CHAR},
+      </if>
+      <if test="xyzs != null">
+        #{xyzs,jdbcType=CHAR},
+      </if>
+      <if test="wjpw != null">
+        #{wjpw,jdbcType=CHAR},
+      </if>
+      <if test="zhucpj != null">
+        #{zhucpj,jdbcType=CHAR},
+      </if>
+      <if test="zzhcpj != null">
+        #{zzhcpj,jdbcType=CHAR},
+      </if>
+      <if test="bchpj != null">
+        #{bchpj,jdbcType=CHAR},
+      </if>
+      <if test="bzhpj != null">
+        #{bzhpj,jdbcType=CHAR},
+      </if>
+      <if test="bzhyp != null">
+        #{bzhyp,jdbcType=CHAR},
+      </if>
+      <if test="chjwts != null">
+        #{chjwts,jdbcType=CHAR},
+      </if>
+      <if test="zlbz != null">
+        #{zlbz,jdbcType=CHAR},
+      </if>
+      <if test="xySms != null">
+        #{xySms,jdbcType=CHAR},
+      </if>
+      <if test="xyYpbz != null">
+        #{xyYpbz,jdbcType=CHAR},
+      </if>
+      <if test="yspbh != null">
+        #{yspbh,jdbcType=CHAR},
+      </if>
+      <if test="huozu != null">
+        #{huozu,jdbcType=CHAR},
+      </if>
+      <if test="cjgjz != null">
+        #{cjgjz,jdbcType=CHAR},
+      </if>
+      <if test="zhengzzt != null">
+        #{zhengzzt,jdbcType=INTEGER},
+      </if>
+      <if test="gspSwpqf != null">
+        #{gspSwpqf,jdbcType=CHAR},
+      </if>
+      <if test="gspJkycpj != null">
+        #{gspJkycpj,jdbcType=CHAR},
+      </if>
+      <if test="gspJkzxz != null">
+        #{gspJkzxz,jdbcType=CHAR},
+      </if>
+      <if test="gspJkswzpbgs != null">
+        #{gspJkswzpbgs,jdbcType=CHAR},
+      </if>
+      <if test="gspJkypbgs != null">
+        #{gspJkypbgs,jdbcType=CHAR},
+      </if>
+      <if test="kesi != null">
+        #{kesi,jdbcType=CHAR},
+      </if>
+      <if test="shuilv != null">
+        #{shuilv,jdbcType=DECIMAL},
+      </if>
+      <if test="swfldm != null">
+        #{swfldm,jdbcType=CHAR},
+      </if>
+      <if test="dsJg != null">
+        #{dsJg,jdbcType=DECIMAL},
+      </if>
+      <if test="bm != null">
+        #{bm,jdbcType=CHAR},
+      </if>
+      <if test="zbz != null">
+        #{zbz,jdbcType=DECIMAL},
+      </if>
+      <if test="isunbundled != null">
+        #{isunbundled,jdbcType=CHAR},
+      </if>
+      <if test="producttype != null">
+        #{producttype,jdbcType=VARCHAR},
+      </if>
+      <if test="barcode != null">
+        #{barcode,jdbcType=VARCHAR},
+      </if>
+      <if test="mbarcode != null">
+        #{mbarcode,jdbcType=VARCHAR},
+      </if>
+      <if test="sbarcode != null">
+        #{sbarcode,jdbcType=VARCHAR},
+      </if>
+      <if test="isgoods != null">
+        #{isgoods,jdbcType=CHAR},
+      </if>
+      <if test="isprecious != null">
+        #{isprecious,jdbcType=CHAR},
+      </if>
+      <if test="isimport != null">
+        #{isimport,jdbcType=CHAR},
+      </if>
+      <if test="countrycode != null">
+        #{countrycode,jdbcType=VARCHAR},
+      </if>
+      <if test="isemonitor != null">
+        #{isemonitor,jdbcType=CHAR},
+      </if>
+      <if test="isanti != null">
+        #{isanti,jdbcType=CHAR},
+      </if>
+      <if test="uefforts != null">
+        #{uefforts,jdbcType=CHAR},
+      </if>
+      <if test="gcategory != null">
+        #{gcategory,jdbcType=CHAR},
+      </if>
+      <if test="squantity != null">
+        #{squantity,jdbcType=INTEGER},
+      </if>
+      <if test="locatlimitedtype != null">
+        #{locatlimitedtype,jdbcType=CHAR},
+      </if>
+      <if test="batchvalidtype != null">
+        #{batchvalidtype,jdbcType=CHAR},
+      </if>
+      <if test="packagespec != null">
+        #{packagespec,jdbcType=VARCHAR},
+      </if>
+      <if test="isemphasis != null">
+        #{isemphasis,jdbcType=CHAR},
+      </if>
+      <if test="zt != null">
+        #{zt,jdbcType=CHAR},
+      </if>
+      <if test="dsjg != null">
+        #{dsjg,jdbcType=DECIMAL},
+      </if>
+      <if test="fenzu2 != null">
+        #{fenzu2,jdbcType=CHAR},
+      </if>
+      <if test="fenzu != null">
+        #{fenzu,jdbcType=CHAR},
+      </if>
+      <if test="isMhj != null">
+        #{isMhj,jdbcType=CHAR},
+      </if>
+      <if test="ypssxkcyr != null">
+        #{ypssxkcyr,jdbcType=CHAR},
+      </if>
+      <if test="gspQxzczh != null">
+        #{gspQxzczh,jdbcType=CHAR},
+      </if>
+      <if test="ssxkcyr != null">
+        #{ssxkcyr,jdbcType=CHAR},
+      </if>
+      <if test="qxScxkzh != null">
+        #{qxScxkzh,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kuka.domain.Spkfk">
+    <!--@mbg.generated-->
+    update spkfk
+    <set>
+      <if test="spbh != null">
+        spbh = #{spbh,jdbcType=CHAR},
+      </if>
+      <if test="sptm != null">
+        sptm = #{sptm,jdbcType=VARCHAR},
+      </if>
+      <if test="spmch != null">
+        spmch = #{spmch,jdbcType=CHAR},
+      </if>
+      <if test="zjm != null">
+        zjm = #{zjm,jdbcType=CHAR},
+      </if>
+      <if test="beactive != null">
+        beactive = #{beactive,jdbcType=CHAR},
+      </if>
+      <if test="yishj != null">
+        yishj = #{yishj,jdbcType=CHAR},
+      </if>
+      <if test="isGdsj != null">
+        is_gdsj = #{isGdsj,jdbcType=CHAR},
+      </if>
+      <if test="isGdzk != null">
+        is_gdzk = #{isGdzk,jdbcType=CHAR},
+      </if>
+      <if test="isTjsp != null">
+        is_tjsp = #{isTjsp,jdbcType=CHAR},
+      </if>
+      <if test="isHysp != null">
+        is_hysp = #{isHysp,jdbcType=CHAR},
+      </if>
+      <if test="isGmp != null">
+        is_gmp = #{isGmp,jdbcType=CHAR},
+      </if>
+      <if test="isGsp != null">
+        is_gsp = #{isGsp,jdbcType=CHAR},
+      </if>
+      <if test="isSy != null">
+        is_sy = #{isSy,jdbcType=CHAR},
+      </if>
+      <if test="isYp != null">
+        is_yp = #{isYp,jdbcType=CHAR},
+      </if>
+      <if test="jingd != null">
+        jingd = #{jingd,jdbcType=CHAR},
+      </if>
+      <if test="denglrq != null">
+        denglrq = #{denglrq,jdbcType=VARCHAR},
+      </if>
+      <if test="gengxshj != null">
+        gengxshj = #{gengxshj,jdbcType=VARCHAR},
+      </if>
+      <if test="delrq != null">
+        delrq = #{delrq,jdbcType=VARCHAR},
+      </if>
+      <if test="dw != null">
+        dw = #{dw,jdbcType=VARCHAR},
+      </if>
+      <if test="shpchd != null">
+        shpchd = #{shpchd,jdbcType=CHAR},
+      </if>
+      <if test="shpgg != null">
+        shpgg = #{shpgg,jdbcType=CHAR},
+      </if>
+      <if test="kemuhao != null">
+        kemuhao = #{kemuhao,jdbcType=VARCHAR},
+      </if>
+      <if test="oldcode != null">
+        oldcode = #{oldcode,jdbcType=VARCHAR},
+      </if>
+      <if test="rkhw != null">
+        rkhw = #{rkhw,jdbcType=VARCHAR},
+      </if>
+      <if test="ckhw != null">
+        ckhw = #{ckhw,jdbcType=VARCHAR},
+      </if>
+      <if test="bzqfs != null">
+        bzqfs = #{bzqfs,jdbcType=VARCHAR},
+      </if>
+      <if test="fenlbh != null">
+        fenlbh = #{fenlbh,jdbcType=VARCHAR},
+      </if>
+      <if test="guojbh != null">
+        guojbh = #{guojbh,jdbcType=VARCHAR},
+      </if>
+      <if test="changjbh != null">
+        changjbh = #{changjbh,jdbcType=VARCHAR},
+      </if>
+      <if test="huaxm != null">
+        huaxm = #{huaxm,jdbcType=VARCHAR},
+      </if>
+      <if test="changym != null">
+        changym = #{changym,jdbcType=VARCHAR},
+      </if>
+      <if test="suming != null">
+        suming = #{suming,jdbcType=VARCHAR},
+      </if>
+      <if test="xiwname != null">
+        xiwname = #{xiwname,jdbcType=VARCHAR},
+      </if>
+      <if test="tongym != null">
+        tongym = #{tongym,jdbcType=CHAR},
+      </if>
+      <if test="shengccj != null">
+        shengccj = #{shengccj,jdbcType=CHAR},
+      </if>
+      <if test="pizhwh != null">
+        pizhwh = #{pizhwh,jdbcType=CHAR},
+      </if>
+      <if test="zhucsb != null">
+        zhucsb = #{zhucsb,jdbcType=VARCHAR},
+      </if>
+      <if test="jixing != null">
+        jixing = #{jixing,jdbcType=CHAR},
+      </if>
+      <if test="shiyzh != null">
+        shiyzh = #{shiyzh,jdbcType=VARCHAR},
+      </if>
+      <if test="bulfy != null">
+        bulfy = #{bulfy,jdbcType=VARCHAR},
+      </if>
+      <if test="chuczysx != null">
+        chuczysx = #{chuczysx,jdbcType=VARCHAR},
+      </if>
+      <if test="chuffl != null">
+        chuffl = #{chuffl,jdbcType=VARCHAR},
+      </if>
+      <if test="yaofpd != null">
+        yaofpd = #{yaofpd,jdbcType=VARCHAR},
+      </if>
+      <if test="yongfyyl != null">
+        yongfyyl = #{yongfyyl,jdbcType=VARCHAR},
+      </if>
+      <if test="jinjzh != null">
+        jinjzh = #{jinjzh,jdbcType=VARCHAR},
+      </if>
+      <if test="zhuysx != null">
+        zhuysx = #{zhuysx,jdbcType=VARCHAR},
+      </if>
+      <if test="yaowchf != null">
+        yaowchf = #{yaowchf,jdbcType=VARCHAR},
+      </if>
+      <if test="youxq != null">
+        youxq = #{youxq,jdbcType=CHAR},
+      </if>
+      <if test="shangplx != null">
+        shangplx = #{shangplx,jdbcType=VARCHAR},
+      </if>
+      <if test="guizbz != null">
+        guizbz = #{guizbz,jdbcType=VARCHAR},
+      </if>
+      <if test="yongyfl != null">
+        yongyfl = #{yongyfl,jdbcType=VARCHAR},
+      </if>
+      <if test="leibie != null">
+        leibie = #{leibie,jdbcType=CHAR},
+      </if>
+      <if test="jlgg != null">
+        jlgg = #{jlgg,jdbcType=INTEGER},
+      </if>
+      <if test="otd != null">
+        otd = #{otd,jdbcType=INTEGER},
+      </if>
+      <if test="ordercycle != null">
+        ordercycle = #{ordercycle,jdbcType=INTEGER},
+      </if>
+      <if test="stkquot != null">
+        stkquot = #{stkquot,jdbcType=DECIMAL},
+      </if>
+      <if test="shlv != null">
+        shlv = #{shlv,jdbcType=DECIMAL},
+      </if>
+      <if test="hshjj != null">
+        hshjj = #{hshjj,jdbcType=DECIMAL},
+      </if>
+      <if test="jj != null">
+        jj = #{jj,jdbcType=DECIMAL},
+      </if>
+      <if test="shj != null">
+        shj = #{shj,jdbcType=DECIMAL},
+      </if>
+      <if test="hshsj != null">
+        hshsj = #{hshsj,jdbcType=DECIMAL},
+      </if>
+      <if test="lshj != null">
+        lshj = #{lshj,jdbcType=DECIMAL},
+      </if>
+      <if test="koul != null">
+        koul = #{koul,jdbcType=DECIMAL},
+      </if>
+      <if test="kcsx != null">
+        kcsx = #{kcsx,jdbcType=DECIMAL},
+      </if>
+      <if test="kcxx != null">
+        kcxx = #{kcxx,jdbcType=DECIMAL},
+      </if>
+      <if test="helkc != null">
+        helkc = #{helkc,jdbcType=DECIMAL},
+      </if>
+      <if test="bzqts != null">
+        bzqts = #{bzqts,jdbcType=INTEGER},
+      </if>
+      <if test="yujts != null">
+        yujts = #{yujts,jdbcType=INTEGER},
+      </if>
+      <if test="zgshl != null">
+        zgshl = #{zgshl,jdbcType=DECIMAL},
+      </if>
+      <if test="zhdcbj != null">
+        zhdcbj = #{zhdcbj,jdbcType=DECIMAL},
+      </if>
+      <if test="zdshj != null">
+        zdshj = #{zdshj,jdbcType=DECIMAL},
+      </if>
+      <if test="zgshj != null">
+        zgshj = #{zgshj,jdbcType=DECIMAL},
+      </if>
+      <if test="zgjjxz != null">
+        zgjjxz = #{zgjjxz,jdbcType=DECIMAL},
+      </if>
+      <if test="maolv != null">
+        maolv = #{maolv,jdbcType=DECIMAL},
+      </if>
+      <if test="huiytj != null">
+        huiytj = #{huiytj,jdbcType=DECIMAL},
+      </if>
+      <if test="itemlength != null">
+        itemlength = #{itemlength,jdbcType=DECIMAL},
+      </if>
+      <if test="itemheight != null">
+        itemheight = #{itemheight,jdbcType=DECIMAL},
+      </if>
+      <if test="itemwidth != null">
+        itemwidth = #{itemwidth,jdbcType=DECIMAL},
+      </if>
+      <if test="weight != null">
+        weight = #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="casevolume != null">
+        casevolume = #{casevolume,jdbcType=DECIMAL},
+      </if>
+      <if test="caseweight != null">
+        caseweight = #{caseweight,jdbcType=DECIMAL},
+      </if>
+      <if test="zuixdwtj != null">
+        zuixdwtj = #{zuixdwtj,jdbcType=DECIMAL},
+      </if>
+      <if test="zuixdwzl != null">
+        zuixdwzl = #{zuixdwzl,jdbcType=DECIMAL},
+      </if>
+      <if test="pfpj != null">
+        pfpj = #{pfpj,jdbcType=DECIMAL},
+      </if>
+      <if test="dispcolor != null">
+        dispcolor = #{dispcolor,jdbcType=CHAR},
+      </if>
+      <if test="jx != null">
+        jx = #{jx,jdbcType=VARCHAR},
+      </if>
+      <if test="bzgg != null">
+        bzgg = #{bzgg,jdbcType=INTEGER},
+      </if>
+      <if test="lastmodifytime != null">
+        lastmodifytime = #{lastmodifytime,jdbcType=VARCHAR},
+      </if>
+      <if test="isCmd != null">
+        is_cmd = #{isCmd,jdbcType=CHAR},
+      </if>
+      <if test="lsgg != null">
+        lsgg = #{lsgg,jdbcType=VARCHAR},
+      </if>
+      <if test="isZdyh != null">
+        is_zdyh = #{isZdyh,jdbcType=CHAR},
+      </if>
+      <if test="isJkyp != null">
+        is_jkyp = #{isJkyp,jdbcType=CHAR},
+      </if>
+      <if test="minshl != null">
+        minshl = #{minshl,jdbcType=INTEGER},
+      </if>
+      <if test="cxDjKl != null">
+        cx_dj_kl = #{cxDjKl,jdbcType=DECIMAL},
+      </if>
+      <if test="isCxDj != null">
+        is_cx_dj = #{isCxDj,jdbcType=CHAR},
+      </if>
+      <if test="zdyh != null">
+        zdyh = #{zdyh,jdbcType=VARCHAR},
+      </if>
+      <if test="zdhyzklshj != null">
+        zdhyzklshj = #{zdhyzklshj,jdbcType=DECIMAL},
+      </if>
+      <if test="isCyhydz != null">
+        is_cyhydz = #{isCyhydz,jdbcType=CHAR},
+      </if>
+      <if test="huiyshl != null">
+        huiyshl = #{huiyshl,jdbcType=DECIMAL},
+      </if>
+      <if test="nocalcopys != null">
+        nocalcopys = #{nocalcopys,jdbcType=CHAR},
+      </if>
+      <if test="fuzr != null">
+        fuzr = #{fuzr,jdbcType=VARCHAR},
+      </if>
+      <if test="isJsh != null">
+        is_jsh = #{isJsh,jdbcType=CHAR},
+      </if>
+      <if test="isLc != null">
+        is_lc = #{isLc,jdbcType=CHAR},
+      </if>
+      <if test="isZhongyao != null">
+        is_zhongyao = #{isZhongyao,jdbcType=CHAR},
+      </if>
+      <if test="typeBh != null">
+        type_bh = #{typeBh,jdbcType=VARCHAR},
+      </if>
+      <if test="zdlshj != null">
+        zdlshj = #{zdlshj,jdbcType=DECIMAL},
+      </if>
+      <if test="guanjzjh != null">
+        guanjzjh = #{guanjzjh,jdbcType=VARCHAR},
+      </if>
+      <if test="shiyq != null">
+        shiyq = #{shiyq,jdbcType=VARCHAR},
+      </if>
+      <if test="abbrimageurl != null">
+        abbrImageURL = #{abbrimageurl,jdbcType=VARCHAR},
+      </if>
+      <if test="cbflbh != null">
+        cbflbh = #{cbflbh,jdbcType=VARCHAR},
+      </if>
+      <if test="imageurl != null">
+        imageUrl = #{imageurl,jdbcType=VARCHAR},
+      </if>
+      <if test="isYbsp != null">
+        is_ybsp = #{isYbsp,jdbcType=CHAR},
+      </if>
+      <if test="ybZfbl != null">
+        yb_zfbl = #{ybZfbl,jdbcType=DECIMAL},
+      </if>
+      <if test="ybSpbh != null">
+        yb_spbh = #{ybSpbh,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        username = #{username,jdbcType=CHAR},
+      </if>
+      <if test="chuchj != null">
+        chuchj = #{chuchj,jdbcType=DECIMAL},
+      </if>
+      <if test="pifj != null">
+        pifj = #{pifj,jdbcType=DECIMAL},
+      </if>
+      <if test="zhilbz != null">
+        zhilbz = #{zhilbz,jdbcType=CHAR},
+      </if>
+      <if test="chargelb != null">
+        chargelb = #{chargelb,jdbcType=CHAR},
+      </if>
+      <if test="isSendybzx != null">
+        is_sendybzx = #{isSendybzx,jdbcType=CHAR},
+      </if>
+      <if test="tjYlshj != null">
+        tj_ylshj = #{tjYlshj,jdbcType=DECIMAL},
+      </if>
+      <if test="isHj != null">
+        is_hj = #{isHj,jdbcType=CHAR},
+      </if>
+      <if test="isYxbz != null">
+        is_yxbz = #{isYxbz,jdbcType=CHAR},
+      </if>
+      <if test="wdid != null">
+        wdid = #{wdid,jdbcType=VARCHAR},
+      </if>
+      <if test="chbjs != null">
+        chbjs = #{chbjs,jdbcType=CHAR},
+      </if>
+      <if test="dwbh != null">
+        dwbh = #{dwbh,jdbcType=VARCHAR},
+      </if>
+      <if test="zengp != null">
+        zengp = #{zengp,jdbcType=CHAR},
+      </if>
+      <if test="beizhu != null">
+        beizhu = #{beizhu,jdbcType=CHAR},
+      </if>
+      <if test="cunchtj != null">
+        cunchtj = #{cunchtj,jdbcType=CHAR},
+      </if>
+      <if test="isJy != null">
+        is_jy = #{isJy,jdbcType=CHAR},
+      </if>
+      <if test="shlvz != null">
+        shlvz = #{shlvz,jdbcType=DECIMAL},
+      </if>
+      <if test="xscbdj != null">
+        xscbdj = #{xscbdj,jdbcType=DECIMAL},
+      </if>
+      <if test="shcqyzz != null">
+        shcqyzz = #{shcqyzz,jdbcType=CHAR},
+      </if>
+      <if test="yppzhwh != null">
+        yppzhwh = #{yppzhwh,jdbcType=CHAR},
+      </if>
+      <if test="chpzlbzh != null">
+        chpzlbzh = #{chpzlbzh,jdbcType=CHAR},
+      </if>
+      <if test="cpzljybgs != null">
+        cpzljybgs = #{cpzljybgs,jdbcType=CHAR},
+      </if>
+      <if test="cpwjpw != null">
+        cpwjpw = #{cpwjpw,jdbcType=CHAR},
+      </if>
+      <if test="jkypxkz != null">
+        jkypxkz = #{jkypxkz,jdbcType=CHAR},
+      </if>
+      <if test="jkypzcz != null">
+        jkypzcz = #{jkypzcz,jdbcType=CHAR},
+      </if>
+      <if test="ypscbzzm != null">
+        ypscbzzm = #{ypscbzzm,jdbcType=CHAR},
+      </if>
+      <if test="cpsmspzwh != null">
+        cpsmspzwh = #{cpsmspzwh,jdbcType=CHAR},
+      </if>
+      <if test="qxcpsczcz != null">
+        qxcpsczcz = #{qxcpsczcz,jdbcType=CHAR},
+      </if>
+      <if test="swzppqfz != null">
+        swzppqfz = #{swzppqfz,jdbcType=CHAR},
+      </if>
+      <if test="jkycpj != null">
+        jkycpj = #{jkycpj,jdbcType=CHAR},
+      </if>
+      <if test="zhk != null">
+        zhk = #{zhk,jdbcType=DECIMAL},
+      </if>
+      <if test="zhkj != null">
+        zhkj = #{zhkj,jdbcType=DECIMAL},
+      </if>
+      <if test="isFp != null">
+        is_fp = #{isFp,jdbcType=CHAR},
+      </if>
+      <if test="zhbj != null">
+        zhbj = #{zhbj,jdbcType=DECIMAL},
+      </if>
+      <if test="danganh != null">
+        danganh = #{danganh,jdbcType=CHAR},
+      </if>
+      <if test="spfl != null">
+        spfl = #{spfl,jdbcType=CHAR},
+      </if>
+      <if test="iszhj != null">
+        iszhj = #{iszhj,jdbcType=CHAR},
+      </if>
+      <if test="shenhe != null">
+        shenhe = #{shenhe,jdbcType=CHAR},
+      </if>
+      <if test="isShenhe != null">
+        is_shenhe = #{isShenhe,jdbcType=CHAR},
+      </if>
+      <if test="leibie1 != null">
+        leibie1 = #{leibie1,jdbcType=CHAR},
+      </if>
+      <if test="zhuzlx != null">
+        zhuzlx = #{zhuzlx,jdbcType=VARCHAR},
+      </if>
+      <if test="waig != null">
+        waig = #{waig,jdbcType=CHAR},
+      </if>
+      <if test="baozh != null">
+        baozh = #{baozh,jdbcType=CHAR},
+      </if>
+      <if test="lclxfy != null">
+        lclxfy = #{lclxfy,jdbcType=CHAR},
+      </if>
+      <if test="zlcxqk != null">
+        zlcxqk = #{zlcxqk,jdbcType=CHAR},
+      </if>
+      <if test="yhfwqk != null">
+        yhfwqk = #{yhfwqk,jdbcType=CHAR},
+      </if>
+      <if test="zlbzbgqk != null">
+        zlbzbgqk = #{zlbzbgqk,jdbcType=CHAR},
+      </if>
+      <if test="kczlkcqk != null">
+        kczlkcqk = #{kczlkcqk,jdbcType=CHAR},
+      </if>
+      <if test="gspzsyxq != null">
+        gspzsyxq = #{gspzsyxq,jdbcType=CHAR},
+      </if>
+      <if test="gmpzsyxq != null">
+        gmpzsyxq = #{gmpzsyxq,jdbcType=CHAR},
+      </if>
+      <if test="gmpzsh != null">
+        gmpzsh = #{gmpzsh,jdbcType=CHAR},
+      </if>
+      <if test="maxkxsl != null">
+        maxkxsl = #{maxkxsl,jdbcType=INTEGER},
+      </if>
+      <if test="jinkzczh != null">
+        jinkzczh = #{jinkzczh,jdbcType=CHAR},
+      </if>
+      <if test="jwh != null">
+        jwh = #{jwh,jdbcType=CHAR},
+      </if>
+      <if test="isDesc != null">
+        is_desc = #{isDesc,jdbcType=CHAR},
+      </if>
+      <if test="ckshlv != null">
+        ckshlv = #{ckshlv,jdbcType=DECIMAL},
+      </if>
+      <if test="gspPzwhyxq != null">
+        gsp_pzwhyxq = #{gspPzwhyxq,jdbcType=CHAR},
+      </if>
+      <if test="gspCgzy != null">
+        gsp_cgzy = #{gspCgzy,jdbcType=CHAR},
+      </if>
+      <if test="xyzs != null">
+        xyzs = #{xyzs,jdbcType=CHAR},
+      </if>
+      <if test="wjpw != null">
+        wjpw = #{wjpw,jdbcType=CHAR},
+      </if>
+      <if test="zhucpj != null">
+        zhucpj = #{zhucpj,jdbcType=CHAR},
+      </if>
+      <if test="zzhcpj != null">
+        zzhcpj = #{zzhcpj,jdbcType=CHAR},
+      </if>
+      <if test="bchpj != null">
+        bchpj = #{bchpj,jdbcType=CHAR},
+      </if>
+      <if test="bzhpj != null">
+        bzhpj = #{bzhpj,jdbcType=CHAR},
+      </if>
+      <if test="bzhyp != null">
+        bzhyp = #{bzhyp,jdbcType=CHAR},
+      </if>
+      <if test="chjwts != null">
+        chjwts = #{chjwts,jdbcType=CHAR},
+      </if>
+      <if test="zlbz != null">
+        zlbz = #{zlbz,jdbcType=CHAR},
+      </if>
+      <if test="xySms != null">
+        xy_sms = #{xySms,jdbcType=CHAR},
+      </if>
+      <if test="xyYpbz != null">
+        xy_ypbz = #{xyYpbz,jdbcType=CHAR},
+      </if>
+      <if test="yspbh != null">
+        yspbh = #{yspbh,jdbcType=CHAR},
+      </if>
+      <if test="huozu != null">
+        huozu = #{huozu,jdbcType=CHAR},
+      </if>
+      <if test="cjgjz != null">
+        cjgjz = #{cjgjz,jdbcType=CHAR},
+      </if>
+      <if test="zhengzzt != null">
+        zhengzzt = #{zhengzzt,jdbcType=INTEGER},
+      </if>
+      <if test="gspSwpqf != null">
+        gsp_swpqf = #{gspSwpqf,jdbcType=CHAR},
+      </if>
+      <if test="gspJkycpj != null">
+        gsp_jkycpj = #{gspJkycpj,jdbcType=CHAR},
+      </if>
+      <if test="gspJkzxz != null">
+        gsp_jkzxz = #{gspJkzxz,jdbcType=CHAR},
+      </if>
+      <if test="gspJkswzpbgs != null">
+        gsp_jkswzpbgs = #{gspJkswzpbgs,jdbcType=CHAR},
+      </if>
+      <if test="gspJkypbgs != null">
+        gsp_jkypbgs = #{gspJkypbgs,jdbcType=CHAR},
+      </if>
+      <if test="kesi != null">
+        kesi = #{kesi,jdbcType=CHAR},
+      </if>
+      <if test="shuilv != null">
+        shuilv = #{shuilv,jdbcType=DECIMAL},
+      </if>
+      <if test="swfldm != null">
+        swfldm = #{swfldm,jdbcType=CHAR},
+      </if>
+      <if test="dsJg != null">
+        ds_jg = #{dsJg,jdbcType=DECIMAL},
+      </if>
+      <if test="bm != null">
+        bm = #{bm,jdbcType=CHAR},
+      </if>
+      <if test="zbz != null">
+        zbz = #{zbz,jdbcType=DECIMAL},
+      </if>
+      <if test="isunbundled != null">
+        isunbundled = #{isunbundled,jdbcType=CHAR},
+      </if>
+      <if test="producttype != null">
+        ProductType = #{producttype,jdbcType=VARCHAR},
+      </if>
+      <if test="barcode != null">
+        BarCode = #{barcode,jdbcType=VARCHAR},
+      </if>
+      <if test="mbarcode != null">
+        MBarCode = #{mbarcode,jdbcType=VARCHAR},
+      </if>
+      <if test="sbarcode != null">
+        SbarCode = #{sbarcode,jdbcType=VARCHAR},
+      </if>
+      <if test="isgoods != null">
+        IsGoods = #{isgoods,jdbcType=CHAR},
+      </if>
+      <if test="isprecious != null">
+        IsPrecious = #{isprecious,jdbcType=CHAR},
+      </if>
+      <if test="isimport != null">
+        IsImport = #{isimport,jdbcType=CHAR},
+      </if>
+      <if test="countrycode != null">
+        CountryCode = #{countrycode,jdbcType=VARCHAR},
+      </if>
+      <if test="isemonitor != null">
+        IsEmonitor = #{isemonitor,jdbcType=CHAR},
+      </if>
+      <if test="isanti != null">
+        IsAnti = #{isanti,jdbcType=CHAR},
+      </if>
+      <if test="uefforts != null">
+        Uefforts = #{uefforts,jdbcType=CHAR},
+      </if>
+      <if test="gcategory != null">
+        GCategory = #{gcategory,jdbcType=CHAR},
+      </if>
+      <if test="squantity != null">
+        Squantity = #{squantity,jdbcType=INTEGER},
+      </if>
+      <if test="locatlimitedtype != null">
+        LocatLimitedType = #{locatlimitedtype,jdbcType=CHAR},
+      </if>
+      <if test="batchvalidtype != null">
+        BatchValidType = #{batchvalidtype,jdbcType=CHAR},
+      </if>
+      <if test="packagespec != null">
+        PackageSpec = #{packagespec,jdbcType=VARCHAR},
+      </if>
+      <if test="isemphasis != null">
+        IsEmphasis = #{isemphasis,jdbcType=CHAR},
+      </if>
+      <if test="zt != null">
+        zt = #{zt,jdbcType=CHAR},
+      </if>
+      <if test="dsjg != null">
+        dsjg = #{dsjg,jdbcType=DECIMAL},
+      </if>
+      <if test="fenzu2 != null">
+        fenzu2 = #{fenzu2,jdbcType=CHAR},
+      </if>
+      <if test="fenzu != null">
+        fenzu = #{fenzu,jdbcType=CHAR},
+      </if>
+      <if test="isMhj != null">
+        is_mhj = #{isMhj,jdbcType=CHAR},
+      </if>
+      <if test="ypssxkcyr != null">
+        ypssxkcyr = #{ypssxkcyr,jdbcType=CHAR},
+      </if>
+      <if test="gspQxzczh != null">
+        gsp_qxzczh = #{gspQxzczh,jdbcType=CHAR},
+      </if>
+      <if test="ssxkcyr != null">
+        ssxkcyr = #{ssxkcyr,jdbcType=CHAR},
+      </if>
+      <if test="qxScxkzh != null">
+        qx_scxkzh = #{qxScxkzh,jdbcType=CHAR},
+      </if>
+    </set>
+    where spid = #{spid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kuka.domain.Spkfk">
+    <!--@mbg.generated-->
+    update spkfk
+    set spbh = #{spbh,jdbcType=CHAR},
+      sptm = #{sptm,jdbcType=VARCHAR},
+      spmch = #{spmch,jdbcType=CHAR},
+      zjm = #{zjm,jdbcType=CHAR},
+      beactive = #{beactive,jdbcType=CHAR},
+      yishj = #{yishj,jdbcType=CHAR},
+      is_gdsj = #{isGdsj,jdbcType=CHAR},
+      is_gdzk = #{isGdzk,jdbcType=CHAR},
+      is_tjsp = #{isTjsp,jdbcType=CHAR},
+      is_hysp = #{isHysp,jdbcType=CHAR},
+      is_gmp = #{isGmp,jdbcType=CHAR},
+      is_gsp = #{isGsp,jdbcType=CHAR},
+      is_sy = #{isSy,jdbcType=CHAR},
+      is_yp = #{isYp,jdbcType=CHAR},
+      jingd = #{jingd,jdbcType=CHAR},
+      denglrq = #{denglrq,jdbcType=VARCHAR},
+      gengxshj = #{gengxshj,jdbcType=VARCHAR},
+      delrq = #{delrq,jdbcType=VARCHAR},
+      dw = #{dw,jdbcType=VARCHAR},
+      shpchd = #{shpchd,jdbcType=CHAR},
+      shpgg = #{shpgg,jdbcType=CHAR},
+      kemuhao = #{kemuhao,jdbcType=VARCHAR},
+      oldcode = #{oldcode,jdbcType=VARCHAR},
+      rkhw = #{rkhw,jdbcType=VARCHAR},
+      ckhw = #{ckhw,jdbcType=VARCHAR},
+      bzqfs = #{bzqfs,jdbcType=VARCHAR},
+      fenlbh = #{fenlbh,jdbcType=VARCHAR},
+      guojbh = #{guojbh,jdbcType=VARCHAR},
+      changjbh = #{changjbh,jdbcType=VARCHAR},
+      huaxm = #{huaxm,jdbcType=VARCHAR},
+      changym = #{changym,jdbcType=VARCHAR},
+      suming = #{suming,jdbcType=VARCHAR},
+      xiwname = #{xiwname,jdbcType=VARCHAR},
+      tongym = #{tongym,jdbcType=CHAR},
+      shengccj = #{shengccj,jdbcType=CHAR},
+      pizhwh = #{pizhwh,jdbcType=CHAR},
+      zhucsb = #{zhucsb,jdbcType=VARCHAR},
+      jixing = #{jixing,jdbcType=CHAR},
+      shiyzh = #{shiyzh,jdbcType=VARCHAR},
+      bulfy = #{bulfy,jdbcType=VARCHAR},
+      chuczysx = #{chuczysx,jdbcType=VARCHAR},
+      chuffl = #{chuffl,jdbcType=VARCHAR},
+      yaofpd = #{yaofpd,jdbcType=VARCHAR},
+      yongfyyl = #{yongfyyl,jdbcType=VARCHAR},
+      jinjzh = #{jinjzh,jdbcType=VARCHAR},
+      zhuysx = #{zhuysx,jdbcType=VARCHAR},
+      yaowchf = #{yaowchf,jdbcType=VARCHAR},
+      youxq = #{youxq,jdbcType=CHAR},
+      shangplx = #{shangplx,jdbcType=VARCHAR},
+      guizbz = #{guizbz,jdbcType=VARCHAR},
+      yongyfl = #{yongyfl,jdbcType=VARCHAR},
+      leibie = #{leibie,jdbcType=CHAR},
+      jlgg = #{jlgg,jdbcType=INTEGER},
+      otd = #{otd,jdbcType=INTEGER},
+      ordercycle = #{ordercycle,jdbcType=INTEGER},
+      stkquot = #{stkquot,jdbcType=DECIMAL},
+      shlv = #{shlv,jdbcType=DECIMAL},
+      hshjj = #{hshjj,jdbcType=DECIMAL},
+      jj = #{jj,jdbcType=DECIMAL},
+      shj = #{shj,jdbcType=DECIMAL},
+      hshsj = #{hshsj,jdbcType=DECIMAL},
+      lshj = #{lshj,jdbcType=DECIMAL},
+      koul = #{koul,jdbcType=DECIMAL},
+      kcsx = #{kcsx,jdbcType=DECIMAL},
+      kcxx = #{kcxx,jdbcType=DECIMAL},
+      helkc = #{helkc,jdbcType=DECIMAL},
+      bzqts = #{bzqts,jdbcType=INTEGER},
+      yujts = #{yujts,jdbcType=INTEGER},
+      zgshl = #{zgshl,jdbcType=DECIMAL},
+      zhdcbj = #{zhdcbj,jdbcType=DECIMAL},
+      zdshj = #{zdshj,jdbcType=DECIMAL},
+      zgshj = #{zgshj,jdbcType=DECIMAL},
+      zgjjxz = #{zgjjxz,jdbcType=DECIMAL},
+      maolv = #{maolv,jdbcType=DECIMAL},
+      huiytj = #{huiytj,jdbcType=DECIMAL},
+      itemlength = #{itemlength,jdbcType=DECIMAL},
+      itemheight = #{itemheight,jdbcType=DECIMAL},
+      itemwidth = #{itemwidth,jdbcType=DECIMAL},
+      weight = #{weight,jdbcType=DECIMAL},
+      casevolume = #{casevolume,jdbcType=DECIMAL},
+      caseweight = #{caseweight,jdbcType=DECIMAL},
+      zuixdwtj = #{zuixdwtj,jdbcType=DECIMAL},
+      zuixdwzl = #{zuixdwzl,jdbcType=DECIMAL},
+      pfpj = #{pfpj,jdbcType=DECIMAL},
+      dispcolor = #{dispcolor,jdbcType=CHAR},
+      jx = #{jx,jdbcType=VARCHAR},
+      bzgg = #{bzgg,jdbcType=INTEGER},
+      lastmodifytime = #{lastmodifytime,jdbcType=VARCHAR},
+      is_cmd = #{isCmd,jdbcType=CHAR},
+      lsgg = #{lsgg,jdbcType=VARCHAR},
+      is_zdyh = #{isZdyh,jdbcType=CHAR},
+      is_jkyp = #{isJkyp,jdbcType=CHAR},
+      minshl = #{minshl,jdbcType=INTEGER},
+      cx_dj_kl = #{cxDjKl,jdbcType=DECIMAL},
+      is_cx_dj = #{isCxDj,jdbcType=CHAR},
+      zdyh = #{zdyh,jdbcType=VARCHAR},
+      zdhyzklshj = #{zdhyzklshj,jdbcType=DECIMAL},
+      is_cyhydz = #{isCyhydz,jdbcType=CHAR},
+      huiyshl = #{huiyshl,jdbcType=DECIMAL},
+      nocalcopys = #{nocalcopys,jdbcType=CHAR},
+      fuzr = #{fuzr,jdbcType=VARCHAR},
+      is_jsh = #{isJsh,jdbcType=CHAR},
+      is_lc = #{isLc,jdbcType=CHAR},
+      is_zhongyao = #{isZhongyao,jdbcType=CHAR},
+      type_bh = #{typeBh,jdbcType=VARCHAR},
+      zdlshj = #{zdlshj,jdbcType=DECIMAL},
+      guanjzjh = #{guanjzjh,jdbcType=VARCHAR},
+      shiyq = #{shiyq,jdbcType=VARCHAR},
+      abbrImageURL = #{abbrimageurl,jdbcType=VARCHAR},
+      cbflbh = #{cbflbh,jdbcType=VARCHAR},
+      imageUrl = #{imageurl,jdbcType=VARCHAR},
+      is_ybsp = #{isYbsp,jdbcType=CHAR},
+      yb_zfbl = #{ybZfbl,jdbcType=DECIMAL},
+      yb_spbh = #{ybSpbh,jdbcType=VARCHAR},
+      username = #{username,jdbcType=CHAR},
+      chuchj = #{chuchj,jdbcType=DECIMAL},
+      pifj = #{pifj,jdbcType=DECIMAL},
+      zhilbz = #{zhilbz,jdbcType=CHAR},
+      chargelb = #{chargelb,jdbcType=CHAR},
+      is_sendybzx = #{isSendybzx,jdbcType=CHAR},
+      tj_ylshj = #{tjYlshj,jdbcType=DECIMAL},
+      is_hj = #{isHj,jdbcType=CHAR},
+      is_yxbz = #{isYxbz,jdbcType=CHAR},
+      wdid = #{wdid,jdbcType=VARCHAR},
+      chbjs = #{chbjs,jdbcType=CHAR},
+      dwbh = #{dwbh,jdbcType=VARCHAR},
+      zengp = #{zengp,jdbcType=CHAR},
+      beizhu = #{beizhu,jdbcType=CHAR},
+      cunchtj = #{cunchtj,jdbcType=CHAR},
+      is_jy = #{isJy,jdbcType=CHAR},
+      shlvz = #{shlvz,jdbcType=DECIMAL},
+      xscbdj = #{xscbdj,jdbcType=DECIMAL},
+      shcqyzz = #{shcqyzz,jdbcType=CHAR},
+      yppzhwh = #{yppzhwh,jdbcType=CHAR},
+      chpzlbzh = #{chpzlbzh,jdbcType=CHAR},
+      cpzljybgs = #{cpzljybgs,jdbcType=CHAR},
+      cpwjpw = #{cpwjpw,jdbcType=CHAR},
+      jkypxkz = #{jkypxkz,jdbcType=CHAR},
+      jkypzcz = #{jkypzcz,jdbcType=CHAR},
+      ypscbzzm = #{ypscbzzm,jdbcType=CHAR},
+      cpsmspzwh = #{cpsmspzwh,jdbcType=CHAR},
+      qxcpsczcz = #{qxcpsczcz,jdbcType=CHAR},
+      swzppqfz = #{swzppqfz,jdbcType=CHAR},
+      jkycpj = #{jkycpj,jdbcType=CHAR},
+      zhk = #{zhk,jdbcType=DECIMAL},
+      zhkj = #{zhkj,jdbcType=DECIMAL},
+      is_fp = #{isFp,jdbcType=CHAR},
+      zhbj = #{zhbj,jdbcType=DECIMAL},
+      danganh = #{danganh,jdbcType=CHAR},
+      spfl = #{spfl,jdbcType=CHAR},
+      iszhj = #{iszhj,jdbcType=CHAR},
+      shenhe = #{shenhe,jdbcType=CHAR},
+      is_shenhe = #{isShenhe,jdbcType=CHAR},
+      leibie1 = #{leibie1,jdbcType=CHAR},
+      zhuzlx = #{zhuzlx,jdbcType=VARCHAR},
+      waig = #{waig,jdbcType=CHAR},
+      baozh = #{baozh,jdbcType=CHAR},
+      lclxfy = #{lclxfy,jdbcType=CHAR},
+      zlcxqk = #{zlcxqk,jdbcType=CHAR},
+      yhfwqk = #{yhfwqk,jdbcType=CHAR},
+      zlbzbgqk = #{zlbzbgqk,jdbcType=CHAR},
+      kczlkcqk = #{kczlkcqk,jdbcType=CHAR},
+      gspzsyxq = #{gspzsyxq,jdbcType=CHAR},
+      gmpzsyxq = #{gmpzsyxq,jdbcType=CHAR},
+      gmpzsh = #{gmpzsh,jdbcType=CHAR},
+      maxkxsl = #{maxkxsl,jdbcType=INTEGER},
+      jinkzczh = #{jinkzczh,jdbcType=CHAR},
+      jwh = #{jwh,jdbcType=CHAR},
+      is_desc = #{isDesc,jdbcType=CHAR},
+      ckshlv = #{ckshlv,jdbcType=DECIMAL},
+      gsp_pzwhyxq = #{gspPzwhyxq,jdbcType=CHAR},
+      gsp_cgzy = #{gspCgzy,jdbcType=CHAR},
+      xyzs = #{xyzs,jdbcType=CHAR},
+      wjpw = #{wjpw,jdbcType=CHAR},
+      zhucpj = #{zhucpj,jdbcType=CHAR},
+      zzhcpj = #{zzhcpj,jdbcType=CHAR},
+      bchpj = #{bchpj,jdbcType=CHAR},
+      bzhpj = #{bzhpj,jdbcType=CHAR},
+      bzhyp = #{bzhyp,jdbcType=CHAR},
+      chjwts = #{chjwts,jdbcType=CHAR},
+      zlbz = #{zlbz,jdbcType=CHAR},
+      xy_sms = #{xySms,jdbcType=CHAR},
+      xy_ypbz = #{xyYpbz,jdbcType=CHAR},
+      yspbh = #{yspbh,jdbcType=CHAR},
+      huozu = #{huozu,jdbcType=CHAR},
+      cjgjz = #{cjgjz,jdbcType=CHAR},
+      zhengzzt = #{zhengzzt,jdbcType=INTEGER},
+      gsp_swpqf = #{gspSwpqf,jdbcType=CHAR},
+      gsp_jkycpj = #{gspJkycpj,jdbcType=CHAR},
+      gsp_jkzxz = #{gspJkzxz,jdbcType=CHAR},
+      gsp_jkswzpbgs = #{gspJkswzpbgs,jdbcType=CHAR},
+      gsp_jkypbgs = #{gspJkypbgs,jdbcType=CHAR},
+      kesi = #{kesi,jdbcType=CHAR},
+      shuilv = #{shuilv,jdbcType=DECIMAL},
+      swfldm = #{swfldm,jdbcType=CHAR},
+      ds_jg = #{dsJg,jdbcType=DECIMAL},
+      bm = #{bm,jdbcType=CHAR},
+      zbz = #{zbz,jdbcType=DECIMAL},
+      isunbundled = #{isunbundled,jdbcType=CHAR},
+      ProductType = #{producttype,jdbcType=VARCHAR},
+      BarCode = #{barcode,jdbcType=VARCHAR},
+      MBarCode = #{mbarcode,jdbcType=VARCHAR},
+      SbarCode = #{sbarcode,jdbcType=VARCHAR},
+      IsGoods = #{isgoods,jdbcType=CHAR},
+      IsPrecious = #{isprecious,jdbcType=CHAR},
+      IsImport = #{isimport,jdbcType=CHAR},
+      CountryCode = #{countrycode,jdbcType=VARCHAR},
+      IsEmonitor = #{isemonitor,jdbcType=CHAR},
+      IsAnti = #{isanti,jdbcType=CHAR},
+      Uefforts = #{uefforts,jdbcType=CHAR},
+      GCategory = #{gcategory,jdbcType=CHAR},
+      Squantity = #{squantity,jdbcType=INTEGER},
+      LocatLimitedType = #{locatlimitedtype,jdbcType=CHAR},
+      BatchValidType = #{batchvalidtype,jdbcType=CHAR},
+      PackageSpec = #{packagespec,jdbcType=VARCHAR},
+      IsEmphasis = #{isemphasis,jdbcType=CHAR},
+      zt = #{zt,jdbcType=CHAR},
+      dsjg = #{dsjg,jdbcType=DECIMAL},
+      fenzu2 = #{fenzu2,jdbcType=CHAR},
+      fenzu = #{fenzu,jdbcType=CHAR},
+      is_mhj = #{isMhj,jdbcType=CHAR},
+      ypssxkcyr = #{ypssxkcyr,jdbcType=CHAR},
+      gsp_qxzczh = #{gspQxzczh,jdbcType=CHAR},
+      ssxkcyr = #{ssxkcyr,jdbcType=CHAR},
+      qx_scxkzh = #{qxScxkzh,jdbcType=CHAR}
+    where spid = #{spid,jdbcType=CHAR}
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into spkfk
+    (spid, spbh, sptm, spmch, zjm, beactive, yishj, is_gdsj, is_gdzk, is_tjsp, is_hysp, 
+      is_gmp, is_gsp, is_sy, is_yp, jingd, denglrq, gengxshj, delrq, dw, shpchd, shpgg, 
+      kemuhao, oldcode, rkhw, ckhw, bzqfs, fenlbh, guojbh, changjbh, huaxm, changym, 
+      suming, xiwname, tongym, shengccj, pizhwh, zhucsb, jixing, shiyzh, bulfy, chuczysx, 
+      chuffl, yaofpd, yongfyyl, jinjzh, zhuysx, yaowchf, youxq, shangplx, guizbz, yongyfl, 
+      leibie, jlgg, otd, ordercycle, stkquot, shlv, hshjj, jj, shj, hshsj, lshj, koul, 
+      kcsx, kcxx, helkc, bzqts, yujts, zgshl, zhdcbj, zdshj, zgshj, zgjjxz, maolv, huiytj, 
+      itemlength, itemheight, itemwidth, weight, casevolume, caseweight, zuixdwtj, zuixdwzl, 
+      pfpj, dispcolor, jx, bzgg, lastmodifytime, is_cmd, lsgg, is_zdyh, is_jkyp, minshl, 
+      cx_dj_kl, is_cx_dj, zdyh, zdhyzklshj, is_cyhydz, huiyshl, nocalcopys, fuzr, is_jsh, 
+      is_lc, is_zhongyao, type_bh, zdlshj, guanjzjh, shiyq, abbrImageURL, cbflbh, imageUrl, 
+      is_ybsp, yb_zfbl, yb_spbh, username, chuchj, pifj, zhilbz, chargelb, is_sendybzx, 
+      tj_ylshj, is_hj, is_yxbz, wdid, chbjs, dwbh, zengp, beizhu, cunchtj, is_jy, shlvz, 
+      xscbdj, shcqyzz, yppzhwh, chpzlbzh, cpzljybgs, cpwjpw, jkypxkz, jkypzcz, ypscbzzm, 
+      cpsmspzwh, qxcpsczcz, swzppqfz, jkycpj, zhk, zhkj, is_fp, zhbj, danganh, spfl, 
+      iszhj, shenhe, is_shenhe, leibie1, zhuzlx, waig, baozh, lclxfy, zlcxqk, yhfwqk, 
+      zlbzbgqk, kczlkcqk, gspzsyxq, gmpzsyxq, gmpzsh, maxkxsl, jinkzczh, jwh, is_desc, 
+      ckshlv, gsp_pzwhyxq, gsp_cgzy, xyzs, wjpw, zhucpj, zzhcpj, bchpj, bzhpj, bzhyp, 
+      chjwts, zlbz, xy_sms, xy_ypbz, yspbh, huozu, cjgjz, zhengzzt, gsp_swpqf, gsp_jkycpj, 
+      gsp_jkzxz, gsp_jkswzpbgs, gsp_jkypbgs, kesi, shuilv, swfldm, ds_jg, bm, zbz, isunbundled, 
+      ProductType, BarCode, MBarCode, SbarCode, IsGoods, IsPrecious, IsImport, CountryCode, 
+      IsEmonitor, IsAnti, Uefforts, GCategory, Squantity, LocatLimitedType, BatchValidType, 
+      PackageSpec, IsEmphasis, zt, dsjg, fenzu2, fenzu, is_mhj, ypssxkcyr, gsp_qxzczh, 
+      ssxkcyr, qx_scxkzh)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.spid,jdbcType=CHAR}, #{item.spbh,jdbcType=CHAR}, #{item.sptm,jdbcType=VARCHAR}, 
+        #{item.spmch,jdbcType=CHAR}, #{item.zjm,jdbcType=CHAR}, #{item.beactive,jdbcType=CHAR}, 
+        #{item.yishj,jdbcType=CHAR}, #{item.isGdsj,jdbcType=CHAR}, #{item.isGdzk,jdbcType=CHAR}, 
+        #{item.isTjsp,jdbcType=CHAR}, #{item.isHysp,jdbcType=CHAR}, #{item.isGmp,jdbcType=CHAR}, 
+        #{item.isGsp,jdbcType=CHAR}, #{item.isSy,jdbcType=CHAR}, #{item.isYp,jdbcType=CHAR}, 
+        #{item.jingd,jdbcType=CHAR}, #{item.denglrq,jdbcType=VARCHAR}, #{item.gengxshj,jdbcType=VARCHAR}, 
+        #{item.delrq,jdbcType=VARCHAR}, #{item.dw,jdbcType=VARCHAR}, #{item.shpchd,jdbcType=CHAR}, 
+        #{item.shpgg,jdbcType=CHAR}, #{item.kemuhao,jdbcType=VARCHAR}, #{item.oldcode,jdbcType=VARCHAR}, 
+        #{item.rkhw,jdbcType=VARCHAR}, #{item.ckhw,jdbcType=VARCHAR}, #{item.bzqfs,jdbcType=VARCHAR}, 
+        #{item.fenlbh,jdbcType=VARCHAR}, #{item.guojbh,jdbcType=VARCHAR}, #{item.changjbh,jdbcType=VARCHAR}, 
+        #{item.huaxm,jdbcType=VARCHAR}, #{item.changym,jdbcType=VARCHAR}, #{item.suming,jdbcType=VARCHAR}, 
+        #{item.xiwname,jdbcType=VARCHAR}, #{item.tongym,jdbcType=CHAR}, #{item.shengccj,jdbcType=CHAR}, 
+        #{item.pizhwh,jdbcType=CHAR}, #{item.zhucsb,jdbcType=VARCHAR}, #{item.jixing,jdbcType=CHAR}, 
+        #{item.shiyzh,jdbcType=VARCHAR}, #{item.bulfy,jdbcType=VARCHAR}, #{item.chuczysx,jdbcType=VARCHAR}, 
+        #{item.chuffl,jdbcType=VARCHAR}, #{item.yaofpd,jdbcType=VARCHAR}, #{item.yongfyyl,jdbcType=VARCHAR}, 
+        #{item.jinjzh,jdbcType=VARCHAR}, #{item.zhuysx,jdbcType=VARCHAR}, #{item.yaowchf,jdbcType=VARCHAR}, 
+        #{item.youxq,jdbcType=CHAR}, #{item.shangplx,jdbcType=VARCHAR}, #{item.guizbz,jdbcType=VARCHAR}, 
+        #{item.yongyfl,jdbcType=VARCHAR}, #{item.leibie,jdbcType=CHAR}, #{item.jlgg,jdbcType=INTEGER}, 
+        #{item.otd,jdbcType=INTEGER}, #{item.ordercycle,jdbcType=INTEGER}, #{item.stkquot,jdbcType=DECIMAL}, 
+        #{item.shlv,jdbcType=DECIMAL}, #{item.hshjj,jdbcType=DECIMAL}, #{item.jj,jdbcType=DECIMAL}, 
+        #{item.shj,jdbcType=DECIMAL}, #{item.hshsj,jdbcType=DECIMAL}, #{item.lshj,jdbcType=DECIMAL}, 
+        #{item.koul,jdbcType=DECIMAL}, #{item.kcsx,jdbcType=DECIMAL}, #{item.kcxx,jdbcType=DECIMAL}, 
+        #{item.helkc,jdbcType=DECIMAL}, #{item.bzqts,jdbcType=INTEGER}, #{item.yujts,jdbcType=INTEGER}, 
+        #{item.zgshl,jdbcType=DECIMAL}, #{item.zhdcbj,jdbcType=DECIMAL}, #{item.zdshj,jdbcType=DECIMAL}, 
+        #{item.zgshj,jdbcType=DECIMAL}, #{item.zgjjxz,jdbcType=DECIMAL}, #{item.maolv,jdbcType=DECIMAL}, 
+        #{item.huiytj,jdbcType=DECIMAL}, #{item.itemlength,jdbcType=DECIMAL}, #{item.itemheight,jdbcType=DECIMAL}, 
+        #{item.itemwidth,jdbcType=DECIMAL}, #{item.weight,jdbcType=DECIMAL}, #{item.casevolume,jdbcType=DECIMAL}, 
+        #{item.caseweight,jdbcType=DECIMAL}, #{item.zuixdwtj,jdbcType=DECIMAL}, #{item.zuixdwzl,jdbcType=DECIMAL}, 
+        #{item.pfpj,jdbcType=DECIMAL}, #{item.dispcolor,jdbcType=CHAR}, #{item.jx,jdbcType=VARCHAR}, 
+        #{item.bzgg,jdbcType=INTEGER}, #{item.lastmodifytime,jdbcType=VARCHAR}, #{item.isCmd,jdbcType=CHAR}, 
+        #{item.lsgg,jdbcType=VARCHAR}, #{item.isZdyh,jdbcType=CHAR}, #{item.isJkyp,jdbcType=CHAR}, 
+        #{item.minshl,jdbcType=INTEGER}, #{item.cxDjKl,jdbcType=DECIMAL}, #{item.isCxDj,jdbcType=CHAR}, 
+        #{item.zdyh,jdbcType=VARCHAR}, #{item.zdhyzklshj,jdbcType=DECIMAL}, #{item.isCyhydz,jdbcType=CHAR}, 
+        #{item.huiyshl,jdbcType=DECIMAL}, #{item.nocalcopys,jdbcType=CHAR}, #{item.fuzr,jdbcType=VARCHAR}, 
+        #{item.isJsh,jdbcType=CHAR}, #{item.isLc,jdbcType=CHAR}, #{item.isZhongyao,jdbcType=CHAR}, 
+        #{item.typeBh,jdbcType=VARCHAR}, #{item.zdlshj,jdbcType=DECIMAL}, #{item.guanjzjh,jdbcType=VARCHAR}, 
+        #{item.shiyq,jdbcType=VARCHAR}, #{item.abbrimageurl,jdbcType=VARCHAR}, #{item.cbflbh,jdbcType=VARCHAR}, 
+        #{item.imageurl,jdbcType=VARCHAR}, #{item.isYbsp,jdbcType=CHAR}, #{item.ybZfbl,jdbcType=DECIMAL}, 
+        #{item.ybSpbh,jdbcType=VARCHAR}, #{item.username,jdbcType=CHAR}, #{item.chuchj,jdbcType=DECIMAL}, 
+        #{item.pifj,jdbcType=DECIMAL}, #{item.zhilbz,jdbcType=CHAR}, #{item.chargelb,jdbcType=CHAR}, 
+        #{item.isSendybzx,jdbcType=CHAR}, #{item.tjYlshj,jdbcType=DECIMAL}, #{item.isHj,jdbcType=CHAR}, 
+        #{item.isYxbz,jdbcType=CHAR}, #{item.wdid,jdbcType=VARCHAR}, #{item.chbjs,jdbcType=CHAR}, 
+        #{item.dwbh,jdbcType=VARCHAR}, #{item.zengp,jdbcType=CHAR}, #{item.beizhu,jdbcType=CHAR}, 
+        #{item.cunchtj,jdbcType=CHAR}, #{item.isJy,jdbcType=CHAR}, #{item.shlvz,jdbcType=DECIMAL}, 
+        #{item.xscbdj,jdbcType=DECIMAL}, #{item.shcqyzz,jdbcType=CHAR}, #{item.yppzhwh,jdbcType=CHAR}, 
+        #{item.chpzlbzh,jdbcType=CHAR}, #{item.cpzljybgs,jdbcType=CHAR}, #{item.cpwjpw,jdbcType=CHAR}, 
+        #{item.jkypxkz,jdbcType=CHAR}, #{item.jkypzcz,jdbcType=CHAR}, #{item.ypscbzzm,jdbcType=CHAR}, 
+        #{item.cpsmspzwh,jdbcType=CHAR}, #{item.qxcpsczcz,jdbcType=CHAR}, #{item.swzppqfz,jdbcType=CHAR}, 
+        #{item.jkycpj,jdbcType=CHAR}, #{item.zhk,jdbcType=DECIMAL}, #{item.zhkj,jdbcType=DECIMAL}, 
+        #{item.isFp,jdbcType=CHAR}, #{item.zhbj,jdbcType=DECIMAL}, #{item.danganh,jdbcType=CHAR}, 
+        #{item.spfl,jdbcType=CHAR}, #{item.iszhj,jdbcType=CHAR}, #{item.shenhe,jdbcType=CHAR}, 
+        #{item.isShenhe,jdbcType=CHAR}, #{item.leibie1,jdbcType=CHAR}, #{item.zhuzlx,jdbcType=VARCHAR}, 
+        #{item.waig,jdbcType=CHAR}, #{item.baozh,jdbcType=CHAR}, #{item.lclxfy,jdbcType=CHAR}, 
+        #{item.zlcxqk,jdbcType=CHAR}, #{item.yhfwqk,jdbcType=CHAR}, #{item.zlbzbgqk,jdbcType=CHAR}, 
+        #{item.kczlkcqk,jdbcType=CHAR}, #{item.gspzsyxq,jdbcType=CHAR}, #{item.gmpzsyxq,jdbcType=CHAR}, 
+        #{item.gmpzsh,jdbcType=CHAR}, #{item.maxkxsl,jdbcType=INTEGER}, #{item.jinkzczh,jdbcType=CHAR}, 
+        #{item.jwh,jdbcType=CHAR}, #{item.isDesc,jdbcType=CHAR}, #{item.ckshlv,jdbcType=DECIMAL}, 
+        #{item.gspPzwhyxq,jdbcType=CHAR}, #{item.gspCgzy,jdbcType=CHAR}, #{item.xyzs,jdbcType=CHAR}, 
+        #{item.wjpw,jdbcType=CHAR}, #{item.zhucpj,jdbcType=CHAR}, #{item.zzhcpj,jdbcType=CHAR}, 
+        #{item.bchpj,jdbcType=CHAR}, #{item.bzhpj,jdbcType=CHAR}, #{item.bzhyp,jdbcType=CHAR}, 
+        #{item.chjwts,jdbcType=CHAR}, #{item.zlbz,jdbcType=CHAR}, #{item.xySms,jdbcType=CHAR}, 
+        #{item.xyYpbz,jdbcType=CHAR}, #{item.yspbh,jdbcType=CHAR}, #{item.huozu,jdbcType=CHAR}, 
+        #{item.cjgjz,jdbcType=CHAR}, #{item.zhengzzt,jdbcType=INTEGER}, #{item.gspSwpqf,jdbcType=CHAR}, 
+        #{item.gspJkycpj,jdbcType=CHAR}, #{item.gspJkzxz,jdbcType=CHAR}, #{item.gspJkswzpbgs,jdbcType=CHAR}, 
+        #{item.gspJkypbgs,jdbcType=CHAR}, #{item.kesi,jdbcType=CHAR}, #{item.shuilv,jdbcType=DECIMAL}, 
+        #{item.swfldm,jdbcType=CHAR}, #{item.dsJg,jdbcType=DECIMAL}, #{item.bm,jdbcType=CHAR}, 
+        #{item.zbz,jdbcType=DECIMAL}, #{item.isunbundled,jdbcType=CHAR}, #{item.producttype,jdbcType=VARCHAR}, 
+        #{item.barcode,jdbcType=VARCHAR}, #{item.mbarcode,jdbcType=VARCHAR}, #{item.sbarcode,jdbcType=VARCHAR}, 
+        #{item.isgoods,jdbcType=CHAR}, #{item.isprecious,jdbcType=CHAR}, #{item.isimport,jdbcType=CHAR}, 
+        #{item.countrycode,jdbcType=VARCHAR}, #{item.isemonitor,jdbcType=CHAR}, #{item.isanti,jdbcType=CHAR}, 
+        #{item.uefforts,jdbcType=CHAR}, #{item.gcategory,jdbcType=CHAR}, #{item.squantity,jdbcType=INTEGER}, 
+        #{item.locatlimitedtype,jdbcType=CHAR}, #{item.batchvalidtype,jdbcType=CHAR}, #{item.packagespec,jdbcType=VARCHAR}, 
+        #{item.isemphasis,jdbcType=CHAR}, #{item.zt,jdbcType=CHAR}, #{item.dsjg,jdbcType=DECIMAL}, 
+        #{item.fenzu2,jdbcType=CHAR}, #{item.fenzu,jdbcType=CHAR}, #{item.isMhj,jdbcType=CHAR}, 
+        #{item.ypssxkcyr,jdbcType=CHAR}, #{item.gspQxzczh,jdbcType=CHAR}, #{item.ssxkcyr,jdbcType=CHAR}, 
+        #{item.qxScxkzh,jdbcType=CHAR})
+    </foreach>
+  </insert>
+</mapper>

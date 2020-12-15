@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.SupplierStockItemMapper">
+  <resultMap id="BaseResultMap" type="com.kuka.domain.SupplierStockItem">
+    <!--@mbg.generated-->
+    <!--@Table supplier_stock_item-->
+    <id column="spid" jdbcType="VARCHAR" property="spid" />
+    <result column="spbh" jdbcType="VARCHAR" property="spbh" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    spid, spbh
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from supplier_stock_item
+    where spid = #{spid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from supplier_stock_item
+    where spid = #{spid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.kuka.domain.SupplierStockItem">
+    <!--@mbg.generated-->
+    insert into supplier_stock_item (spid, spbh)
+    values (#{spid,jdbcType=VARCHAR}, #{spbh,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kuka.domain.SupplierStockItem">
+    <!--@mbg.generated-->
+    insert into supplier_stock_item
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        spid,
+      </if>
+      <if test="spbh != null">
+        spbh,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        #{spid,jdbcType=VARCHAR},
+      </if>
+      <if test="spbh != null">
+        #{spbh,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kuka.domain.SupplierStockItem">
+    <!--@mbg.generated-->
+    update supplier_stock_item
+    <set>
+      <if test="spbh != null">
+        spbh = #{spbh,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where spid = #{spid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kuka.domain.SupplierStockItem">
+    <!--@mbg.generated-->
+    update supplier_stock_item
+    set spbh = #{spbh,jdbcType=VARCHAR}
+    where spid = #{spid,jdbcType=VARCHAR}
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into supplier_stock_item
+    (spid, spbh)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.spid,jdbcType=VARCHAR}, #{item.spbh,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+</mapper>

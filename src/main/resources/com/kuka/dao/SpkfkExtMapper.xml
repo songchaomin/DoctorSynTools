@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.SpkfkExtMapper">
+  <resultMap id="BaseResultExtMap" type="com.kuka.domain.Spkfk">
+    <!--@mbg.generated-->
+    <!--@Table spkfk-->
+    <id column="spid" jdbcType="CHAR" property="spid" />
+    <result column="spbh" jdbcType="CHAR" property="spbh" />
+    <result column="sptm" jdbcType="VARCHAR" property="sptm" />
+    <result column="spmch" jdbcType="CHAR" property="spmch" />
+    <result column="zjm" jdbcType="CHAR" property="zjm" />
+    <result column="beactive" jdbcType="CHAR" property="beactive" />
+    <result column="yishj" jdbcType="CHAR" property="yishj" />
+    <result column="is_gdsj" jdbcType="CHAR" property="isGdsj" />
+    <result column="is_gdzk" jdbcType="CHAR" property="isGdzk" />
+    <result column="is_tjsp" jdbcType="CHAR" property="isTjsp" />
+    <result column="is_hysp" jdbcType="CHAR" property="isHysp" />
+    <result column="is_gmp" jdbcType="CHAR" property="isGmp" />
+    <result column="is_gsp" jdbcType="CHAR" property="isGsp" />
+    <result column="is_sy" jdbcType="CHAR" property="isSy" />
+    <result column="is_yp" jdbcType="CHAR" property="isYp" />
+    <result column="jingd" jdbcType="CHAR" property="jingd" />
+    <result column="denglrq" jdbcType="VARCHAR" property="denglrq" />
+    <result column="gengxshj" jdbcType="VARCHAR" property="gengxshj" />
+    <result column="delrq" jdbcType="VARCHAR" property="delrq" />
+    <result column="dw" jdbcType="VARCHAR" property="dw" />
+    <result column="shpchd" jdbcType="CHAR" property="shpchd" />
+    <result column="shpgg" jdbcType="CHAR" property="shpgg" />
+    <result column="kemuhao" jdbcType="VARCHAR" property="kemuhao" />
+    <result column="oldcode" jdbcType="VARCHAR" property="oldcode" />
+    <result column="rkhw" jdbcType="VARCHAR" property="rkhw" />
+    <result column="ckhw" jdbcType="VARCHAR" property="ckhw" />
+    <result column="bzqfs" jdbcType="VARCHAR" property="bzqfs" />
+    <result column="fenlbh" jdbcType="VARCHAR" property="fenlbh" />
+    <result column="guojbh" jdbcType="VARCHAR" property="guojbh" />
+    <result column="changjbh" jdbcType="VARCHAR" property="changjbh" />
+    <result column="huaxm" jdbcType="VARCHAR" property="huaxm" />
+    <result column="changym" jdbcType="VARCHAR" property="changym" />
+    <result column="suming" jdbcType="VARCHAR" property="suming" />
+    <result column="xiwname" jdbcType="VARCHAR" property="xiwname" />
+    <result column="tongym" jdbcType="CHAR" property="tongym" />
+    <result column="shengccj" jdbcType="CHAR" property="shengccj" />
+    <result column="pizhwh" jdbcType="CHAR" property="pizhwh" />
+    <result column="zhucsb" jdbcType="VARCHAR" property="zhucsb" />
+    <result column="jixing" jdbcType="CHAR" property="jixing" />
+    <result column="shiyzh" jdbcType="VARCHAR" property="shiyzh" />
+    <result column="bulfy" jdbcType="VARCHAR" property="bulfy" />
+    <result column="chuczysx" jdbcType="VARCHAR" property="chuczysx" />
+    <result column="chuffl" jdbcType="VARCHAR" property="chuffl" />
+    <result column="yaofpd" jdbcType="VARCHAR" property="yaofpd" />
+    <result column="yongfyyl" jdbcType="VARCHAR" property="yongfyyl" />
+    <result column="jinjzh" jdbcType="VARCHAR" property="jinjzh" />
+    <result column="zhuysx" jdbcType="VARCHAR" property="zhuysx" />
+    <result column="yaowchf" jdbcType="VARCHAR" property="yaowchf" />
+    <result column="youxq" jdbcType="CHAR" property="youxq" />
+    <result column="shangplx" jdbcType="VARCHAR" property="shangplx" />
+    <result column="guizbz" jdbcType="VARCHAR" property="guizbz" />
+    <result column="yongyfl" jdbcType="VARCHAR" property="yongyfl" />
+    <result column="leibie" jdbcType="CHAR" property="leibie" />
+    <result column="jlgg" jdbcType="INTEGER" property="jlgg" />
+    <result column="otd" jdbcType="INTEGER" property="otd" />
+    <result column="ordercycle" jdbcType="INTEGER" property="ordercycle" />
+    <result column="stkquot" jdbcType="DECIMAL" property="stkquot" />
+    <result column="shlv" jdbcType="DECIMAL" property="shlv" />
+    <result column="hshjj" jdbcType="DECIMAL" property="hshjj" />
+    <result column="jj" jdbcType="DECIMAL" property="jj" />
+    <result column="shj" jdbcType="DECIMAL" property="shj" />
+    <result column="hshsj" jdbcType="DECIMAL" property="hshsj" />
+    <result column="lshj" jdbcType="DECIMAL" property="lshj" />
+    <result column="koul" jdbcType="DECIMAL" property="koul" />
+    <result column="kcsx" jdbcType="DECIMAL" property="kcsx" />
+    <result column="kcxx" jdbcType="DECIMAL" property="kcxx" />
+    <result column="helkc" jdbcType="DECIMAL" property="helkc" />
+    <result column="bzqts" jdbcType="INTEGER" property="bzqts" />
+    <result column="yujts" jdbcType="INTEGER" property="yujts" />
+    <result column="zgshl" jdbcType="DECIMAL" property="zgshl" />
+    <result column="zhdcbj" jdbcType="DECIMAL" property="zhdcbj" />
+    <result column="zdshj" jdbcType="DECIMAL" property="zdshj" />
+    <result column="zgshj" jdbcType="DECIMAL" property="zgshj" />
+    <result column="zgjjxz" jdbcType="DECIMAL" property="zgjjxz" />
+    <result column="maolv" jdbcType="DECIMAL" property="maolv" />
+    <result column="huiytj" jdbcType="DECIMAL" property="huiytj" />
+    <result column="itemlength" jdbcType="DECIMAL" property="itemlength" />
+    <result column="itemheight" jdbcType="DECIMAL" property="itemheight" />
+    <result column="itemwidth" jdbcType="DECIMAL" property="itemwidth" />
+    <result column="weight" jdbcType="DECIMAL" property="weight" />
+    <result column="casevolume" jdbcType="DECIMAL" property="casevolume" />
+    <result column="caseweight" jdbcType="DECIMAL" property="caseweight" />
+    <result column="zuixdwtj" jdbcType="DECIMAL" property="zuixdwtj" />
+    <result column="zuixdwzl" jdbcType="DECIMAL" property="zuixdwzl" />
+    <result column="pfpj" jdbcType="DECIMAL" property="pfpj" />
+    <result column="dispcolor" jdbcType="CHAR" property="dispcolor" />
+    <result column="jx" jdbcType="VARCHAR" property="jx" />
+    <result column="bzgg" jdbcType="INTEGER" property="bzgg" />
+    <result column="lastmodifytime" jdbcType="VARCHAR" property="lastmodifytime" />
+    <result column="is_cmd" jdbcType="CHAR" property="isCmd" />
+    <result column="lsgg" jdbcType="VARCHAR" property="lsgg" />
+    <result column="is_zdyh" jdbcType="CHAR" property="isZdyh" />
+    <result column="is_jkyp" jdbcType="CHAR" property="isJkyp" />
+    <result column="minshl" jdbcType="INTEGER" property="minshl" />
+    <result column="cx_dj_kl" jdbcType="DECIMAL" property="cxDjKl" />
+    <result column="is_cx_dj" jdbcType="CHAR" property="isCxDj" />
+    <result column="zdyh" jdbcType="VARCHAR" property="zdyh" />
+    <result column="zdhyzklshj" jdbcType="DECIMAL" property="zdhyzklshj" />
+    <result column="is_cyhydz" jdbcType="CHAR" property="isCyhydz" />
+    <result column="huiyshl" jdbcType="DECIMAL" property="huiyshl" />
+    <result column="nocalcopys" jdbcType="CHAR" property="nocalcopys" />
+    <result column="fuzr" jdbcType="VARCHAR" property="fuzr" />
+    <result column="is_jsh" jdbcType="CHAR" property="isJsh" />
+    <result column="is_lc" jdbcType="CHAR" property="isLc" />
+    <result column="is_zhongyao" jdbcType="CHAR" property="isZhongyao" />
+    <result column="type_bh" jdbcType="VARCHAR" property="typeBh" />
+    <result column="zdlshj" jdbcType="DECIMAL" property="zdlshj" />
+    <result column="guanjzjh" jdbcType="VARCHAR" property="guanjzjh" />
+    <result column="shiyq" jdbcType="VARCHAR" property="shiyq" />
+    <result column="abbrImageURL" jdbcType="VARCHAR" property="abbrimageurl" />
+    <result column="cbflbh" jdbcType="VARCHAR" property="cbflbh" />
+    <result column="imageUrl" jdbcType="VARCHAR" property="imageurl" />
+    <result column="is_ybsp" jdbcType="CHAR" property="isYbsp" />
+    <result column="yb_zfbl" jdbcType="DECIMAL" property="ybZfbl" />
+    <result column="yb_spbh" jdbcType="VARCHAR" property="ybSpbh" />
+    <result column="username" jdbcType="CHAR" property="username" />
+    <result column="chuchj" jdbcType="DECIMAL" property="chuchj" />
+    <result column="pifj" jdbcType="DECIMAL" property="pifj" />
+    <result column="zhilbz" jdbcType="CHAR" property="zhilbz" />
+    <result column="chargelb" jdbcType="CHAR" property="chargelb" />
+    <result column="is_sendybzx" jdbcType="CHAR" property="isSendybzx" />
+    <result column="tj_ylshj" jdbcType="DECIMAL" property="tjYlshj" />
+    <result column="is_hj" jdbcType="CHAR" property="isHj" />
+    <result column="is_yxbz" jdbcType="CHAR" property="isYxbz" />
+    <result column="wdid" jdbcType="VARCHAR" property="wdid" />
+    <result column="chbjs" jdbcType="CHAR" property="chbjs" />
+    <result column="dwbh" jdbcType="VARCHAR" property="dwbh" />
+    <result column="zengp" jdbcType="CHAR" property="zengp" />
+    <result column="beizhu" jdbcType="CHAR" property="beizhu" />
+    <result column="cunchtj" jdbcType="CHAR" property="cunchtj" />
+    <result column="is_jy" jdbcType="CHAR" property="isJy" />
+    <result column="shlvz" jdbcType="DECIMAL" property="shlvz" />
+    <result column="xscbdj" jdbcType="DECIMAL" property="xscbdj" />
+    <result column="shcqyzz" jdbcType="CHAR" property="shcqyzz" />
+    <result column="yppzhwh" jdbcType="CHAR" property="yppzhwh" />
+    <result column="chpzlbzh" jdbcType="CHAR" property="chpzlbzh" />
+    <result column="cpzljybgs" jdbcType="CHAR" property="cpzljybgs" />
+    <result column="cpwjpw" jdbcType="CHAR" property="cpwjpw" />
+    <result column="jkypxkz" jdbcType="CHAR" property="jkypxkz" />
+    <result column="jkypzcz" jdbcType="CHAR" property="jkypzcz" />
+    <result column="ypscbzzm" jdbcType="CHAR" property="ypscbzzm" />
+    <result column="cpsmspzwh" jdbcType="CHAR" property="cpsmspzwh" />
+    <result column="qxcpsczcz" jdbcType="CHAR" property="qxcpsczcz" />
+    <result column="swzppqfz" jdbcType="CHAR" property="swzppqfz" />
+    <result column="jkycpj" jdbcType="CHAR" property="jkycpj" />
+    <result column="zhk" jdbcType="DECIMAL" property="zhk" />
+    <result column="zhkj" jdbcType="DECIMAL" property="zhkj" />
+    <result column="is_fp" jdbcType="CHAR" property="isFp" />
+    <result column="zhbj" jdbcType="DECIMAL" property="zhbj" />
+    <result column="danganh" jdbcType="CHAR" property="danganh" />
+    <result column="spfl" jdbcType="CHAR" property="spfl" />
+    <result column="iszhj" jdbcType="CHAR" property="iszhj" />
+    <result column="shenhe" jdbcType="CHAR" property="shenhe" />
+    <result column="is_shenhe" jdbcType="CHAR" property="isShenhe" />
+    <result column="leibie1" jdbcType="CHAR" property="leibie1" />
+    <result column="zhuzlx" jdbcType="VARCHAR" property="zhuzlx" />
+    <result column="waig" jdbcType="CHAR" property="waig" />
+    <result column="baozh" jdbcType="CHAR" property="baozh" />
+    <result column="lclxfy" jdbcType="CHAR" property="lclxfy" />
+    <result column="zlcxqk" jdbcType="CHAR" property="zlcxqk" />
+    <result column="yhfwqk" jdbcType="CHAR" property="yhfwqk" />
+    <result column="zlbzbgqk" jdbcType="CHAR" property="zlbzbgqk" />
+    <result column="kczlkcqk" jdbcType="CHAR" property="kczlkcqk" />
+    <result column="gspzsyxq" jdbcType="CHAR" property="gspzsyxq" />
+    <result column="gmpzsyxq" jdbcType="CHAR" property="gmpzsyxq" />
+    <result column="gmpzsh" jdbcType="CHAR" property="gmpzsh" />
+    <result column="maxkxsl" jdbcType="INTEGER" property="maxkxsl" />
+    <result column="jinkzczh" jdbcType="CHAR" property="jinkzczh" />
+    <result column="jwh" jdbcType="CHAR" property="jwh" />
+    <result column="is_desc" jdbcType="CHAR" property="isDesc" />
+    <result column="ckshlv" jdbcType="DECIMAL" property="ckshlv" />
+    <result column="gsp_pzwhyxq" jdbcType="CHAR" property="gspPzwhyxq" />
+    <result column="gsp_cgzy" jdbcType="CHAR" property="gspCgzy" />
+    <result column="xyzs" jdbcType="CHAR" property="xyzs" />
+    <result column="wjpw" jdbcType="CHAR" property="wjpw" />
+    <result column="zhucpj" jdbcType="CHAR" property="zhucpj" />
+    <result column="zzhcpj" jdbcType="CHAR" property="zzhcpj" />
+    <result column="bchpj" jdbcType="CHAR" property="bchpj" />
+    <result column="bzhpj" jdbcType="CHAR" property="bzhpj" />
+    <result column="bzhyp" jdbcType="CHAR" property="bzhyp" />
+    <result column="chjwts" jdbcType="CHAR" property="chjwts" />
+    <result column="zlbz" jdbcType="CHAR" property="zlbz" />
+    <result column="xy_sms" jdbcType="CHAR" property="xySms" />
+    <result column="xy_ypbz" jdbcType="CHAR" property="xyYpbz" />
+    <result column="yspbh" jdbcType="CHAR" property="yspbh" />
+    <result column="huozu" jdbcType="CHAR" property="huozu" />
+    <result column="cjgjz" jdbcType="CHAR" property="cjgjz" />
+    <result column="zhengzzt" jdbcType="INTEGER" property="zhengzzt" />
+    <result column="gsp_swpqf" jdbcType="CHAR" property="gspSwpqf" />
+    <result column="gsp_jkycpj" jdbcType="CHAR" property="gspJkycpj" />
+    <result column="gsp_jkzxz" jdbcType="CHAR" property="gspJkzxz" />
+    <result column="gsp_jkswzpbgs" jdbcType="CHAR" property="gspJkswzpbgs" />
+    <result column="gsp_jkypbgs" jdbcType="CHAR" property="gspJkypbgs" />
+    <result column="kesi" jdbcType="CHAR" property="kesi" />
+    <result column="shuilv" jdbcType="DECIMAL" property="shuilv" />
+    <result column="swfldm" jdbcType="CHAR" property="swfldm" />
+    <result column="ds_jg" jdbcType="DECIMAL" property="dsJg" />
+    <result column="bm" jdbcType="CHAR" property="bm" />
+    <result column="zbz" jdbcType="DECIMAL" property="zbz" />
+    <result column="isunbundled" jdbcType="CHAR" property="isunbundled" />
+    <result column="ProductType" jdbcType="VARCHAR" property="producttype" />
+    <result column="BarCode" jdbcType="VARCHAR" property="barcode" />
+    <result column="MBarCode" jdbcType="VARCHAR" property="mbarcode" />
+    <result column="SbarCode" jdbcType="VARCHAR" property="sbarcode" />
+    <result column="IsGoods" jdbcType="CHAR" property="isgoods" />
+    <result column="IsPrecious" jdbcType="CHAR" property="isprecious" />
+    <result column="IsImport" jdbcType="CHAR" property="isimport" />
+    <result column="CountryCode" jdbcType="VARCHAR" property="countrycode" />
+    <result column="IsEmonitor" jdbcType="CHAR" property="isemonitor" />
+    <result column="IsAnti" jdbcType="CHAR" property="isanti" />
+    <result column="Uefforts" jdbcType="CHAR" property="uefforts" />
+    <result column="GCategory" jdbcType="CHAR" property="gcategory" />
+    <result column="Squantity" jdbcType="INTEGER" property="squantity" />
+    <result column="LocatLimitedType" jdbcType="CHAR" property="locatlimitedtype" />
+    <result column="BatchValidType" jdbcType="CHAR" property="batchvalidtype" />
+    <result column="PackageSpec" jdbcType="VARCHAR" property="packagespec" />
+    <result column="IsEmphasis" jdbcType="CHAR" property="isemphasis" />
+    <result column="zt" jdbcType="CHAR" property="zt" />
+    <result column="dsjg" jdbcType="DECIMAL" property="dsjg" />
+    <result column="fenzu2" jdbcType="CHAR" property="fenzu2" />
+    <result column="fenzu" jdbcType="CHAR" property="fenzu" />
+    <result column="is_mhj" jdbcType="CHAR" property="isMhj" />
+    <result column="ypssxkcyr" jdbcType="CHAR" property="ypssxkcyr" />
+    <result column="gsp_qxzczh" jdbcType="CHAR" property="gspQxzczh" />
+    <result column="ssxkcyr" jdbcType="CHAR" property="ssxkcyr" />
+    <result column="qx_scxkzh" jdbcType="CHAR" property="qxScxkzh" />
+  </resultMap>
+  <sql id="Base_Column_ext_List">
+    <!--@mbg.generated-->
+    spid, spbh, sptm, spmch, zjm, beactive, yishj, is_gdsj, is_gdzk, is_tjsp, is_hysp, 
+    is_gmp, is_gsp, is_sy, is_yp, jingd, denglrq, gengxshj, delrq, dw, shpchd, shpgg, 
+    kemuhao, oldcode, rkhw, ckhw, bzqfs, fenlbh, guojbh, changjbh, huaxm, changym, suming, 
+    xiwname, tongym, shengccj, pizhwh, zhucsb, jixing, shiyzh, bulfy, chuczysx, chuffl, 
+    yaofpd, yongfyyl, jinjzh, zhuysx, yaowchf, youxq, shangplx, guizbz, yongyfl, leibie, 
+    jlgg, otd, ordercycle, stkquot, shlv, hshjj, jj, shj, hshsj, lshj, koul, kcsx, kcxx, 
+    helkc, bzqts, yujts, zgshl, zhdcbj, zdshj, zgshj, zgjjxz, maolv, huiytj, itemlength, 
+    itemheight, itemwidth, weight, casevolume, caseweight, zuixdwtj, zuixdwzl, pfpj, 
+    dispcolor, jx, bzgg, lastmodifytime, is_cmd, lsgg, is_zdyh, is_jkyp, minshl, cx_dj_kl, 
+    is_cx_dj, zdyh, zdhyzklshj, is_cyhydz, huiyshl, nocalcopys, fuzr, is_jsh, is_lc, 
+    is_zhongyao, type_bh, zdlshj, guanjzjh, shiyq, abbrImageURL, cbflbh, imageUrl, is_ybsp, 
+    yb_zfbl, yb_spbh, username, chuchj, pifj, zhilbz, chargelb, is_sendybzx, tj_ylshj, 
+    is_hj, is_yxbz, wdid, chbjs, dwbh, zengp, beizhu, cunchtj, is_jy, shlvz, xscbdj, 
+    shcqyzz, yppzhwh, chpzlbzh, cpzljybgs, cpwjpw, jkypxkz, jkypzcz, ypscbzzm, cpsmspzwh, 
+    qxcpsczcz, swzppqfz, jkycpj, zhk, zhkj, is_fp, zhbj, danganh, spfl, iszhj, shenhe, 
+    is_shenhe, leibie1, zhuzlx, waig, baozh, lclxfy, zlcxqk, yhfwqk, zlbzbgqk, kczlkcqk, 
+    gspzsyxq, gmpzsyxq, gmpzsh, maxkxsl, jinkzczh, jwh, is_desc, ckshlv, gsp_pzwhyxq, 
+    gsp_cgzy, xyzs, wjpw, zhucpj, zzhcpj, bchpj, bzhpj, bzhyp, chjwts, zlbz, xy_sms, 
+    xy_ypbz, yspbh, huozu, cjgjz, zhengzzt, gsp_swpqf, gsp_jkycpj, gsp_jkzxz, gsp_jkswzpbgs, 
+    gsp_jkypbgs, kesi, shuilv, swfldm, ds_jg, bm, zbz, isunbundled, ProductType, BarCode, 
+    MBarCode, SbarCode, IsGoods, IsPrecious, IsImport, CountryCode, IsEmonitor, IsAnti, 
+    Uefforts, GCategory, Squantity, LocatLimitedType, BatchValidType, PackageSpec, IsEmphasis, 
+    zt, dsjg, fenzu2, fenzu, is_mhj, ypssxkcyr, gsp_qxzczh, ssxkcyr, qx_scxkzh
+  </sql>
+
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into spkfk
+    (spid, spbh, spmch, zjm, beactive, yishj, is_gdsj,is_gdzk, is_tjsp, is_hysp, is_gmp,is_gsp,is_sy,is_yp,jingd, dw,
+      shpchd, shpgg,bzqfs, shengccj, pizhwh, jixing, leibie, jlgg, cunchtj, shenhe,
+      shlv, xscbdj, zhk, zhkj, zhbj,gsp_pzwhyxq,zhengzzt)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (
+        #{item.spid},  #{item.spbh},  #{item.spmch}, #{item.zjm}, #{item.beactive},  #{item.yishj}, #{item.isGdsj}, #{item.isGdzk},  #{item.isTjsp},
+        #{item.isHysp}, #{item.isGmp}, #{item.isGsp}, #{item.isSy}, #{item.isYp}, #{item.jingd},
+        #{item.dw}, #{item.shpchd}, #{item.shpgg}, #{item.bzqfs}, #{item.shengccj},  #{item.pizhwh}, #{item.jixing},  #{item.leibie},
+        #{item.jlgg}, #{item.cunchtj}, #{item.shenhe},  #{item.shlv}, #{item.xscbdj}, #{item.zhk},  #{item.zhkj}, #{item.zhbj}, #{item.gspPzwhyxq},
+        #{item.zhengzzt}
+
+        )
+    </foreach>
+  </insert>
+</mapper>

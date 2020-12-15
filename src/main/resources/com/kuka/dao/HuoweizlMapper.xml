@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuka.dao.HuoweizlMapper">
+  <resultMap id="BaseResultMap" type="com.kuka.domain.Huoweizl">
+    <!--@mbg.generated-->
+    <!--@Table huoweizl-->
+    <id column="hw" jdbcType="CHAR" property="hw" />
+    <result column="hwbh" jdbcType="VARCHAR" property="hwbh" />
+    <result column="huowname" jdbcType="VARCHAR" property="huowname" />
+    <result column="beactive" jdbcType="CHAR" property="beactive" />
+    <result column="fuzr" jdbcType="VARCHAR" property="fuzr" />
+    <result column="otd" jdbcType="INTEGER" property="otd" />
+    <result column="area" jdbcType="INTEGER" property="area" />
+    <result column="cubage" jdbcType="DECIMAL" property="cubage" />
+    <result column="guanlrys" jdbcType="INTEGER" property="guanlrys" />
+    <result column="kecfpzs" jdbcType="INTEGER" property="kecfpzs" />
+    <result column="guidcfpzs" jdbcType="INTEGER" property="guidcfpzs" />
+    <result column="jzsl" jdbcType="DECIMAL" property="jzsl" />
+    <result column="jzje" jdbcType="DECIMAL" property="jzje" />
+    <result column="lingsjzje" jdbcType="DECIMAL" property="lingsjzje" />
+    <result column="kemuhao" jdbcType="VARCHAR" property="kemuhao" />
+    <result column="isglph" jdbcType="CHAR" property="isglph" />
+    <result column="isljfkc" jdbcType="CHAR" property="isljfkc" />
+    <result column="is_dd" jdbcType="CHAR" property="isDd" />
+    <result column="is_hj" jdbcType="CHAR" property="isHj" />
+    <result column="is_sqjhd" jdbcType="CHAR" property="isSqjhd" />
+    <result column="is_ykzdxj" jdbcType="CHAR" property="isYkzdxj" />
+    <result column="ckzht" jdbcType="VARCHAR" property="ckzht" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="yyj" jdbcType="INTEGER" property="yyj" />
+    <result column="shenhe" jdbcType="CHAR" property="shenhe" />
+    <result column="duifbsh" jdbcType="CHAR" property="duifbsh" />
+    <result column="lastmodifytime" jdbcType="VARCHAR" property="lastmodifytime" />
+    <result column="is_ykzdsj" jdbcType="CHAR" property="isYkzdsj" />
+    <result column="isfthw" jdbcType="CHAR" property="isfthw" />
+    <result column="is_guizu" jdbcType="CHAR" property="isGuizu" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    hw, hwbh, huowname, beactive, fuzr, otd, area, cubage, guanlrys, kecfpzs, guidcfpzs, 
+    jzsl, jzje, lingsjzje, kemuhao, isglph, isljfkc, is_dd, is_hj, is_sqjhd, is_ykzdxj, 
+    ckzht, [type], yyj, shenhe, duifbsh, lastmodifytime, is_ykzdsj, isfthw, is_guizu
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from huoweizl
+    where hw = #{hw,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from huoweizl
+    where hw = #{hw,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.kuka.domain.Huoweizl">
+    <!--@mbg.generated-->
+    insert into huoweizl (hw, hwbh, huowname, 
+      beactive, fuzr, otd, area, 
+      cubage, guanlrys, kecfpzs, 
+      guidcfpzs, jzsl, jzje, 
+      lingsjzje, kemuhao, isglph, 
+      isljfkc, is_dd, is_hj, is_sqjhd, 
+      is_ykzdxj, ckzht, [type], 
+      yyj, shenhe, duifbsh, lastmodifytime, 
+      is_ykzdsj, isfthw, is_guizu)
+    values (#{hw,jdbcType=CHAR}, #{hwbh,jdbcType=VARCHAR}, #{huowname,jdbcType=VARCHAR}, 
+      #{beactive,jdbcType=CHAR}, #{fuzr,jdbcType=VARCHAR}, #{otd,jdbcType=INTEGER}, #{area,jdbcType=INTEGER}, 
+      #{cubage,jdbcType=DECIMAL}, #{guanlrys,jdbcType=INTEGER}, #{kecfpzs,jdbcType=INTEGER}, 
+      #{guidcfpzs,jdbcType=INTEGER}, #{jzsl,jdbcType=DECIMAL}, #{jzje,jdbcType=DECIMAL}, 
+      #{lingsjzje,jdbcType=DECIMAL}, #{kemuhao,jdbcType=VARCHAR}, #{isglph,jdbcType=CHAR}, 
+      #{isljfkc,jdbcType=CHAR}, #{isDd,jdbcType=CHAR}, #{isHj,jdbcType=CHAR}, #{isSqjhd,jdbcType=CHAR}, 
+      #{isYkzdxj,jdbcType=CHAR}, #{ckzht,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{yyj,jdbcType=INTEGER}, #{shenhe,jdbcType=CHAR}, #{duifbsh,jdbcType=CHAR}, #{lastmodifytime,jdbcType=VARCHAR}, 
+      #{isYkzdsj,jdbcType=CHAR}, #{isfthw,jdbcType=CHAR}, #{isGuizu,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kuka.domain.Huoweizl">
+    <!--@mbg.generated-->
+    insert into huoweizl
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="hw != null">
+        hw,
+      </if>
+      <if test="hwbh != null">
+        hwbh,
+      </if>
+      <if test="huowname != null">
+        huowname,
+      </if>
+      <if test="beactive != null">
+        beactive,
+      </if>
+      <if test="fuzr != null">
+        fuzr,
+      </if>
+      <if test="otd != null">
+        otd,
+      </if>
+      <if test="area != null">
+        area,
+      </if>
+      <if test="cubage != null">
+        cubage,
+      </if>
+      <if test="guanlrys != null">
+        guanlrys,
+      </if>
+      <if test="kecfpzs != null">
+        kecfpzs,
+      </if>
+      <if test="guidcfpzs != null">
+        guidcfpzs,
+      </if>
+      <if test="jzsl != null">
+        jzsl,
+      </if>
+      <if test="jzje != null">
+        jzje,
+      </if>
+      <if test="lingsjzje != null">
+        lingsjzje,
+      </if>
+      <if test="kemuhao != null">
+        kemuhao,
+      </if>
+      <if test="isglph != null">
+        isglph,
+      </if>
+      <if test="isljfkc != null">
+        isljfkc,
+      </if>
+      <if test="isDd != null">
+        is_dd,
+      </if>
+      <if test="isHj != null">
+        is_hj,
+      </if>
+      <if test="isSqjhd != null">
+        is_sqjhd,
+      </if>
+      <if test="isYkzdxj != null">
+        is_ykzdxj,
+      </if>
+      <if test="ckzht != null">
+        ckzht,
+      </if>
+      <if test="type != null">
+        [type],
+      </if>
+      <if test="yyj != null">
+        yyj,
+      </if>
+      <if test="shenhe != null">
+        shenhe,
+      </if>
+      <if test="duifbsh != null">
+        duifbsh,
+      </if>
+      <if test="lastmodifytime != null">
+        lastmodifytime,
+      </if>
+      <if test="isYkzdsj != null">
+        is_ykzdsj,
+      </if>
+      <if test="isfthw != null">
+        isfthw,
+      </if>
+      <if test="isGuizu != null">
+        is_guizu,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="hw != null">
+        #{hw,jdbcType=CHAR},
+      </if>
+      <if test="hwbh != null">
+        #{hwbh,jdbcType=VARCHAR},
+      </if>
+      <if test="huowname != null">
+        #{huowname,jdbcType=VARCHAR},
+      </if>
+      <if test="beactive != null">
+        #{beactive,jdbcType=CHAR},
+      </if>
+      <if test="fuzr != null">
+        #{fuzr,jdbcType=VARCHAR},
+      </if>
+      <if test="otd != null">
+        #{otd,jdbcType=INTEGER},
+      </if>
+      <if test="area != null">
+        #{area,jdbcType=INTEGER},
+      </if>
+      <if test="cubage != null">
+        #{cubage,jdbcType=DECIMAL},
+      </if>
+      <if test="guanlrys != null">
+        #{guanlrys,jdbcType=INTEGER},
+      </if>
+      <if test="kecfpzs != null">
+        #{kecfpzs,jdbcType=INTEGER},
+      </if>
+      <if test="guidcfpzs != null">
+        #{guidcfpzs,jdbcType=INTEGER},
+      </if>
+      <if test="jzsl != null">
+        #{jzsl,jdbcType=DECIMAL},
+      </if>
+      <if test="jzje != null">
+        #{jzje,jdbcType=DECIMAL},
+      </if>
+      <if test="lingsjzje != null">
+        #{lingsjzje,jdbcType=DECIMAL},
+      </if>
+      <if test="kemuhao != null">
+        #{kemuhao,jdbcType=VARCHAR},
+      </if>
+      <if test="isglph != null">
+        #{isglph,jdbcType=CHAR},
+      </if>
+      <if test="isljfkc != null">
+        #{isljfkc,jdbcType=CHAR},
+      </if>
+      <if test="isDd != null">
+        #{isDd,jdbcType=CHAR},
+      </if>
+      <if test="isHj != null">
+        #{isHj,jdbcType=CHAR},
+      </if>
+      <if test="isSqjhd != null">
+        #{isSqjhd,jdbcType=CHAR},
+      </if>
+      <if test="isYkzdxj != null">
+        #{isYkzdxj,jdbcType=CHAR},
+      </if>
+      <if test="ckzht != null">
+        #{ckzht,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="yyj != null">
+        #{yyj,jdbcType=INTEGER},
+      </if>
+      <if test="shenhe != null">
+        #{shenhe,jdbcType=CHAR},
+      </if>
+      <if test="duifbsh != null">
+        #{duifbsh,jdbcType=CHAR},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=VARCHAR},
+      </if>
+      <if test="isYkzdsj != null">
+        #{isYkzdsj,jdbcType=CHAR},
+      </if>
+      <if test="isfthw != null">
+        #{isfthw,jdbcType=CHAR},
+      </if>
+      <if test="isGuizu != null">
+        #{isGuizu,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kuka.domain.Huoweizl">
+    <!--@mbg.generated-->
+    update huoweizl
+    <set>
+      <if test="hwbh != null">
+        hwbh = #{hwbh,jdbcType=VARCHAR},
+      </if>
+      <if test="huowname != null">
+        huowname = #{huowname,jdbcType=VARCHAR},
+      </if>
+      <if test="beactive != null">
+        beactive = #{beactive,jdbcType=CHAR},
+      </if>
+      <if test="fuzr != null">
+        fuzr = #{fuzr,jdbcType=VARCHAR},
+      </if>
+      <if test="otd != null">
+        otd = #{otd,jdbcType=INTEGER},
+      </if>
+      <if test="area != null">
+        area = #{area,jdbcType=INTEGER},
+      </if>
+      <if test="cubage != null">
+        cubage = #{cubage,jdbcType=DECIMAL},
+      </if>
+      <if test="guanlrys != null">
+        guanlrys = #{guanlrys,jdbcType=INTEGER},
+      </if>
+      <if test="kecfpzs != null">
+        kecfpzs = #{kecfpzs,jdbcType=INTEGER},
+      </if>
+      <if test="guidcfpzs != null">
+        guidcfpzs = #{guidcfpzs,jdbcType=INTEGER},
+      </if>
+      <if test="jzsl != null">
+        jzsl = #{jzsl,jdbcType=DECIMAL},
+      </if>
+      <if test="jzje != null">
+        jzje = #{jzje,jdbcType=DECIMAL},
+      </if>
+      <if test="lingsjzje != null">
+        lingsjzje = #{lingsjzje,jdbcType=DECIMAL},
+      </if>
+      <if test="kemuhao != null">
+        kemuhao = #{kemuhao,jdbcType=VARCHAR},
+      </if>
+      <if test="isglph != null">
+        isglph = #{isglph,jdbcType=CHAR},
+      </if>
+      <if test="isljfkc != null">
+        isljfkc = #{isljfkc,jdbcType=CHAR},
+      </if>
+      <if test="isDd != null">
+        is_dd = #{isDd,jdbcType=CHAR},
+      </if>
+      <if test="isHj != null">
+        is_hj = #{isHj,jdbcType=CHAR},
+      </if>
+      <if test="isSqjhd != null">
+        is_sqjhd = #{isSqjhd,jdbcType=CHAR},
+      </if>
+      <if test="isYkzdxj != null">
+        is_ykzdxj = #{isYkzdxj,jdbcType=CHAR},
+      </if>
+      <if test="ckzht != null">
+        ckzht = #{ckzht,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        [type] = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="yyj != null">
+        yyj = #{yyj,jdbcType=INTEGER},
+      </if>
+      <if test="shenhe != null">
+        shenhe = #{shenhe,jdbcType=CHAR},
+      </if>
+      <if test="duifbsh != null">
+        duifbsh = #{duifbsh,jdbcType=CHAR},
+      </if>
+      <if test="lastmodifytime != null">
+        lastmodifytime = #{lastmodifytime,jdbcType=VARCHAR},
+      </if>
+      <if test="isYkzdsj != null">
+        is_ykzdsj = #{isYkzdsj,jdbcType=CHAR},
+      </if>
+      <if test="isfthw != null">
+        isfthw = #{isfthw,jdbcType=CHAR},
+      </if>
+      <if test="isGuizu != null">
+        is_guizu = #{isGuizu,jdbcType=CHAR},
+      </if>
+    </set>
+    where hw = #{hw,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kuka.domain.Huoweizl">
+    <!--@mbg.generated-->
+    update huoweizl
+    set hwbh = #{hwbh,jdbcType=VARCHAR},
+      huowname = #{huowname,jdbcType=VARCHAR},
+      beactive = #{beactive,jdbcType=CHAR},
+      fuzr = #{fuzr,jdbcType=VARCHAR},
+      otd = #{otd,jdbcType=INTEGER},
+      area = #{area,jdbcType=INTEGER},
+      cubage = #{cubage,jdbcType=DECIMAL},
+      guanlrys = #{guanlrys,jdbcType=INTEGER},
+      kecfpzs = #{kecfpzs,jdbcType=INTEGER},
+      guidcfpzs = #{guidcfpzs,jdbcType=INTEGER},
+      jzsl = #{jzsl,jdbcType=DECIMAL},
+      jzje = #{jzje,jdbcType=DECIMAL},
+      lingsjzje = #{lingsjzje,jdbcType=DECIMAL},
+      kemuhao = #{kemuhao,jdbcType=VARCHAR},
+      isglph = #{isglph,jdbcType=CHAR},
+      isljfkc = #{isljfkc,jdbcType=CHAR},
+      is_dd = #{isDd,jdbcType=CHAR},
+      is_hj = #{isHj,jdbcType=CHAR},
+      is_sqjhd = #{isSqjhd,jdbcType=CHAR},
+      is_ykzdxj = #{isYkzdxj,jdbcType=CHAR},
+      ckzht = #{ckzht,jdbcType=VARCHAR},
+      [type] = #{type,jdbcType=VARCHAR},
+      yyj = #{yyj,jdbcType=INTEGER},
+      shenhe = #{shenhe,jdbcType=CHAR},
+      duifbsh = #{duifbsh,jdbcType=CHAR},
+      lastmodifytime = #{lastmodifytime,jdbcType=VARCHAR},
+      is_ykzdsj = #{isYkzdsj,jdbcType=CHAR},
+      isfthw = #{isfthw,jdbcType=CHAR},
+      is_guizu = #{isGuizu,jdbcType=CHAR}
+    where hw = #{hw,jdbcType=CHAR}
+  </update>
+  <insert id="batchInsert" parameterType="map">
+    <!--@mbg.generated-->
+    insert into huoweizl
+    (hw, hwbh, huowname, beactive, fuzr, otd, area, cubage, guanlrys, kecfpzs, guidcfpzs, 
+      jzsl, jzje, lingsjzje, kemuhao, isglph, isljfkc, is_dd, is_hj, is_sqjhd, is_ykzdxj, 
+      ckzht, [type], yyj, shenhe, duifbsh, lastmodifytime, is_ykzdsj, isfthw, is_guizu
+      )
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.hw,jdbcType=CHAR}, #{item.hwbh,jdbcType=VARCHAR}, #{item.huowname,jdbcType=VARCHAR}, 
+        #{item.beactive,jdbcType=CHAR}, #{item.fuzr,jdbcType=VARCHAR}, #{item.otd,jdbcType=INTEGER}, 
+        #{item.area,jdbcType=INTEGER}, #{item.cubage,jdbcType=DECIMAL}, #{item.guanlrys,jdbcType=INTEGER}, 
+        #{item.kecfpzs,jdbcType=INTEGER}, #{item.guidcfpzs,jdbcType=INTEGER}, #{item.jzsl,jdbcType=DECIMAL}, 
+        #{item.jzje,jdbcType=DECIMAL}, #{item.lingsjzje,jdbcType=DECIMAL}, #{item.kemuhao,jdbcType=VARCHAR}, 
+        #{item.isglph,jdbcType=CHAR}, #{item.isljfkc,jdbcType=CHAR}, #{item.isDd,jdbcType=CHAR}, 
+        #{item.isHj,jdbcType=CHAR}, #{item.isSqjhd,jdbcType=CHAR}, #{item.isYkzdxj,jdbcType=CHAR}, 
+        #{item.ckzht,jdbcType=VARCHAR}, #{item.type,jdbcType=VARCHAR}, #{item.yyj,jdbcType=INTEGER}, 
+        #{item.shenhe,jdbcType=CHAR}, #{item.duifbsh,jdbcType=CHAR}, #{item.lastmodifytime,jdbcType=VARCHAR}, 
+        #{item.isYkzdsj,jdbcType=CHAR}, #{item.isfthw,jdbcType=CHAR}, #{item.isGuizu,jdbcType=CHAR}
+        )
+    </foreach>
+  </insert>
+
+
+    <select id="queryMaxHuoWeiNo" resultType="String">
+        select max(hw) from huoweizl
+    </select>
+</mapper>
