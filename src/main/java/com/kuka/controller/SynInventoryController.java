@@ -31,7 +31,7 @@ public class SynInventoryController {
         schedulerJob.setJobGroup("ds");
         schedulerJob.setTriggerName("synInventoryTrigger");
         schedulerJob.setTriggerGroup("ds");
-        schedulerJob.setCronExpression("0 0 18 * * ?");
+        schedulerJob.setCronExpression("0 0 10,15 * * ?");
         try {
             schedulerService.runJob(schedulerJob);
         } catch (SchedulerException e) {
