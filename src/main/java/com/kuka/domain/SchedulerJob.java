@@ -9,7 +9,6 @@ import java.sql.Date;
 @Data
 public class SchedulerJob {
     private String jobId;
-
     private String className;
 
     private String cronExpression;
