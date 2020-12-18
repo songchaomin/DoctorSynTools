@@ -1,6 +1,7 @@
 package com.kuka.utils;
 
 import cn.hutool.core.date.DateUtil;
+import com.alibaba.fastjson.JSONObject;
 import com.kuka.config.YamlPropertySourceFactory;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -119,6 +120,7 @@ public class Md5Utils {
 
         try {
             response = httpclient.execute(httpPost);
+            //MailUtils.sendMail(JSONObject.toJSONString(response.getLocale()));
             StatusLine status = response.getStatusLine();
             int state = status.getStatusCode();
             if (state == HttpStatus.SC_OK) {
