@@ -3,8 +3,8 @@ package com.kuka.event;
 import org.springframework.context.ApplicationEvent;
 
 
-public class SynItemEvent extends ApplicationEvent {
-    public SynItemEvent(Object source) {
+public class SynInventoryEvent extends ApplicationEvent {
+    public SynInventoryEvent(Object source) {
         super(source);
     }
 }

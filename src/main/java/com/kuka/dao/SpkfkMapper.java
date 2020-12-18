@@ -3,9 +3,7 @@ package com.kuka.dao;
 import com.kuka.domain.Spkfk;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface SpkfkMapper {
     int deleteByPrimaryKey(String spid);
 

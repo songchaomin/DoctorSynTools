@@ -228,8 +228,6 @@
     <result column="is_mhj" jdbcType="CHAR" property="isMhj" />
     <result column="ypssxkcyr" jdbcType="CHAR" property="ypssxkcyr" />
     <result column="gsp_qxzczh" jdbcType="CHAR" property="gspQxzczh" />
-    <result column="ssxkcyr" jdbcType="CHAR" property="ssxkcyr" />
-    <result column="qx_scxkzh" jdbcType="CHAR" property="qxScxkzh" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
@@ -255,7 +253,7 @@
     gsp_jkypbgs, kesi, shuilv, swfldm, ds_jg, bm, zbz, isunbundled, ProductType, BarCode, 
     MBarCode, SbarCode, IsGoods, IsPrecious, IsImport, CountryCode, IsEmonitor, IsAnti, 
     Uefforts, GCategory, Squantity, LocatLimitedType, BatchValidType, PackageSpec, IsEmphasis, 
-    zt, dsjg, fenzu2, fenzu, is_mhj, ypssxkcyr, gsp_qxzczh, ssxkcyr, qx_scxkzh
+    zt, dsjg, fenzu2, fenzu, is_mhj, ypssxkcyr, gsp_qxzczh
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
@@ -337,8 +335,7 @@
       GCategory, Squantity, LocatLimitedType, 
       BatchValidType, PackageSpec, IsEmphasis, 
       zt, dsjg, fenzu2, fenzu, 
-      is_mhj, ypssxkcyr, gsp_qxzczh, 
-      ssxkcyr, qx_scxkzh)
+      is_mhj, ypssxkcyr, gsp_qxzczh)
     values (#{spid,jdbcType=CHAR}, #{spbh,jdbcType=CHAR}, #{sptm,jdbcType=VARCHAR}, #{spmch,jdbcType=CHAR}, 
       #{zjm,jdbcType=CHAR}, #{beactive,jdbcType=CHAR}, #{yishj,jdbcType=CHAR}, #{isGdsj,jdbcType=CHAR}, 
       #{isGdzk,jdbcType=CHAR}, #{isTjsp,jdbcType=CHAR}, #{isHysp,jdbcType=CHAR}, #{isGmp,jdbcType=CHAR}, 
@@ -405,8 +402,7 @@
       #{gcategory,jdbcType=CHAR}, #{squantity,jdbcType=INTEGER}, #{locatlimitedtype,jdbcType=CHAR}, 
       #{batchvalidtype,jdbcType=CHAR}, #{packagespec,jdbcType=VARCHAR}, #{isemphasis,jdbcType=CHAR}, 
       #{zt,jdbcType=CHAR}, #{dsjg,jdbcType=DECIMAL}, #{fenzu2,jdbcType=CHAR}, #{fenzu,jdbcType=CHAR}, 
-      #{isMhj,jdbcType=CHAR}, #{ypssxkcyr,jdbcType=CHAR}, #{gspQxzczh,jdbcType=CHAR}, 
-      #{ssxkcyr,jdbcType=CHAR}, #{qxScxkzh,jdbcType=CHAR})
+      #{isMhj,jdbcType=CHAR}, #{ypssxkcyr,jdbcType=CHAR}, #{gspQxzczh,jdbcType=CHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.kuka.domain.Spkfk">
     <!--@mbg.generated-->
@@ -1084,12 +1080,6 @@
       <if test="gspQxzczh != null">
         gsp_qxzczh,
       </if>
-      <if test="ssxkcyr != null">
-        ssxkcyr,
-      </if>
-      <if test="qxScxkzh != null">
-        qx_scxkzh,
-      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="spid != null">
@@ -1763,12 +1753,6 @@
       </if>
       <if test="gspQxzczh != null">
         #{gspQxzczh,jdbcType=CHAR},
-      </if>
-      <if test="ssxkcyr != null">
-        #{ssxkcyr,jdbcType=CHAR},
-      </if>
-      <if test="qxScxkzh != null">
-        #{qxScxkzh,jdbcType=CHAR},
       </if>
     </trim>
   </insert>
@@ -2445,12 +2429,6 @@
       <if test="gspQxzczh != null">
         gsp_qxzczh = #{gspQxzczh,jdbcType=CHAR},
       </if>
-      <if test="ssxkcyr != null">
-        ssxkcyr = #{ssxkcyr,jdbcType=CHAR},
-      </if>
-      <if test="qxScxkzh != null">
-        qx_scxkzh = #{qxScxkzh,jdbcType=CHAR},
-      </if>
     </set>
     where spid = #{spid,jdbcType=CHAR}
   </update>
@@ -2679,9 +2657,7 @@
       fenzu = #{fenzu,jdbcType=CHAR},
       is_mhj = #{isMhj,jdbcType=CHAR},
       ypssxkcyr = #{ypssxkcyr,jdbcType=CHAR},
-      gsp_qxzczh = #{gspQxzczh,jdbcType=CHAR},
-      ssxkcyr = #{ssxkcyr,jdbcType=CHAR},
-      qx_scxkzh = #{qxScxkzh,jdbcType=CHAR}
+      gsp_qxzczh = #{gspQxzczh,jdbcType=CHAR}
     where spid = #{spid,jdbcType=CHAR}
   </update>
   <insert id="batchInsert" parameterType="map">
@@ -2709,8 +2685,8 @@
       gsp_jkzxz, gsp_jkswzpbgs, gsp_jkypbgs, kesi, shuilv, swfldm, ds_jg, bm, zbz, isunbundled, 
       ProductType, BarCode, MBarCode, SbarCode, IsGoods, IsPrecious, IsImport, CountryCode, 
       IsEmonitor, IsAnti, Uefforts, GCategory, Squantity, LocatLimitedType, BatchValidType, 
-      PackageSpec, IsEmphasis, zt, dsjg, fenzu2, fenzu, is_mhj, ypssxkcyr, gsp_qxzczh, 
-      ssxkcyr, qx_scxkzh)
+      PackageSpec, IsEmphasis, zt, dsjg, fenzu2, fenzu, is_mhj, ypssxkcyr, gsp_qxzczh
+      )
     values
     <foreach collection="list" item="item" separator=",">
       (#{item.spid,jdbcType=CHAR}, #{item.spbh,jdbcType=CHAR}, #{item.sptm,jdbcType=VARCHAR}, 
@@ -2787,8 +2763,7 @@
         #{item.locatlimitedtype,jdbcType=CHAR}, #{item.batchvalidtype,jdbcType=CHAR}, #{item.packagespec,jdbcType=VARCHAR}, 
         #{item.isemphasis,jdbcType=CHAR}, #{item.zt,jdbcType=CHAR}, #{item.dsjg,jdbcType=DECIMAL}, 
         #{item.fenzu2,jdbcType=CHAR}, #{item.fenzu,jdbcType=CHAR}, #{item.isMhj,jdbcType=CHAR}, 
-        #{item.ypssxkcyr,jdbcType=CHAR}, #{item.gspQxzczh,jdbcType=CHAR}, #{item.ssxkcyr,jdbcType=CHAR}, 
-        #{item.qxScxkzh,jdbcType=CHAR})
+        #{item.ypssxkcyr,jdbcType=CHAR}, #{item.gspQxzczh,jdbcType=CHAR})
     </foreach>
   </insert>
 </mapper>

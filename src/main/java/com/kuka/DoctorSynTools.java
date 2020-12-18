@@ -1,7 +1,6 @@
 package com.kuka;
 
-import com.kuka.event.SynItemEvent;
-import com.kuka.listener.SynItemListener;
+import com.kuka.event.SynInventoryEvent;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,6 +22,6 @@ public class DoctorSynTools
     {
         SpringApplication springApplication=new SpringApplication(DoctorSynTools.class);
         ConfigurableApplicationContext context = springApplication.run(args);
-        context.publishEvent(new SynItemEvent(new Object()));
+        context.publishEvent(new SynInventoryEvent(new Object()));
     }
 }

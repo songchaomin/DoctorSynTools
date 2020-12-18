@@ -451,10 +451,6 @@ public class Spkfk {
 
     private String gspQxzczh;
 
-    private String ssxkcyr;
-
-    private String qxScxkzh;
-
     public String getSpid() {
         return spid;
     }
@@ -2245,21 +2241,5 @@ public class Spkfk {
 
     public void setGspQxzczh(String gspQxzczh) {
         this.gspQxzczh = gspQxzczh;
-    }
-
-    public String getSsxkcyr() {
-        return ssxkcyr;
-    }
-
-    public void setSsxkcyr(String ssxkcyr) {
-        this.ssxkcyr = ssxkcyr;
-    }
-
-    public String getQxScxkzh() {
-        return qxScxkzh;
-    }
-
-    public void setQxScxkzh(String qxScxkzh) {
-        this.qxScxkzh = qxScxkzh;
     }
 }

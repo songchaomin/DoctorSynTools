@@ -1,8 +1,7 @@
 package com.kuka.listener;
 
 import com.kuka.domain.SchedulerJob;
-import com.kuka.event.SynItemEvent;
-import com.kuka.scheduler.job.SynInventoryJob;
+import com.kuka.event.SynInventoryEvent;
 import com.kuka.scheduler.services.SchedulerService;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.SchedulerException;
@@ -12,11 +11,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class SynItemListener implements ApplicationListener<SynItemEvent> {
+public class SynInventoryListener implements ApplicationListener<SynInventoryEvent> {
     @Autowired
     private SchedulerService schedulerService;
     @Override
-    public void onApplicationEvent(SynItemEvent event)
+    public void onApplicationEvent(SynInventoryEvent event)
     {
         log.info("【定时任务开启中】");
         SchedulerJob schedulerJob = new SchedulerJob();
