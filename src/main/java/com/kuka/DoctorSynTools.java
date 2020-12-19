@@ -1,5 +1,6 @@
 package com.kuka;
 
+import com.kuka.event.SendMailEvent;
 import com.kuka.event.SynInventoryEvent;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -23,5 +24,6 @@ public class DoctorSynTools
         SpringApplication springApplication=new SpringApplication(DoctorSynTools.class);
         ConfigurableApplicationContext context = springApplication.run(args);
         context.publishEvent(new SynInventoryEvent(new Object()));
+        context.publishEvent(new SendMailEvent(new Object()));
     }
 }
