@@ -7,4 +7,5 @@ import java.util.List;
 public interface SphwphService {
     void batchInsertSphwph(List<Sphwph> sphwphList);
     void truncateSphwph();
+    void deleteSphwphByHwi(String hwi);
 }

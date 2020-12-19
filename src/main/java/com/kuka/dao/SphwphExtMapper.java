@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface SphwphExtMapper {
     void truncateSphwph();
+
+    void deleteSphwphByHwi(String hwi);
 }

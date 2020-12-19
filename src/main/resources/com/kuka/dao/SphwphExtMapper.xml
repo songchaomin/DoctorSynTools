@@ -30,4 +30,8 @@
 <update id="truncateSphwph">
     truncate table sphwph
 </update>
+
+    <delete id="deleteSphwphByHwi">
+        delete from sphwph where hw=#{hwi}
+    </delete>
 </mapper>

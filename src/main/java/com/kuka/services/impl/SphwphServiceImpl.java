@@ -56,4 +56,9 @@ public class SphwphServiceImpl implements SphwphService {
     public void truncateSphwph() {
         sphwphExtMapper.truncateSphwph();
     }
+
+    @Override
+    public void deleteSphwphByHwi(String hwi) {
+        sphwphExtMapper.deleteSphwphByHwi(hwi);
+    }
 }

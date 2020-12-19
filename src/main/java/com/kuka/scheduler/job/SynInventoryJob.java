@@ -74,6 +74,8 @@ public class SynInventoryJob implements Job {
         int itemCount = supplierStockService.queryBatchSupplierStockItemCount();
         if (itemCount<=0){
             throw new KukaRollbackException("此次查询没有可以同步的库存数据！");
+        }else{
+            sphwphService.deleteSphwphByHwi(hwi);
         }
         int itemPage=itemCount%DBHANDLERROWS==0?itemCount/DBHANDLERROWS:(itemCount/DBHANDLERROWS)+1;
         for (int i=1;i<=itemPage;i++) {
