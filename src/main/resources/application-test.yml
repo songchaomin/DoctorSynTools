@@ -1,7 +1,7 @@
 #测试数据库配置信息
 jdbc:
   driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-  url: jdbc:sqlserver://192.168.199.238:1433;DatabaseName=ksoa
+  url: jdbc:sqlserver://localhost:1433;DatabaseName=ksoa
   username: sa
   password: scm123
 

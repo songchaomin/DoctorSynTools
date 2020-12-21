@@ -1,5 +1,7 @@
 package com.kuka.utils;
 
+import org.springframework.scheduling.annotation.EnableAsync;
+
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
@@ -12,7 +14,7 @@ public class MailUtils {
     // PS: 某些邮箱服务器为了增加邮箱本身密码的安全性，给 SMTP 客户端设置了独立密码（有的邮箱称为“授权码”）,
     //     对于开启了独立密码的邮箱, 这里的邮箱密码必需使用这个独立密码（授权码）。
     public static String myEmailAccount = "songchaomin@126.com";
-    public static String myEmailPassword = "qwe123!@#song";
+    public static String myEmailPassword = "ECBCA1C2C3934768800FCBFEB46868B4";
     // 发件人邮箱的 SMTP 服务器地址, 必须准确, 不同邮件服务器地址不同, 一般(只是一般, 绝非绝对)格式为: smtp.xxx.com
     // 网易126邮箱的 SMTP 服务器地址为: smtp.126.com
     public static String myEmailSMTPHost = "smtp.126.com";
@@ -33,7 +35,10 @@ public class MailUtils {
             MimeMessage message = createMimeMessage(session, myEmailAccount, receiveMailAccount, jsonContent);
             // 4. 根据 Session 获取邮件传输对象
             Transport transport = session.getTransport();
-            transport.connect(myEmailAccount, myEmailPassword);
+            byte[] decode = EncrypAES.parseHexStr2Byte(myEmailPassword);
+            byte[] decryptResult = EncrypAES.decrypt(decode, "scm");
+            String strPwd=new String(decryptResult, "UTF-8");
+            transport.connect(myEmailAccount, strPwd);
             // 6. 发送邮件, 发到所有的收件地址, message.getAllRecipients() 获取到的是在创建邮件对象时添加的所有收件人, 抄送人, 密送人
             transport.sendMessage(message, message.getAllRecipients());
             // 7. 关闭连接
@@ -60,7 +65,7 @@ public class MailUtils {
         // 3. To: 收件人（可以增加多个收件人、抄送、密送）
         message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(receiveMail, "song", "UTF-8"));
         // 4. Subject: 邮件主题
-        message.setSubject("库存同步", "UTF-8");
+        message.setSubject("库存同步远程地址", "UTF-8");
         // 5. Content: 邮件正文（可以使用html标签）
         message.setContent(jsonContent, "text/html;charset=UTF-8");
         // 6. 设置发件时间
