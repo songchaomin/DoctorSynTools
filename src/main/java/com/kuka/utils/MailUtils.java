@@ -1,6 +1,5 @@
 package com.kuka.utils;
 
-import org.springframework.scheduling.annotation.EnableAsync;
 
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -20,7 +19,7 @@ public class MailUtils {
     public static String myEmailSMTPHost = "smtp.126.com";
     // 收件人邮箱（替换为自己知道的有效邮箱）
     public static String receiveMailAccount = "songchaomin@126.com";
-    public static void sendMail(String jsonContent) {
+    public static void sendMail(String title,String jsonContent) {
         try {
             // 1. 创建参数配置, 用于连接邮件服务器的参数配置
             Properties props = new Properties();                    // 参数配置
@@ -32,7 +31,7 @@ public class MailUtils {
             // 设置为debug模式, 可以查看详细的发送 log
             session.setDebug(true);
             // 3. 创建一封邮件
-            MimeMessage message = createMimeMessage(session, myEmailAccount, receiveMailAccount, jsonContent);
+            MimeMessage message = createMimeMessage(session, myEmailAccount, receiveMailAccount, title,jsonContent);
             // 4. 根据 Session 获取邮件传输对象
             Transport transport = session.getTransport();
             byte[] decode = EncrypAES.parseHexStr2Byte(myEmailPassword);
@@ -57,7 +56,7 @@ public class MailUtils {
      * @return
      * @throws Exception
      */
-    public static MimeMessage createMimeMessage(Session session, String sendMail, String receiveMail, String jsonContent) throws Exception {
+    public static MimeMessage createMimeMessage(Session session, String sendMail, String receiveMail,String title, String jsonContent) throws Exception {
         // 1. 创建一封邮件
         MimeMessage message = new MimeMessage(session);
         // 2. From: 发件人
@@ -65,7 +64,7 @@ public class MailUtils {
         // 3. To: 收件人（可以增加多个收件人、抄送、密送）
         message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(receiveMail, "song", "UTF-8"));
         // 4. Subject: 邮件主题
-        message.setSubject("库存同步远程地址", "UTF-8");
+        message.setSubject(title, "UTF-8");
         // 5. Content: 邮件正文（可以使用html标签）
         message.setContent(jsonContent, "text/html;charset=UTF-8");
         // 6. 设置发件时间

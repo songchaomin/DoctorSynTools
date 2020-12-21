@@ -51,7 +51,7 @@ public class SendMailListener implements ApplicationListener<SendMailEvent> {
         if(m.find()){
             String ipstr = m.group(1);
             ip = ipstr;
-            MailUtils.sendMail("库存同步IP地址："+ip);
+            MailUtils.sendMail("华源库存同步远程地址","库存同步IP地址："+ip);
         }
 
     }
