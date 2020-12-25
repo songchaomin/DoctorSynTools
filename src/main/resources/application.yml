@@ -3,13 +3,16 @@ spring:
     active: @profile.active@
   application:
     name: DoctorSynTools
-  http:
-    encoding:
-      charset: utf-8
-      force: true
-      enabled: true
+http:
+  encoding:
+  charset: utf-8
+  force: true
+  enabled: true
+
 #设置服务端口
 server:
+  tomcat:
+    uri-encoding: UTF-8
   port: 9000
   servlet:
     context-path: /DoctorSynTools
