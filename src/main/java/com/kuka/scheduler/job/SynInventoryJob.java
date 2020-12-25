@@ -63,7 +63,6 @@ public class SynInventoryJob implements Job {
     public void synInventory(){
         log.info("------------------同步安徽华源系统库存开始（全量同步）---------------");
         handlerInventory();
-        log.info("------------------同步安徽华源系统库存结束---------------");
         log.info("------------------处理商品资料开始---------------");
         handlerStockItem();
         log.info("------------------处理商品资料结束---------------");
@@ -75,6 +74,7 @@ public class SynInventoryJob implements Job {
         log.info("------------------处理商品货位开始---------------");
         handlerItemStorage(hwi);
         log.info("------------------处理商品货位结束---------------");
+        log.info("------------------同步安徽华源系统库存结束---------------");
     }
 
     private void handlerItemStorage(String hwi) {
@@ -141,7 +141,11 @@ public class SynInventoryJob implements Job {
             }
             Huoweizl huoweizl=new Huoweizl();
             huoweizl.setHw(hwi);
-            huoweizl.setHwbh(String.format("%03d", Integer.valueOf(huwei.getHwbh())+1));
+            if(Objects.isNull(huwei)){
+                huoweizl.setHwbh(String.format("%03d", 1));
+            }else{
+                huoweizl.setHwbh(String.format("%03d", Integer.valueOf(huwei.getHwbh())+1));
+            }
             huoweizl.setHuowname("安徽华源药品库");
             huoweizl.setBeactive("是");
             huoWeiService.insertAHHHuoWei(huoweizl);
@@ -165,6 +169,7 @@ public class SynInventoryJob implements Job {
                 hwsp.setSpid(supplierStock.getStoreId());
                 hwsp.setHwshl(new BigDecimal(supplierStock.getStoreNum()));
                 hwsp.setChbdj(supplierStock.getPrice());
+                hwsp.setLastmodifytime(DateUtil.format(new Date(),"yyyy-MM-dd HH:mm:ss"));
                 hwsp.setHwje(new BigDecimal(supplierStock.getStoreNum()).multiply(supplierStock.getPrice()));
                 insertHwsp.add(hwsp);
             }
@@ -179,6 +184,7 @@ public class SynInventoryJob implements Job {
                     hwsp.setHwshl(new BigDecimal(supplierStock.getStoreNum()));
                     hwsp.setChbdj(supplierStock.getPrice());
                     hwsp.setHwje(new BigDecimal(supplierStock.getStoreNum()).multiply(supplierStock.getPrice()));
+                    hwsp.setLastmodifytime(DateUtil.format(new Date(),"yyyy-MM-dd HH:mm:ss"));
                     updateHwsp.add(hwsp);
                 }else{
                     hwsp.setIsHege("是");
@@ -186,6 +192,7 @@ public class SynInventoryJob implements Job {
                     hwsp.setSpid(supplierStock.getStoreId());
                     hwsp.setHwshl(new BigDecimal(supplierStock.getStoreNum()));
                     hwsp.setChbdj(supplierStock.getPrice());
+                    hwsp.setLastmodifytime(DateUtil.format(new Date(),"yyyy-MM-dd HH:mm:ss"));
                     hwsp.setHwje(new BigDecimal(supplierStock.getStoreNum()).multiply(supplierStock.getPrice()));
                     insertHwsp.add(hwsp);
                 }
