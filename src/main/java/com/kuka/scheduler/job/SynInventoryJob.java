@@ -2,6 +2,7 @@ package com.kuka.scheduler.job;
 
 import cn.hutool.core.date.DateUtil;
 import com.alibaba.fastjson.JSONObject;
+import com.kuka.config.YamlPropertySourceFactory;
 import com.kuka.domain.*;
 import com.kuka.exeception.KukaRollbackException;
 import com.kuka.services.*;
@@ -11,6 +12,8 @@ import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
@@ -22,12 +25,15 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
+@PropertySource(value = {"classpath:application-${spring.profiles.active}.yml"},factory = YamlPropertySourceFactory.class)
 public class SynInventoryJob implements Job {
     /**
      * 每次查询的记录数
      */
     private static final int ROWS=1000;
     private static final int DBHANDLERROWS=500;
+    @Value("${dubhe.tenantCode}")
+    private  String tenantCode;
     @Autowired
     private Md5Utils md5Utils;
     @Autowired
@@ -135,7 +141,7 @@ public class SynInventoryJob implements Job {
             }
             Huoweizl huoweizl=new Huoweizl();
             huoweizl.setHw(hwi);
-            huoweizl.setHwbh(Integer.toString(Integer.valueOf(huwei.getHwbh())+1));
+            huoweizl.setHwbh(String.format("%03d", Integer.valueOf(huwei.getHwbh())+1));
             huoweizl.setHuowname("安徽华源药品库");
             huoweizl.setBeactive("是");
             huoWeiService.insertAHHHuoWei(huoweizl);
@@ -370,7 +376,7 @@ public class SynInventoryJob implements Job {
 
     private String invokeInventoryInterface(int page, int rows, String startTime ) {
         JSONObject jsonObject=new JSONObject();
-        jsonObject.put("tenantCode","ylkj");
+        jsonObject.put("tenantCode",tenantCode);
         jsonObject.put("startTime",startTime);
         jsonObject.put("endTime", DateUtil.format(new Date(),"yyyy-MM-dd HH:mm:ss"));
         jsonObject.put("page",page);

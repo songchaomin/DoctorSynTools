@@ -415,6 +415,6 @@
 
 
     <select id="queryMaxHuoWeiNo" resultType="com.kuka.domain.Huoweizl">
-        select max(hw) hw,max(hwbh) hwbh from huoweizl
+        select max(hw) hw,max(convert(int,hwbh)) hwbh from huoweizl
     </select>
 </mapper>
