@@ -414,7 +414,7 @@
   </insert>
 
 
-    <select id="queryMaxHuoWeiNo" resultType="String">
-        select max(hw) from huoweizl
+    <select id="queryMaxHuoWeiNo" resultType="com.kuka.domain.Huoweizl">
+        select max(hw) hw,max(hwbh) hwbh from huoweizl
     </select>
 </mapper>

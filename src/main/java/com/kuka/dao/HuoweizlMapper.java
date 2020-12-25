@@ -19,6 +19,6 @@ public interface HuoweizlMapper {
 
     int batchInsert(@Param("list") List<Huoweizl> list);
 
-    String queryMaxHuoWeiNo();
+    Huoweizl queryMaxHuoWeiNo();
 
 }

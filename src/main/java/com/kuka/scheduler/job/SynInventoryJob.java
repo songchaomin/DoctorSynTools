@@ -125,16 +125,17 @@ public class SynInventoryJob implements Job {
         List<InventoryConfig> inventoryConfigs = inventoryConfigService.queryInventoryConfig();
         String hwi = inventoryConfigs.stream().filter(t -> Objects.equals("hwi", t.getType())).findFirst().get().getContent();
         if (Objects.equals(hwi,"0")){
-            String huwei = huoWeiService.queryMaxHuoWeiNo();
-            if (StringUtils.isEmpty(huwei)){
+            Huoweizl  huwei = huoWeiService.queryMaxHuoWeiNo();
+            if (Objects.isNull(huwei)){
                 hwi=String.format("%s%08d", "HWI",1);
             }else{
-                String maxno = huwei.substring(3);
+                String hw = huwei.getHw();
+                String maxno = hw.substring(3);
                 hwi=String.format("%s%08d", "HWI",Integer.valueOf(maxno)+1);
             }
             Huoweizl huoweizl=new Huoweizl();
             huoweizl.setHw(hwi);
-            huoweizl.setHwbh("1");
+            huoweizl.setHwbh(Integer.toString(Integer.valueOf(huwei.getHwbh())+1));
             huoweizl.setHuowname("安徽华源药品库");
             huoweizl.setBeactive("是");
             huoWeiService.insertAHHHuoWei(huoweizl);

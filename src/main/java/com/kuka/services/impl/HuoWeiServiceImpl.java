@@ -13,7 +13,7 @@ public class HuoWeiServiceImpl implements HuoWeiService {
     @Autowired
     private HuoweizlMapper huoweizlMapper;
     @Override
-    public String queryMaxHuoWeiNo() {
+    public Huoweizl  queryMaxHuoWeiNo() {
         return huoweizlMapper.queryMaxHuoWeiNo();
     }
 
