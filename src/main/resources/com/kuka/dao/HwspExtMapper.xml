@@ -110,6 +110,9 @@
                 <if test="model.helkc != null">
                     helkc = #{model.helkc,jdbcType=DECIMAL},
                 </if>
+                <if test="model.hw != null">
+                    hw = #{model.hw,jdbcType=DECIMAL},
+                </if>
             </set>
             where  spid = #{model.spid,jdbcType=CHAR}
 
