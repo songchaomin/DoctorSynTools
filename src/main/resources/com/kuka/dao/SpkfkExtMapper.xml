@@ -263,7 +263,7 @@
     insert into spkfk
     (spid, spbh, spmch, zjm, beactive, yishj, is_gdsj,is_gdzk, is_tjsp, is_hysp, is_gmp,is_gsp,is_sy,is_yp,jingd, dw,
       shpchd, shpgg,bzqfs, shengccj, pizhwh, jixing, leibie, jlgg, cunchtj, shenhe,
-      shlv, xscbdj, zhk, zhkj, zhbj,gsp_pzwhyxq,zhengzzt)
+      shlv, xscbdj, zhk, zhkj, zhbj,gsp_pzwhyxq,zhengzzt,sptm)
     values
     <foreach collection="list" item="item" separator=",">
       (
@@ -271,7 +271,7 @@
         #{item.isHysp}, #{item.isGmp}, #{item.isGsp}, #{item.isSy}, #{item.isYp}, #{item.jingd},
         #{item.dw}, #{item.shpchd}, #{item.shpgg}, #{item.bzqfs}, #{item.shengccj},  #{item.pizhwh}, #{item.jixing},  #{item.leibie},
         #{item.jlgg}, #{item.cunchtj}, #{item.shenhe},  #{item.shlv}, #{item.xscbdj}, #{item.zhk},  #{item.zhkj}, #{item.zhbj}, #{item.gspPzwhyxq},
-        #{item.zhengzzt}
+        #{item.zhengzzt},#{item.sptm}
 
         )
     </foreach>

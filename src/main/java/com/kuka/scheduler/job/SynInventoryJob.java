@@ -94,7 +94,7 @@ public class SynInventoryJob implements Job {
                 sphwph.setSpid(supplierStock.getStoreId());
                 sphwph.setHw(hwi);
                 sphwph.setPihao(supplierStock.getBatchNum());
-                sphwph.setBaozhiqi(supplierStock.getDueDate2());
+                sphwph.setBaozhiqi(supplierStock.getProdDate());
                 sphwph.setDangqzht("合格");
                 sphwph.setSxrq(supplierStock.getDueDate2());
                 sphwph.setShl(new BigDecimal(supplierStock.getStoreNum()));
@@ -344,6 +344,12 @@ public class SynInventoryJob implements Job {
         spkfk.setZhengzzt(1);
         spkfk.setGspPzwhyxq("2055-12-31");
         spkfk.setShangplx("普通药品");
+        String drugBarCode = supplierStock.getDrugBarCode();
+        if (StringUtils.isEmpty(drugBarCode)){
+            spkfk.setSptm(t.getSpid().substring(0,8));
+        }else{
+            spkfk.setSptm(supplierStock.getDrugBarCode());
+        }
         return spkfk;
     }
 
