@@ -108,6 +108,7 @@ public class SynInventoryJob implements Job {
     private void handlerInventoryStorage(String hwi) {
         //查询合计库存数量
         int itemCount = supplierStockService.queryMergeSupplierStockItemCount();
+        String finalHwi = hwi;
         if (itemCount<=0){
             throw new KukaRollbackException("此次查询没有可以同步的库存数据！");
         }
@@ -118,7 +119,6 @@ public class SynInventoryJob implements Job {
             CompletableFuture.runAsync(()->{
                 handlerSpkfjc(stockJCS, spids);
             });
-            String finalHwi = hwi;
             CompletableFuture.runAsync(()->{
                 handlerHwsp(stockJCS,spids, finalHwi);
             });
@@ -346,7 +346,7 @@ public class SynInventoryJob implements Job {
         spkfk.setShangplx("普通药品");
         String drugBarCode = supplierStock.getDrugBarCode();
         if (StringUtils.isEmpty(drugBarCode)){
-            spkfk.setSptm(t.getSpid().substring(0,8));
+            spkfk.setSptm(t.getSpid().substring(0,10));
         }else{
             spkfk.setSptm(supplierStock.getDrugBarCode());
         }

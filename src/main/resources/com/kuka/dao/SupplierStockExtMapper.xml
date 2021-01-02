@@ -51,8 +51,8 @@
 (
     SELECT ROW_NUMBER() OVER (ORDER BY drug_num) AS RowNum, *
 	 FROM (
-	 select drug_num,drug_name,product_factory,spec,pack,unit,drug_type,approve_no,supplier_category,drug_code,factory_code,drug_bar_code
-	from supplier_stock group by drug_num,drug_name,product_factory,spec,pack,unit,drug_type,approve_no,supplier_category,drug_code,factory_code,drug_bar_code
+	 select drug_num,drug_name,product_factory,spec,pack,unit,drug_type,approve_no,supplier_category,drug_code,factory_code,max(drug_bar_code) drug_bar_code
+	from supplier_stock group by drug_num,drug_name,product_factory,spec,pack,unit,drug_type,approve_no,supplier_category,drug_code,factory_code
 	) a
 )b
 
@@ -93,7 +93,7 @@ WHERE RowNum BETWEEN (#{page}-1)*#{pageSize}+1 AND #{page}*#{pageSize}
 <select id="queryBatchSupplierStockItemCount" resultType="java.lang.Integer">
 select count(1) from
 (
-select b.spid store_id,drug_num,sum(a.store_num) store_num,min(a.price)price ,a.batch_num,max(a.prod_date) prod_date
+select b.spid store_id,drug_num,sum(a.store_num) store_num,min(a.price)price ,a.batch_num,max(a.prod_date) prod_date,max(convert(date,substring(a.due_date2,1,10))) due_date2
 from supplier_stock a inner join supplier_stock_item b on a.drug_num=b.spbh
 where a.store_num>=100
 group by b.spid,drug_num,a.batch_num
@@ -105,7 +105,7 @@ group by b.spid,drug_num,a.batch_num
         (
         SELECT ROW_NUMBER() OVER (ORDER BY drug_num) AS RowNum, *
         FROM (
-            select b.spid store_id,drug_num,sum(a.store_num) store_num,min(a.price)price ,a.batch_num,max(a.prod_date) prod_date
+            select b.spid store_id,drug_num,sum(a.store_num) store_num,min(a.price)price ,a.batch_num,max(a.prod_date) prod_date,max(convert(date,substring(a.due_date2,1,10))) due_date2
             from supplier_stock a inner join supplier_stock_item b on a.drug_num=b.spbh
             where a.store_num>=100
             group by b.spid,drug_num,a.batch_num
