@@ -157,7 +157,7 @@ public class SynInventoryJob implements Job {
     private void handlerHwsp(List<SupplierStock> stockJCS, List<String> spids,  String hwi) {
         //查询货位商品表
         List<Hwsp> hwspList = hwspService.queryHwsp(spids);
-        Map<String, Hwsp> mapSpkfjc = hwspList.stream().collect(Collectors.toMap((t)->{return t.getSpid()+"!@#"+t.getHw();}, t -> t, (k1, k2) -> k1));
+        Map<String, Hwsp> mapSpkfjc = hwspList.stream().collect(Collectors.toMap((t)->{return t.getSpid()+"!@#"+hwi;}, t -> t, (k1, k2) -> k1));
         List<Hwsp> insertHwsp=new ArrayList<>();
         List<Hwsp> updateHwsp=new ArrayList<>();
         if (CollectionUtils.isEmpty(hwspList)){
