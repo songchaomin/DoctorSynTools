@@ -157,7 +157,7 @@ public class SynInventoryJob implements Job {
     private void handlerHwsp(List<SupplierStock> stockJCS, List<String> spids,  String hwi) {
         //查询货位商品表
         List<Hwsp> hwspList = hwspService.queryHwsp(spids);
-        Map<String, Hwsp> mapSpkfjc = hwspList.stream().collect(Collectors.toMap(Hwsp::getSpid, t -> t, (k1, k2) -> k1));
+        Map<String, Hwsp> mapSpkfjc = hwspList.stream().collect(Collectors.toMap((t)->{return t.getSpid()+"!@#"+t.getHw();}, t -> t, (k1, k2) -> k1));
         List<Hwsp> insertHwsp=new ArrayList<>();
         List<Hwsp> updateHwsp=new ArrayList<>();
         if (CollectionUtils.isEmpty(hwspList)){
@@ -177,7 +177,7 @@ public class SynInventoryJob implements Job {
             for (int j=0;j<stockJCS.size();j++){
                 SupplierStock supplierStock = stockJCS.get(j);
                 Hwsp hwsp=new Hwsp();
-                if (mapSpkfjc.containsKey(supplierStock.getStoreId())){
+                if (mapSpkfjc.containsKey(supplierStock.getStoreId()+"!@#"+hwi)){
                     hwsp.setIsHege("是");
                     hwsp.setHw(hwi);
                     hwsp.setSpid(supplierStock.getStoreId());
@@ -346,7 +346,7 @@ public class SynInventoryJob implements Job {
         spkfk.setShangplx("普通药品");
         String drugBarCode = supplierStock.getDrugBarCode();
         if (StringUtils.isEmpty(drugBarCode)){
-            spkfk.setSptm(t.getSpid().substring(0,10));
+            spkfk.setSptm(t.getSpid().substring(3));
         }else{
             spkfk.setSptm(supplierStock.getDrugBarCode());
         }

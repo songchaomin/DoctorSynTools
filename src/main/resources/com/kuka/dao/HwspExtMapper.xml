@@ -114,7 +114,7 @@
                     hw = #{model.hw,jdbcType=DECIMAL},
                 </if>
             </set>
-            where  spid = #{model.spid,jdbcType=CHAR}
+            where  spid = #{model.spid,jdbcType=CHAR} and hw= #{model.hw,jdbcType=DECIMAL}
 
         </foreach>
 
