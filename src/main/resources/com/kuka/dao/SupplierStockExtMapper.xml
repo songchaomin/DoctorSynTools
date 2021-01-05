@@ -51,8 +51,8 @@
 (
     SELECT ROW_NUMBER() OVER (ORDER BY drug_num) AS RowNum, *
 	 FROM (
-	 select drug_num,drug_name,product_factory,spec,pack,unit,drug_type,approve_no,supplier_category,drug_code,factory_code,max(drug_bar_code) drug_bar_code
-	from supplier_stock group by drug_num,drug_name,product_factory,spec,pack,unit,drug_type,approve_no,supplier_category,drug_code,factory_code
+	 select drug_num,drug_name,product_factory,max(spec)spec,pack,unit,drug_type,approve_no,supplier_category,drug_code,factory_code,max(drug_bar_code) drug_bar_code
+	from supplier_stock group by drug_num,drug_name,product_factory,pack,unit,drug_type,approve_no,supplier_category,drug_code,factory_code
 	) a
 )b
 
