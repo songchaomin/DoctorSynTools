@@ -64,15 +64,15 @@ public class SynInventoryJob implements Job {
         log.info("------------------同步安徽华源系统库存开始（全量同步）---------------");
         handlerInventory();
         log.info("------------------处理商品资料开始---------------");
-        handlerStockItem();
+        //handlerStockItem();
         log.info("------------------处理商品资料结束---------------");
         log.info("------------------获取货位---------------");
-        String hwi = getHwi();
+        //String hwi = getHwi();
         log.info("------------------处理结存和货位商品表开始---------------");
-        handlerInventoryStorage(hwi);
+        //handlerInventoryStorage(hwi);
         log.info("------------------处理结存和货位商品表结束---------------");
         log.info("------------------处理商品货位开始---------------");
-        handlerItemStorage(hwi);
+        //handlerItemStorage(hwi);
         log.info("------------------处理商品货位结束---------------");
         log.info("------------------同步安徽华源系统库存结束---------------");
     }
