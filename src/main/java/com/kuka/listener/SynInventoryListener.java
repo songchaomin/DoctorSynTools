@@ -24,7 +24,7 @@ public class SynInventoryListener implements ApplicationListener<SynInventoryEve
         schedulerJob.setJobGroup("ds");
         schedulerJob.setTriggerName("synInventoryTrigger");
         schedulerJob.setTriggerGroup("ds");
-        schedulerJob.setCronExpression("0 0 0/1 * * ?");
+        schedulerJob.setCronExpression("0 0 8,9,10,11,12,13,14,15,16,17,18 * * ? ");
         try {
             schedulerService.runJob(schedulerJob);
         } catch (SchedulerException e) {
