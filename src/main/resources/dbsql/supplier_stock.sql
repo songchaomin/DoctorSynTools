@@ -4,7 +4,7 @@
  */
 create table supplier_stock(
     store_id varchar (256) primary key,--库存Id
-    is_retail int (1),--是否拆零
+    is_retail int,--是否拆零
     drug_num varchar (256), --药品编码
     clerk_num varchar (64),--业务员编码
     drug_name varchar (256),--药品名称
@@ -22,10 +22,10 @@ create table supplier_stock(
     price decimal(18, 4), --售价
     unit varchar(64), --单位
     drug_type varchar(64), --剂型
-    tax_rate int(32), --税率
+    tax_rate int, --税率
     approve_no varchar(64), --批准文号
     store_no varchar(64), --仓库编号
-    special_drug int(32), --专机销售(可以查看，线下销售)
+    special_drug int, --专机销售(可以查看，线下销售)
     supplier_category varchar(64), --供货单位类别
     main_url varchar(256), --图片路径
     update_date varchar(256), --最后更新时间
